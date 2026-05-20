@@ -11,14 +11,14 @@
 
 When working with the Sitefinity CMS _Translation_ module, you can benefit from a number of translation connectors that you use out-of-the-box with minimum setup. To serve your requirements, you can also implement your own translation connector with custom logic.
 
-This tutorial provides you with a sample that you use to implement a custom translation connector to work with the _SYSTRAN Pure Neural Server_ service. You first create and setup the connector and then use the _Systran Translation .Net Client Library_ to implement the overall translation process.
+This tutorial provides you with a sample that you use to implement a custom translation connector to work with the _SYSTRAN Pure Neural Server_ service. The connector uses direct HTTP calls to the Systran API endpoint for translation requests.
 
 ### Prerequisites
 
 - You must have a Sitefinity CMS license.
 - Your Sitefinity CMS website must be in multilingual mode.  
   You have added atleast one additinal language to the website. Otherwise, you will not see the translations screen in the administrations tab of your application.
-- You must have obtained API key and API URL from Systran.io https://platform.systran.net/user/admin#/apiKeys.
+- You must have obtained API key and API URL from your Systran service provider.
 
 ### Installation
 
@@ -26,11 +26,9 @@ Add the _Systran Machine Translation_ sample project to your solution. To do thi
 
 1. Open your Sitefinity CMS solution in Visual Studio.
 2. Add `Progress.Sitefinity.Translations.SystranMachineTranslation` project to the same solution.
-3. In _SystranMachineTranslation_, add a reference to the `SystranClientTranslationApiLib` assembly.  
-   You can download it from Systran Natural Language Processing .NET Client Library from https://github.com/SYSTRAN/translation-api-csharp-client.
-4. Ensure `Telerik.Sitefinity.Translations` nuget package is installed in `SystranMachineTranslation`.
-5. In _SitefinityWebApp_, add a reference to the _SystranMachineTranslation_ project.
-6. Build your solution.
+3. Ensure `Telerik.Sitefinity.Translations` nuget package is installed in `SystranMachineTranslation`.
+4. In _SitefinityWebApp_, add a reference to the _SystranMachineTranslation_ project.
+5. Build your solution.
 
 ### Configure the connector
 
@@ -40,9 +38,9 @@ To configure the _SystranMachineTranslationConnector_ connector, perform the fol
 2. Expand the _Parameters_ section of the _SystranMachineTranslation_ connector
 3. Enter and save the following _Keys_:
    - `apiKey`  
-     In <i>Value</i>, enter the API key that you obtained from Systran.
+     In <i>Value</i>, enter the API key that you obtained from your Systran service provider. This will be used in the Authorization header as `Key {apiKey}`.
    - `apiUrl`  
-     This is the Systran API URL. If you do not set it, the system uses the default value *https://api-platform.systran.net*.
+     This is the Systran API base URL (without the endpoint path). If you do not set it, the system uses the default value *https://api-translate.systran.net*.
 4. To enable the connector, under _SystranMachineTranslation_, in input field _Enabled_, enter `true`.
 5. Save your changes.
 

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json.Linq;
 using Progress.Sitefinity.Translations;
-using Systran;
-using Systran.TranslationClientLib.Api;
-using Systran.TranslationClientLib.Client;
 using Telerik.Sitefinity.Translations;
 
 [assembly: TranslationConnector(name: SystranMachineTranslationConnector.ConnectorName,
@@ -20,29 +20,19 @@ namespace Progress.Sitefinity.Translations
         #region Initialization
         protected override void InitializeConnector(NameValueCollection config)
         {
-            var key = config.Get(SystranMachineTranslationConnector.ApiKey);
-            if (string.IsNullOrEmpty(key))
+            this.apiKey = config.Get(SystranMachineTranslationConnector.ApiKey);
+            if (string.IsNullOrEmpty(this.apiKey))
             {
                 throw new ArgumentException(SystranMachineTranslationConnector.NoApiKeyExceptionMessage);
             }
 
-            var apiUrl = "https://api-platform.systran.net";
-            if (!string.IsNullOrEmpty(config.Get(SystranMachineTranslationConnector.ApiUrl)))
+            this.apiUrl = config.Get(SystranMachineTranslationConnector.ApiUrl);
+            if (string.IsNullOrEmpty(this.apiUrl))
             {
-                apiUrl = config.Get(SystranMachineTranslationConnector.ApiUrl);
+                this.apiUrl = "https://api-translate.systran.net";
             }
 
-            this.client = new ApiClient(apiUrl);
-            Configuration.apiClient = client;
-            Dictionary<String, String> keys = new Dictionary<String, String>();
-           
-            keys.Add("key", key);
-            Configuration.apiKey = keys;
-            if (keys.Count == 0)
-                throw new Exception("No api key found, please check your apiKey.txt file");
-
-            this.translationApi = new TranslationApi(Configuration.apiClient);
-
+            this.httpClient = new HttpClient();
         }
         #endregion
 
@@ -51,20 +41,45 @@ namespace Progress.Sitefinity.Translations
             var output = new List<string>();
             foreach (var item in input)
             {
-                var response = this.translationApi.TranslationTranslateGet(new List<string>() { item }, translationOptions.SourceLanguage, translationOptions.TargetLanguage, null, null, true, false, null, null, false, null, null, false, null, null);
-                output.Add(response.Outputs.First().Output);
+                var translatedText = TranslateText(item, translationOptions.SourceLanguage, translationOptions.TargetLanguage);
+                output.Add(translatedText);
             }
 
             return output;
+        }
+
+        private string TranslateText(string text, string sourceLanguage, string targetLanguage)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Post, $"{this.apiUrl}/translation/text/translate");
+            request.Headers.Add("Authorization", $"Key {this.apiKey}");
+
+            var requestBody = new JObject
+            {
+                ["input"] = text,
+                ["source"] = sourceLanguage,
+                ["target"] = targetLanguage
+            };
+
+            var content = new StringContent(requestBody.ToString(), Encoding.UTF8, "application/json");
+            request.Content = content;
+
+            var response = this.httpClient.SendAsync(request).GetAwaiter().GetResult();
+            response.EnsureSuccessStatusCode();
+
+            var responseContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            var responseJson = JObject.Parse(responseContent);
+
+            return responseJson["output"].ToString();
         }
 
         internal const string ConnectorName = "SystranMachineTranslation";
         internal const string ConnectorTitle = "Systran Machine Translation";
         internal const string ApiKey = "apiKey";
         internal const string ApiUrl = "apiUrl";
-        internal const string NoApiKeyExceptionMessage = "No API key configured for azure translations connector.";
+        internal const string NoApiKeyExceptionMessage = "No API key configured for Systran translations connector.";
 
-        private ApiClient client;
-        private TranslationApi translationApi;
+        private HttpClient httpClient;
+        private string apiKey;
+        private string apiUrl;
     }
 }
