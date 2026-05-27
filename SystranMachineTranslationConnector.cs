@@ -56,8 +56,8 @@ namespace Progress.Sitefinity.Translations
             var requestBody = new JObject
             {
                 ["input"] = text,
-                ["source"] = sourceLanguage,
-                ["target"] = targetLanguage
+                ["source"] = GetLanguageCode(sourceLanguage),
+                ["target"] = GetLanguageCode(targetLanguage)
             };
 
             var content = new StringContent(requestBody.ToString(), Encoding.UTF8, "application/json");
@@ -72,6 +72,21 @@ namespace Progress.Sitefinity.Translations
             return responseJson["output"].ToString();
         }
 
+        private string GetLanguageCode(string cultureCode)
+        {
+            if (string.IsNullOrEmpty(cultureCode))
+                return cultureCode;
+
+            if (cultureCode.Length == 2)
+                return cultureCode;
+
+            var dashIndex = cultureCode.IndexOf('-');
+            if (dashIndex > 0)
+                return cultureCode.Substring(0, dashIndex);
+
+            return cultureCode;
+       }
+
         internal const string ConnectorName = "SystranMachineTranslation";
         internal const string ConnectorTitle = "Systran Machine Translation";
         internal const string ApiKey = "apiKey";
@@ -82,4 +97,6 @@ namespace Progress.Sitefinity.Translations
         private string apiKey;
         private string apiUrl;
     }
+
+    
 }
