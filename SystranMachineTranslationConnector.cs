@@ -38,24 +38,53 @@ namespace Progress.Sitefinity.Translations
 
         protected override List<string> Translate(List<string> input, ITranslationOptions translationOptions)
         {
-            var output = new List<string>();
-            foreach (var item in input)
-            {
-                var translatedText = TranslateText(item, translationOptions.SourceLanguage, translationOptions.TargetLanguage);
-                output.Add(translatedText);
-            }
-
-            return output;
+            return TranslateTexts(input, translationOptions.SourceLanguage, translationOptions.TargetLanguage);
         }
 
-        private string TranslateText(string text, string sourceLanguage, string targetLanguage)
+        private List<string> TranslateTexts(List<string> texts, string sourceLanguage, string targetLanguage)
+        {
+            var results = new List<string>(texts.Count);
+
+            foreach (var batch in SplitIntoBatches(texts))
+            {
+                results.AddRange(TranslateBatch(batch, sourceLanguage, targetLanguage));
+            }
+
+            return results;
+        }
+
+        private IEnumerable<List<string>> SplitIntoBatches(List<string> texts)
+        {
+            var batch = new List<string>();
+            var batchBytes = 0;
+
+            foreach (var text in texts)
+            {
+                var textBytes = Encoding.UTF8.GetByteCount(text);
+
+                if (batch.Count > 0 && (batch.Count >= MaxBatchItems || batchBytes + textBytes > MaxBatchBytes))
+                {
+                    yield return batch;
+                    batch = new List<string>();
+                    batchBytes = 0;
+                }
+
+                batch.Add(text);
+                batchBytes += textBytes;
+            }
+
+            if (batch.Count > 0)
+                yield return batch;
+        }
+
+        private List<string> TranslateBatch(List<string> texts, string sourceLanguage, string targetLanguage)
         {
             var request = new HttpRequestMessage(HttpMethod.Post, $"{this.apiUrl}/translation/text/translate");
             request.Headers.Add("Authorization", $"Key {this.apiKey}");
 
             var requestBody = new JObject
             {
-                ["input"] = text,
+                ["input"] = new JArray(texts),
                 ["source"] = GetLanguageCode(sourceLanguage),
                 ["target"] = GetLanguageCode(targetLanguage)
             };
@@ -69,7 +98,11 @@ namespace Progress.Sitefinity.Translations
             var responseContent = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
             var responseJson = JObject.Parse(responseContent);
 
-            return responseJson["output"].ToString();
+            var outputs = responseJson["outputs"] as JArray;
+            if (outputs == null || outputs.Count != texts.Count)
+                throw new InvalidOperationException($"Unexpected Systran API response format. Response: {responseContent}");
+
+            return outputs.Select(o => o["output"]?.ToString() ?? string.Empty).ToList();
         }
 
         private string GetLanguageCode(string cultureCode)
@@ -92,6 +125,9 @@ namespace Progress.Sitefinity.Translations
         internal const string ApiKey = "apiKey";
         internal const string ApiUrl = "apiUrl";
         internal const string NoApiKeyExceptionMessage = "No API key configured for Systran translations connector.";
+
+        private const int MaxBatchItems = 50000;
+        private const int MaxBatchBytes = 40 * 1024 * 1024;
 
         private HttpClient httpClient;
         private string apiKey;
