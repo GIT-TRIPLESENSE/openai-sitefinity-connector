@@ -79,14 +79,20 @@ namespace Progress.Sitefinity.Translations
 
         private List<string> TranslateBatch(List<string> texts, string sourceLanguage, string targetLanguage)
         {
+            var sourceCode = GetLanguageCode(sourceLanguage);
+            var targetCode = GetLanguageCode(targetLanguage);
+
+            if (string.Equals(sourceCode, targetCode, StringComparison.OrdinalIgnoreCase))
+                return texts;
+
             var request = new HttpRequestMessage(HttpMethod.Post, $"{this.apiUrl}/translation/text/translate");
             request.Headers.Add("Authorization", $"Key {this.apiKey}");
 
             var requestBody = new JObject
             {
                 ["input"] = new JArray(texts),
-                ["source"] = GetLanguageCode(sourceLanguage),
-                ["target"] = GetLanguageCode(targetLanguage)
+                ["source"] = sourceCode,
+                ["target"] = targetCode
             };
 
             var content = new StringContent(requestBody.ToString(), Encoding.UTF8, "application/json");
