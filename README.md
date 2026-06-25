@@ -29,6 +29,7 @@ Configure the connector in Sitefinity under **Administration > Settings > Advanc
 | `model` | No | `gpt-5.4-mini` | OpenAI model used for translation. |
 | `apiUrl` | No | `https://api.openai.com/v1/responses` | Responses API endpoint. |
 | `glossaryPath` | No | `~/App_Data/OpenAITranslation/glossary.json` | Leapmotor glossary/context JSON. |
+| `promptInstructions` | No | Built-in Leapmotor translation prompt | Editable business/style prompt. Use `\n` for line breaks if the CMS field is single-line. |
 | `cachePath` | No | `~/App_Data/OpenAITranslation/cache.json` | Persistent translation-memory cache. |
 | `timeoutSeconds` | No | `30` | Per-request HTTP timeout. |
 | `maxRetries` | No | `2` | Retries for transient failures, rate limits, and malformed provider output. |
@@ -43,6 +44,8 @@ App_Data\OpenAITranslation\glossary.json
 Deploy that file to the same path in the Sitefinity web app, or set `glossaryPath` to another approved JSON glossary. `glossary.sample.json` remains available as a small template for new markets.
 
 Glossary entries can contain per-language `targets`. For regional locales such as `fr-be`, `de-ch`, and `it-ch`, the connector keeps the full target locale in the prompt and the glossary instructs OpenAI to fall back to the base `fr`, `de`, or `it` target when no regional override exists.
+
+The `promptInstructions` setting lets CMS administrators tune tone, brand guidance, and translation style without rebuilding the connector. The connector always appends fixed output-safety rules for JSON structure, protected tokens, placeholders, URLs, and HTML. Changing `promptInstructions` changes the cache key, so old cached translations are not reused with a new prompt.
 
 ## Translation Behavior
 

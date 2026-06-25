@@ -88,14 +88,16 @@ The connector automatically includes the glossary content in the prompt. The loc
 | `model` | Optional. Defaults to `gpt-5.4-mini` |
 | `apiUrl` | Optional. Defaults to `https://api.openai.com/v1/responses` |
 | `glossaryPath` | Optional. Defaults to `~/App_Data/OpenAITranslation/glossary.json` |
+| `promptInstructions` | Optional. Editable Leapmotor business/style prompt. Use `\n` for line breaks if the CMS value field is single-line. |
 | `cachePath` | Optional. Defaults to `~/App_Data/OpenAITranslation/cache.json` |
 | `timeoutSeconds` | Optional. Defaults to `30` |
 | `maxRetries` | Optional. Defaults to `2` |
 | `enableCache` | Optional. Defaults to `true` |
 
-5. Set **Enabled** to `true`.
-6. Save changes.
-7. Restart the IIS application pool.
+5. Optionally edit `promptInstructions` when brand tone or market guidance changes. The connector still appends fixed rules for JSON output, HTML, URLs, and placeholder preservation.
+6. Set **Enabled** to `true`.
+7. Save changes.
+8. Restart the IIS application pool.
 
 ## Step 6 - Configure Languages
 
