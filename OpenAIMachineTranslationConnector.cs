@@ -75,6 +75,11 @@ namespace Progress.Sitefinity.Translations
 
             var sourceLanguage = NormalizeLanguageCode(translationOptions.SourceLanguage);
             var targetLanguage = NormalizeLanguageCode(translationOptions.TargetLanguage);
+            if (!string.IsNullOrEmpty(sourceLanguage) && string.Equals(sourceLanguage, targetLanguage, StringComparison.OrdinalIgnoreCase))
+            {
+                return new List<string>(input);
+            }
+
             var output = new List<string>(input);
             var misses = new List<TranslationItem>();
 
