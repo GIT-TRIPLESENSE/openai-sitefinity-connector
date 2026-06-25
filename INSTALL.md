@@ -89,6 +89,7 @@ The connector automatically includes the glossary content in the prompt. The loc
 | `apiUrl` | Optional. Defaults to `https://api.openai.com/v1/responses` |
 | `glossaryPath` | Optional. Defaults to `~/App_Data/OpenAITranslation/glossary.json` |
 | `promptInstructions` | Optional. Editable Leapmotor business/style prompt. Use `\n` for line breaks if the CMS value field is single-line. |
+| `avoidRegionalLanguages` | Optional. Defaults to `false`. Set to `true` to translate regional cultures such as `fr-MQ`, `fr-BE`, `de-CH`, and `en-AU` as their main languages (`fr`, `de`, `en`). |
 | `cachePath` | Optional. Defaults to `~/App_Data/OpenAITranslation/cache.json` |
 | `timeoutSeconds` | Optional. Defaults to `30` |
 | `maxRetries` | Optional. Defaults to `2` |
@@ -102,6 +103,8 @@ The connector automatically includes the glossary content in the prompt. The loc
 ## Step 6 - Configure Languages
 
 Sitefinity may pass cultures such as `fr-BE`, `de-CH`, or `en-AU`. The connector normalizes case and underscores, but keeps regional intent. Configure Sitefinity culture mappings only if your CMS emits a culture code that is not the target locale you want OpenAI to receive.
+
+If you do not want regional variants, set `avoidRegionalLanguages=true`. The connector then sends and caches only the main language code, for example `fr-MQ` -> `fr`, `de-CH` -> `de`, and `en-AU` -> `en`.
 
 Leapmotor target set:
 

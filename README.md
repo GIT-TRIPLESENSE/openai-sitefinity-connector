@@ -30,6 +30,7 @@ Configure the connector in Sitefinity under **Administration > Settings > Advanc
 | `apiUrl` | No | `https://api.openai.com/v1/responses` | Responses API endpoint. |
 | `glossaryPath` | No | `~/App_Data/OpenAITranslation/glossary.json` | Leapmotor glossary/context JSON. |
 | `promptInstructions` | No | Built-in Leapmotor translation prompt | Editable business/style prompt. Use `\n` for line breaks if the CMS field is single-line. |
+| `avoidRegionalLanguages` | No | `false` | When `true`, regional codes such as `fr-mq`, `fr-be`, `de-ch`, and `en-au` are translated as `fr`, `fr`, `de`, and `en`. |
 | `cachePath` | No | `~/App_Data/OpenAITranslation/cache.json` | Persistent translation-memory cache. |
 | `timeoutSeconds` | No | `30` | Per-request HTTP timeout. |
 | `maxRetries` | No | `2` | Retries for transient failures, rate limits, and malformed provider output. |
@@ -56,6 +57,8 @@ The connector keeps regional language intent instead of collapsing cultures to n
 - `de-at`, `de-de`, `de-ch`: regional German variants
 - `it-it`, `it-ch`: regional Italian variants
 - `nl-be`, `nl-nl`: regional Dutch variants
+
+Set `avoidRegionalLanguages=true` when regional variants should intentionally reuse the main language translation. In that mode, `fr-mq`, `fr-be`, and `fr-fr` are sent to OpenAI and cached as `fr`; `de-at` and `de-ch` as `de`; and regional English targets as `en`.
 
 Protected content is masked before the OpenAI call and restored afterwards:
 

@@ -28,6 +28,7 @@ using Telerik.Sitefinity.Translations;
                                     OpenAIMachineTranslationConnector.ApiUrl,
                                     OpenAIMachineTranslationConnector.GlossaryPath,
                                     OpenAIMachineTranslationConnector.PromptInstructions,
+                                    OpenAIMachineTranslationConnector.AvoidRegionalLanguages,
                                     OpenAIMachineTranslationConnector.CachePath,
                                     OpenAIMachineTranslationConnector.TimeoutSeconds,
                                     OpenAIMachineTranslationConnector.MaxRetries,
@@ -53,6 +54,7 @@ namespace Progress.Sitefinity.Translations
             this.glossaryPath = ResolveSitePath(GetOptional(config, GlossaryPath, DefaultGlossaryPath));
             this.promptInstructions = NormalizePromptInstructions(GetOptional(config, PromptInstructions, DefaultPromptInstructions));
             this.promptInstructionsHash = ComputeHash(this.promptInstructions);
+            this.avoidRegionalLanguages = GetOptionalBool(config, AvoidRegionalLanguages, false);
             this.cachePath = ResolveSitePath(GetOptional(config, CachePath, DefaultCachePath));
 
             ServicePointManager.SecurityProtocol = ServicePointManager.SecurityProtocol | SecurityProtocolType.Tls12;
@@ -78,6 +80,12 @@ namespace Progress.Sitefinity.Translations
 
             var sourceLanguage = NormalizeLanguageCode(translationOptions.SourceLanguage);
             var targetLanguage = NormalizeLanguageCode(translationOptions.TargetLanguage);
+            if (this.avoidRegionalLanguages)
+            {
+                sourceLanguage = GetMainLanguageCode(sourceLanguage);
+                targetLanguage = GetMainLanguageCode(targetLanguage);
+            }
+
             if (!string.IsNullOrEmpty(sourceLanguage) && string.Equals(sourceLanguage, targetLanguage, StringComparison.OrdinalIgnoreCase))
             {
                 return new List<string>(input);
@@ -594,6 +602,17 @@ namespace Progress.Sitefinity.Translations
             return languageCode.Trim().Replace('_', '-').ToLowerInvariant();
         }
 
+        private static string GetMainLanguageCode(string languageCode)
+        {
+            if (string.IsNullOrEmpty(languageCode))
+            {
+                return languageCode;
+            }
+
+            var dashIndex = languageCode.IndexOf('-');
+            return dashIndex > 0 ? languageCode.Substring(0, dashIndex) : languageCode;
+        }
+
         private static string ResolveSitePath(string path)
         {
             if (string.IsNullOrWhiteSpace(path))
@@ -729,6 +748,7 @@ namespace Progress.Sitefinity.Translations
         internal const string ApiUrl = "apiUrl";
         internal const string GlossaryPath = "glossaryPath";
         internal const string PromptInstructions = "promptInstructions";
+        internal const string AvoidRegionalLanguages = "avoidRegionalLanguages";
         internal const string CachePath = "cachePath";
         internal const string TimeoutSeconds = "timeoutSeconds";
         internal const string MaxRetries = "maxRetries";
@@ -800,6 +820,7 @@ For single words or CTAs, prefer concise native marketing copy over literal word
         private int timeoutSeconds;
         private int maxRetries;
         private bool enableCache;
+        private bool avoidRegionalLanguages;
         private bool cacheDirty;
         private HttpClient httpClient;
         private Dictionary<string, string> cache;
