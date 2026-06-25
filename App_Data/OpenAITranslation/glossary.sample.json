@@ -1,0 +1,46 @@
+{
+  "version": "leapmotor-openai-translation-v1",
+  "brandContext": "Leapmotor is an electric vehicle brand. Translate concise CMS fragments for Leapmotor website pages, product pages, offers, forms, navigation, legal notices, and CTAs.",
+  "styleGuide": [
+    "Keep Leapmotor as Leapmotor.",
+    "Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged unless the locale convention requires punctuation or spacing changes.",
+    "Use clear automotive retail language. CTAs should sound native and concise.",
+    "Do not expand or invent claims that are not present in the source."
+  ],
+  "terms": [
+    {
+      "source": "Leapmotor",
+      "target": "Leapmotor",
+      "note": "Brand name. Do not translate."
+    },
+    {
+      "source": "EV",
+      "note": "Electric vehicle. Use the common target-locale automotive term."
+    },
+    {
+      "source": "range",
+      "note": "Vehicle driving range, not a product selection range."
+    },
+    {
+      "source": "charging",
+      "note": "Vehicle battery charging context."
+    },
+    {
+      "source": "test drive",
+      "note": "Use the target-locale automotive retail expression."
+    }
+  ],
+  "marketNotes": {
+    "en-gb": "Use British English.",
+    "en-ie": "Use Irish/British English conventions.",
+    "en-au": "Use Australian English.",
+    "en-nz": "Use New Zealand English.",
+    "en-za": "Use South African English.",
+    "fr-be": "Use French suitable for Belgium.",
+    "fr-ch": "Use French suitable for Switzerland.",
+    "de-at": "Use German suitable for Austria.",
+    "de-ch": "Use German suitable for Switzerland.",
+    "it-ch": "Use Italian suitable for Switzerland.",
+    "nl-be": "Use Dutch suitable for Belgium."
+  }
+}

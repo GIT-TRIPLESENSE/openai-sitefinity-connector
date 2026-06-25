@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MachineTranslation")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("OpenAIMachineTranslation")]
+[assembly: AssemblyDescription("OpenAI machine translation connector for Sitefinity CMS")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MachineTranslation")]
+[assembly: AssemblyProduct("OpenAIMachineTranslation")]
 [assembly: AssemblyCopyright("Copyright © 2005-2019 Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bdaadaf1-5d13-4227-a097-4ea856bafc69")]
+[assembly: Guid("243f7a0f-9e19-449e-b15c-570e162f68aa")]
 
 // Version information for an assembly consists of the following four values:
 //

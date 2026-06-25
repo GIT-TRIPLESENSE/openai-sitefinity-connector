@@ -1,184 +1,164 @@
-# Installing the Systran Machine Translation Connector on Sitefinity 15.4 (On-Premises)
+# Installing the OpenAI Machine Translation Connector on Sitefinity 15.4
 
-This guide walks through integrating the `SystranMachineTranslation` connector into an existing on-premises Sitefinity CMS 15.4 installation.
-
----
+This guide walks through integrating `OpenAIMachineTranslation` into an existing on-premises Sitefinity CMS 15.4 installation.
 
 ## Prerequisites
 
 | Requirement | Details |
 |---|---|
-| Sitefinity CMS | 15.4.8626 (on-premises, IIS) |
+| Sitefinity CMS | 15.4.8626 on-premises |
 | .NET Framework | 4.8 |
-| Visual Studio | 2022 (any edition) |
-| NuGet CLI / Package Manager | v6+ |
-| Systran API key | Obtain from https://platform.systran.net/user/admin#/apiKeys |
-| Systran .NET client library | https://github.com/SYSTRAN/translation-api-csharp-client |
-| Progress NuGet feed configured | Required to restore `Telerik.Sitefinity.*` packages |
+| Visual Studio | 2022 recommended |
+| Progress NuGet feed | Required for `Telerik.Sitefinity.*` packages |
+| OpenAI API key | Required for the connector `apiKey` parameter |
+| Outbound HTTPS | Sitefinity server must reach `https://api.openai.com` or your configured `apiUrl` |
 
----
-
-## Step 1 — Configure the Progress NuGet Feed
+## Step 1 - Configure the Progress NuGet Feed
 
 Sitefinity packages are hosted on the Progress private NuGet feed. You must have an active Sitefinity license to access it.
 
-1. In Visual Studio, open **Tools → NuGet Package Manager → Package Manager Settings → Package Sources**.
+1. In Visual Studio, open **Tools > NuGet Package Manager > Package Manager Settings > Package Sources**.
 2. Add a new source:
-   - **Name:** `Progress`
-   - **URL:** `https://nuget.sitefinity.com/nuget/`
-3. When prompted for credentials, use your **Progress/Telerik account** email and password.
+   - Name: `Progress`
+   - URL: `https://nuget.sitefinity.com/nuget/`
+3. When prompted for credentials, use your Progress/Telerik account.
 
-Alternatively, add the feed to your `NuGet.config`:
+## Step 2 - Add the Connector Project
 
-```xml
-<configuration>
-  <packageSources>
-    <add key="Progress" value="https://nuget.sitefinity.com/nuget/" />
-  </packageSources>
-  <packageSourceCredentials>
-    <Progress>
-      <add key="Username" value="YOUR_TELERIK_EMAIL" />
-      <add key="ClearTextPassword" value="YOUR_TELERIK_PASSWORD" />
-    </Progress>
-  </packageSourceCredentials>
-</configuration>
-```
+1. Open your Sitefinity web application solution in Visual Studio.
+2. Add `OpenAIMachineTranslation.csproj` as an existing project.
+3. Add a project reference from `SitefinityWebApp` to `OpenAIMachineTranslation`.
+4. Restore NuGet packages for the solution.
 
----
-
-## Step 2 — Get the Systran .NET Client Library
-
-The connector depends on the `SystranClientTranslationApiLib` project, which is **not** available on NuGet and must be built from source.
-
-1. Clone (or download) the Systran .NET client library repository:
-   ```
-   git clone https://github.com/SYSTRAN/translation-api-csharp-client.git
-   ```
-2. Place the cloned folder **at the same level** as this repository. The expected relative path from the `.csproj` is:
-   ```
-   ..\translation-api-csharp-client\SystranClientTranslationApiLib\SystranClientTranslationApiLib.csproj
-   ```
-   Example layout:
-   ```
-   C:\Projects\
-   ├── SystranMTConnector\          ← this repository
-   └── translation-api-csharp-client\
-       └── SystranClientTranslationApiLib\
-   ```
-
----
-
-## Step 3 — Add the Connector to Your Sitefinity Solution
-
-1. Open your Sitefinity web application solution (`.sln`) in Visual Studio 2022.
-2. Right-click the solution node → **Add → Existing Project…**
-3. Browse to `SystranMTConnector\SystranMachineTranslation.csproj` and add it.
-4. Right-click the **SitefinityWebApp** project → **Add → Project Reference…**
-5. Check **SystranMachineTranslation** and click **OK**.
-
----
-
-## Step 4 — Restore NuGet Packages
-
-In the **Package Manager Console** (with the Progress feed configured):
+From the connector folder you can also restore directly:
 
 ```powershell
-Update-Package -Reinstall -ProjectName SystranMachineTranslation
+nuget restore OpenAIMachineTranslation.sln
 ```
 
-Or via the CLI from the solution root:
+## Step 3 - Build
 
+1. Set the build configuration to `Release`.
+2. Build the full Sitefinity solution.
+3. Confirm the connector DLL exists at:
+
+```text
+OpenAIMachineTranslation\bin\Release\OpenAIMachineTranslation.dll
 ```
-nuget restore SystranMachineTranslation.sln
+
+When the web app references the project, the DLL is copied to the web app `bin` folder during build. If deploying manually, copy:
+
+- `OpenAIMachineTranslation.dll`
+- `Newtonsoft.Json.dll` if the Sitefinity web app does not already include a compatible version
+
+## Step 4 - Add the Leapmotor Glossary
+
+Create this folder in the Sitefinity web app:
+
+```text
+App_Data\OpenAITranslation\
 ```
 
-Verify that the following packages are restored under `SystranMTConnector\packages\`:
+Copy:
 
-- `Telerik.Sitefinity.Core.15.4.8626`
-- `Telerik.Sitefinity.Translations.15.4.8626`
-- `Progress.Sitefinity.Renderer.15.4.8626.64`
-- `Progress.Sitefinity.Web.UI.2025.4.1321.462`
-- `Telerik.Licensing.1.6.36`
-- `ServiceStack.*.10.0.4`
+```text
+App_Data\OpenAITranslation\glossary.sample.json
+```
 
----
+to:
 
-## Step 5 — Build the Solution
+```text
+App_Data\OpenAITranslation\glossary.json
+```
 
-1. Set the build configuration to **Release**.
-2. Build the entire solution (**Build → Build Solution** or `Ctrl+Shift+B`).
-3. Confirm there are no build errors. The output DLL will be at:
-   ```
-   SystranMTConnector\bin\Release\SystranMachineTranslation.dll
-   ```
+Edit `glossary.json` with the approved Leapmotor glossary, brand rules, model names, market-specific wording, legal phrases, and terms that must remain untranslated.
 
-When you build with `SitefinityWebApp` referencing the connector project, the DLL is automatically copied to the web app's `bin\` folder. If you are deploying the DLL separately (e.g. pre-compiled), copy the following files to the Sitefinity site's `bin\` folder:
+The connector automatically includes the glossary content in the prompt. The local cache key includes the glossary hash, so updating the glossary automatically bypasses stale cached translations.
 
-- `SystranMachineTranslation.dll`
-- `SystranClientTranslationApiLib.dll`
-- `RestSharp.dll` (from `packages\RestSharp.105.2.3\lib\net46\`)
-
----
-
-## Step 6 — Configure the Connector in Sitefinity Admin
+## Step 5 - Configure the Connector in Sitefinity
 
 1. Log in to the Sitefinity backend as an Administrator.
-2. Navigate to **Administration → Settings → Advanced → Translations → Connectors**.
-3. Locate **SystranMachineTranslation** in the list.
-4. Expand the **Parameters** section and add the following keys:
+2. Navigate to **Administration > Settings > Advanced > Translations > Connectors**.
+3. Locate `OpenAIMachineTranslation`.
+4. Expand **Parameters** and add these values:
 
-   | Key | Value |
-   |---|---|
-   | `apiKey` | Your Systran API key |
-   | `apiUrl` | *(optional)* Custom Systran endpoint. Defaults to `https://api-platform.systran.net` if left empty |
+| Key | Value |
+|---|---|
+| `apiKey` | OpenAI API key |
+| `model` | Optional. Defaults to `gpt-5.4-mini` |
+| `apiUrl` | Optional. Defaults to `https://api.openai.com/v1/responses` |
+| `glossaryPath` | Optional. Defaults to `~/App_Data/OpenAITranslation/glossary.json` |
+| `cachePath` | Optional. Defaults to `~/App_Data/OpenAITranslation/cache.json` |
+| `timeoutSeconds` | Optional. Defaults to `30` |
+| `maxRetries` | Optional. Defaults to `2` |
+| `enableCache` | Optional. Defaults to `true` |
 
-5. Set the **Enabled** field to `true`.
-6. Click **Save changes**.
+5. Set **Enabled** to `true`.
+6. Save changes.
+7. Restart the IIS application pool.
 
----
+## Step 6 - Configure Languages
 
-## Step 7 — Configure Culture Mappings (if needed)
+Sitefinity may pass cultures such as `fr-BE`, `de-CH`, or `en-AU`. The connector normalizes case and underscores, but keeps regional intent. Configure Sitefinity culture mappings only if your CMS emits a culture code that is not the target locale you want OpenAI to receive.
 
-SYSTRAN Pure Neural Server only accepts **two-letter ISO 639-1 language codes** (e.g. `en`, `fr`, `de`). Sitefinity culture names may include region suffixes (e.g. `en-US`, `fr-FR`).
+Leapmotor target set:
 
-To map a Sitefinity culture to a neutral language code:
+```text
+it-it, en-au, de-at, nl-be, fr-be, fr-fr, de-de, fr-gp, en-ie,
+fr-lu, en-mt, fr-mq, fr-mu, fr-ma, nl-nl, en-nz, pl-pl, pt-pt,
+fr-re, sk-sk, en-za, es-es, fr-ch, it-ch, de-ch, en-gb, hr-hr,
+cs-cz, el-gr, hu-hu, is-is, ro-ro, sl-si
+```
 
-1. Navigate to **Administration → Settings → Advanced → Culture mappings**.
-2. Add a mapping for each regional culture used on your site, e.g.:
-   - `en-US` → `en`
-   - `fr-FR` → `fr`
-   - `de-DE` → `de`
+## Step 7 - Smoke Test
 
----
+Translate a small page that includes:
 
-## Step 8 — Enable Multilingual Mode
+- A CTA such as `Book a test drive`
+- Vehicle terms such as `range`, `charging`, and `electric vehicle`
+- HTML tags such as `<strong>Leapmotor</strong>`
+- A URL
+- A placeholder such as `{0}` or `{{vehicleName}}`
+- One regional English target such as `en-au` or `en-gb`
+- One regional French/German target such as `fr-be` or `de-ch`
 
-The Translations module is only visible when the site runs in multilingual mode.
+Confirm:
 
-1. Navigate to **Administration → Settings → Languages**.
-2. Ensure at least one additional language is added and activated.
-3. The **Translations** menu item will appear under **Administration**.
-
----
+- Markup and placeholders are unchanged.
+- The connector returns one translated string for each source string.
+- `App_Data\OpenAITranslation\cache.json` is created after the first successful uncached translation.
+- Repeating the same translation reuses the cache and avoids another OpenAI call.
 
 ## Troubleshooting
 
-**Connector not visible in the connectors list**
-- Ensure `SystranMachineTranslation.dll` is present in the Sitefinity site's `bin\` folder.
-- Restart the IIS application pool after adding the DLL.
-- Check the Sitefinity error log at `App_Data\Sitefinity\Logs\` for assembly load errors.
+**Connector not visible**
 
-**`No API key configured` exception**
-- Verify the `apiKey` parameter is saved and non-empty in Advanced Settings.
+- Ensure `OpenAIMachineTranslation.dll` is in the Sitefinity web app `bin` folder.
+- Restart the IIS application pool.
+- Check `App_Data\Sitefinity\Logs\` for assembly load errors.
 
-**Translation returns empty or errors**
-- Confirm the `apiUrl` is reachable from the server (check firewall/proxy rules).
-- Validate your API key at https://platform.systran.net.
-- Check that the source and target language codes are valid 2-letter ISO codes (see Culture Mappings above).
+**No API key configured**
 
-**Build error: missing `SystranClientTranslationApiLib`**
-- Ensure the `translation-api-csharp-client` folder is placed at the correct relative path (see Step 2).
+- Verify the `apiKey` parameter is saved under the `OpenAIMachineTranslation` connector.
 
-**NuGet restore fails for Sitefinity packages**
-- Confirm the Progress NuGet feed is configured and your credentials are valid.
-- Ensure your Sitefinity license covers version 15.4.
+**401 or 403 from OpenAI**
+
+- Verify the API key, project access, and model access.
+
+**429 or 5xx from OpenAI**
+
+- The connector retries transient failures using exponential backoff. If the error persists, check OpenAI rate limits and service status.
+
+**Translations fail after glossary changes**
+
+- Validate `glossary.json` as JSON.
+- Confirm the IIS process can read `App_Data\OpenAITranslation\glossary.json`.
+
+**Cache file not created**
+
+- Confirm `enableCache` is `true`.
+- Confirm the IIS process can write to `App_Data\OpenAITranslation\`.
+
+**Protected token error**
+
+- The model returned a translation that changed a masked HTML tag, URL, or placeholder. The connector retries and then fails rather than returning unsafe markup. If this happens often, reduce batch size in code or add a stricter glossary/style note for the affected content type.

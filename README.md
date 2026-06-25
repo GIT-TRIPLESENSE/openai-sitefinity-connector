@@ -1,51 +1,98 @@
-# Progress.Sitefinity.Translations.SystranMachineTranslationConnector
+# Progress.Sitefinity.Translations.OpenAIMachineTranslationConnector
 
-> **Latest supported version**: Sitefinity CMS 15.4.8626.0
+> **Supported baseline**: Sitefinity CMS 15.4.8626.0, .NET Framework 4.8
 
-> **Documentation articles**: [Custom translation connector](https://www.progress.com/documentation/sitefinity-cms/custom-translation-connector)
+This repository contains a custom Sitefinity machine translation connector that calls the OpenAI Responses API directly from the Sitefinity backend. It is intended for Leapmotor website translations where CMS text may arrive as very small fragments, including CTAs, labels, menu items, legal snippets, and single words.
 
-> **IMPORTANT**: This repository may not be compatible with the latest or your current Sitefinity CMS version. If you want to use the repository with a specific Sitefinity CMS version, either upgrade the code from this repository or your Sitefinity CMS project to ensure compatibility.<br/>
-> The dev team monitors the repository. You can create a GitHub issue to submit feedback or report bugs. Or make a pull request to submit project enhancements or compatibility changes that support new Sitefinity CMS versions.
+The original Systran connector should remain a separate repository/package. This fork is now an independent OpenAI connector with its own assembly and connector identity:
 
-### Overview
+- Assembly: `OpenAIMachineTranslation.dll`
+- Connector name: `OpenAIMachineTranslation`
+- Connector title: `OpenAI Machine Translation`
 
-When working with the Sitefinity CMS _Translation_ module, you can benefit from a number of translation connectors that you use out-of-the-box with minimum setup. To serve your requirements, you can also implement your own translation connector with custom logic.
+## How It Works
 
-This tutorial provides you with a sample that you use to implement a custom translation connector to work with the _SYSTRAN Pure Neural Server_ service. You first create and setup the connector and then use the _Systran Translation .Net Client Library_ to implement the overall translation process.
+- Sitefinity calls `OpenAIMachineTranslationConnector.Translate(...)`.
+- The connector masks HTML tags, URLs, and common placeholders before sending text to OpenAI.
+- The request includes Leapmotor brand context and glossary JSON.
+- The Responses API is asked for strict structured JSON output with one translation per source item.
+- The connector restores protected values, preserves source order, and returns the translated strings to Sitefinity.
+- A local persistent cache avoids repeated OpenAI calls for identical source/model/glossary/language combinations.
 
-### Prerequisites
+## Configuration
 
-- You must have a Sitefinity CMS license.
-- Your Sitefinity CMS website must be in multilingual mode.  
-  You have added atleast one additinal language to the website. Otherwise, you will not see the translations screen in the administrations tab of your application.
-- You must have obtained API key and API URL from Systran.io https://platform.systran.net/user/admin#/apiKeys.
+Configure the connector in Sitefinity under **Administration > Settings > Advanced > Translations > Connectors > OpenAIMachineTranslation**.
 
-### Installation
+| Key | Required | Default | Description |
+|---|---:|---|---|
+| `apiKey` | Yes | | OpenAI API key. |
+| `model` | No | `gpt-5.4-mini` | OpenAI model used for translation. |
+| `apiUrl` | No | `https://api.openai.com/v1/responses` | Responses API endpoint. |
+| `glossaryPath` | No | `~/App_Data/OpenAITranslation/glossary.json` | Leapmotor glossary/context JSON. |
+| `cachePath` | No | `~/App_Data/OpenAITranslation/cache.json` | Persistent translation-memory cache. |
+| `timeoutSeconds` | No | `30` | Per-request HTTP timeout. |
+| `maxRetries` | No | `2` | Retries for transient failures, rate limits, and malformed provider output. |
+| `enableCache` | No | `true` | Enables local persistent cache. |
 
-Add the _Systran Machine Translation_ sample project to your solution. To do this:
+Copy `App_Data/OpenAITranslation/glossary.sample.json` to the Sitefinity web app as:
 
-1. Open your Sitefinity CMS solution in Visual Studio.
-2. Add `Progress.Sitefinity.Translations.SystranMachineTranslation` project to the same solution.
-3. In _SystranMachineTranslation_, add a reference to the `SystranClientTranslationApiLib` assembly.  
-   You can download it from Systran Natural Language Processing .NET Client Library from https://github.com/SYSTRAN/translation-api-csharp-client.
-4. Ensure `Telerik.Sitefinity.Translations` nuget package is installed in `SystranMachineTranslation`.
-5. In _SitefinityWebApp_, add a reference to the _SystranMachineTranslation_ project.
-6. Build your solution.
+```text
+App_Data\OpenAITranslation\glossary.json
+```
 
-### Configure the connector
+Update it with the approved Leapmotor glossary before production translation.
 
-To configure the _SystranMachineTranslationConnector_ connector, perform the following:
+## Translation Behavior
 
-1. In Sitefinity CMS, navigate to _Administration >> Settings >> Advanced >> Translations >> Connectors_.
-2. Expand the _Parameters_ section of the _SystranMachineTranslation_ connector
-3. Enter and save the following _Keys_:
-   - `apiKey`  
-     In <i>Value</i>, enter the API key that you obtained from Systran.
-   - `apiUrl`  
-     This is the Systran API URL. If you do not set it, the system uses the default value *https://api-platform.systran.net*.
-4. To enable the connector, under _SystranMachineTranslation_, in input field _Enabled_, enter `true`.
-5. Save your changes.
+The connector keeps regional language intent instead of collapsing cultures to neutral language codes. Examples:
 
-### Limitations
+- `en-au`, `en-gb`, `en-nz`, `en-za`: localized English variants
+- `fr-be`, `fr-fr`, `fr-ch`: regional French variants
+- `de-at`, `de-de`, `de-ch`: regional German variants
+- `it-it`, `it-ch`: regional Italian variants
+- `nl-be`, `nl-nl`: regional Dutch variants
 
-SYSTRAN Pure Neural Server deos not support culture-specific languages. The service supports two-letter ISO language codes, such as _en_, _fr_, _de_, etc. You can use neutral culture, such as _en_, or specify a mapping between the specific culture and neutral culture in the translations advanced settings. To do this, navigate to <i>Administration >> Settings >> Advanced >> Culture mappings</i>.
+Protected content is masked before the OpenAI call and restored afterwards:
+
+- HTML tags such as `<strong>` and `</a>`
+- URLs such as `https://www.leapmotor.com`
+- Common placeholders such as `{0}`, `{vehicleName}`, `{{cta}}`, `%s`, and `$value`
+
+If OpenAI does not preserve a protected token, the connector retries. If retries are exhausted, Sitefinity receives an exception instead of silently publishing broken markup or placeholders.
+
+## Cost Estimate
+
+Estimate basis:
+
+- 500k English source characters per target language, based on the previous Microsoft Translator volume.
+- About 125k source tokens per target language.
+- `gpt-5.4-mini` pricing from OpenAI API pricing on June 25, 2026:
+  - Input: `$0.75 / 1M tokens`
+  - Cached input: `$0.075 / 1M tokens`
+  - Output: `$4.50 / 1M tokens`
+
+Estimated launch cost for all 33 target locales:
+
+| Target group | Locales | Estimated cost per locale with prompt cache |
+|---|---|---:|
+| English regional | `en-au`, `en-ie`, `en-mt`, `en-nz`, `en-za`, `en-gb` | `$1.22` |
+| Dutch | `nl-be`, `nl-nl` | `$1.25` |
+| Italian/German/other EU | `it-it`, `it-ch`, `de-at`, `de-de`, `de-ch`, `pl-pl`, `pt-pt`, `sk-sk`, `es-es`, `hr-hr`, `cs-cz`, `hu-hu`, `is-is`, `ro-ro`, `sl-si` | `$1.28` |
+| French | `fr-be`, `fr-fr`, `fr-gp`, `fr-lu`, `fr-mq`, `fr-mu`, `fr-ma`, `fr-re`, `fr-ch` | `$1.30` |
+| Greek | `el-gr` | `$1.36` |
+
+Estimated total:
+
+- With prompt caching: about `$42`
+- Without prompt caching: about `$209`
+
+Actual costs should be recalibrated from OpenAI usage logs after the first production translation run because source fragmentation, glossary size, target-language expansion, and cache hit rate all affect token use.
+
+## Build
+
+1. Configure the Progress NuGet feed.
+2. Restore NuGet packages.
+3. Build `OpenAIMachineTranslation.sln` in Release mode.
+4. Deploy `bin\Release\OpenAIMachineTranslation.dll` and `Newtonsoft.Json.dll` if the Sitefinity web app does not already provide the same compatible version.
+
+See `INSTALL.md` for the full integration guide.
