@@ -34,13 +34,15 @@ Configure the connector in Sitefinity under **Administration > Settings > Advanc
 | `maxRetries` | No | `2` | Retries for transient failures, rate limits, and malformed provider output. |
 | `enableCache` | No | `true` | Enables local persistent cache. |
 
-Copy `App_Data/OpenAITranslation/glossary.sample.json` to the Sitefinity web app as:
+The repository includes the Leapmotor EN-to-IT/FR/DE glossary at:
 
 ```text
 App_Data\OpenAITranslation\glossary.json
 ```
 
-Update it with the approved Leapmotor glossary before production translation.
+Deploy that file to the same path in the Sitefinity web app, or set `glossaryPath` to another approved JSON glossary. `glossary.sample.json` remains available as a small template for new markets.
+
+Glossary entries can contain per-language `targets`. For regional locales such as `fr-be`, `de-ch`, and `it-ch`, the connector keeps the full target locale in the prompt and the glossary instructs OpenAI to fall back to the base `fr`, `de`, or `it` target when no regional override exists.
 
 ## Translation Behavior
 

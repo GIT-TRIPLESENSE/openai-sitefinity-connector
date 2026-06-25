@@ -59,21 +59,21 @@ Create this folder in the Sitefinity web app:
 App_Data\OpenAITranslation\
 ```
 
-Copy:
-
-```text
-App_Data\OpenAITranslation\glossary.sample.json
-```
-
-to:
+Deploy:
 
 ```text
 App_Data\OpenAITranslation\glossary.json
 ```
 
-Edit `glossary.json` with the approved Leapmotor glossary, brand rules, model names, market-specific wording, legal phrases, and terms that must remain untranslated.
+to the same path in the Sitefinity web app:
 
-The connector automatically includes the glossary content in the prompt. The local cache key includes the glossary hash, so updating the glossary automatically bypasses stale cached translations.
+```text
+App_Data\OpenAITranslation\glossary.json
+```
+
+The included `glossary.json` contains the approved Leapmotor EN-to-IT/FR/DE glossary targets converted from the source workbooks. `glossary.sample.json` is only a small template for creating future market glossaries.
+
+The connector automatically includes the glossary content in the prompt. The local cache key includes the glossary hash, so updating the glossary automatically bypasses stale cached translations. For regional targets such as `fr-BE`, `de-CH`, or `it-CH`, the glossary falls back to the base `fr`, `de`, or `it` target unless a regional override is added.
 
 ## Step 5 - Configure the Connector in Sitefinity
 

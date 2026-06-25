@@ -255,6 +255,7 @@ namespace Progress.Sitefinity.Translations
             builder.AppendLine("You are a professional automotive website translator for Leapmotor CMS content.");
             builder.AppendLine("Translate short website fragments accurately and naturally for the requested target locale.");
             builder.AppendLine("Use the Leapmotor context and glossary exactly where applicable.");
+            builder.AppendLine("When glossary entries define targets, use the target for target_language exactly; for regional target_language values, fall back to the base language target before translating freely.");
             builder.AppendLine("Preserve all protected tokens that look like @@SFMT_*@@ exactly as written.");
             builder.AppendLine("Preserve HTML tags, URLs, placeholders, whitespace intent, punctuation intent, model names, trim names, units, and legal wording.");
             builder.AppendLine("For regional English targets, localize spelling and automotive terminology while keeping the text in English.");
@@ -727,15 +728,16 @@ namespace Progress.Sitefinity.Translations
         private const int DefaultTimeoutSeconds = 30;
         private const int DefaultMaxRetries = 2;
         private const int MaxItemsPerRequest = 20;
-        private const string DefaultPromptVersion = "leapmotor-openai-translation-v1";
+        private const string DefaultPromptVersion = "leapmotor-openai-translation-v2";
         private const string DefaultGlossaryJson = @"{
-  ""version"": ""leapmotor-openai-translation-v1"",
+  ""version"": ""leapmotor-openai-translation-v2"",
   ""brandContext"": ""Leapmotor is an electric vehicle brand. Translate concise CMS fragments for Leapmotor website pages, product pages, offers, forms, navigation, legal notices, and CTAs."",
   ""styleGuide"": [
     ""Keep Leapmotor as Leapmotor."",
     ""Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged unless the locale convention requires punctuation or spacing changes."",
     ""Use clear automotive retail language. CTAs should sound native and concise."",
-    ""Do not expand or invent claims that are not present in the source.""
+    ""Do not expand or invent claims that are not present in the source."",
+    ""When a glossary entry has targets, use the requested target locale first, then fall back to the base language target.""
   ],
   ""terms"": [
     { ""source"": ""Leapmotor"", ""target"": ""Leapmotor"", ""note"": ""Brand name. Do not translate."" },
