@@ -59,21 +59,21 @@ Create this folder in the Sitefinity web app:
 App_Data\OpenAITranslation\
 ```
 
-Copy:
-
-```text
-App_Data\OpenAITranslation\glossary.sample.json
-```
-
-to:
+Deploy:
 
 ```text
 App_Data\OpenAITranslation\glossary.json
 ```
 
-Edit `glossary.json` with the approved Leapmotor glossary, brand rules, model names, market-specific wording, legal phrases, and terms that must remain untranslated.
+to the same path in the Sitefinity web app:
 
-The connector automatically includes the glossary content in the prompt. The local cache key includes the glossary hash, so updating the glossary automatically bypasses stale cached translations.
+```text
+App_Data\OpenAITranslation\glossary.json
+```
+
+The included `glossary.json` contains the approved Leapmotor EN-to-IT/FR/DE glossary targets converted from the source workbooks. `glossary.sample.json` is only a small template for creating future market glossaries.
+
+The connector automatically includes the glossary content in the prompt. The local cache key includes the glossary hash, so updating the glossary automatically bypasses stale cached translations. For regional targets such as `fr-BE`, `de-CH`, or `it-CH`, the glossary falls back to the base `fr`, `de`, or `it` target unless a regional override is added.
 
 ## Step 5 - Configure the Connector in Sitefinity
 
@@ -88,18 +88,23 @@ The connector automatically includes the glossary content in the prompt. The loc
 | `model` | Optional. Defaults to `gpt-5.4-mini` |
 | `apiUrl` | Optional. Defaults to `https://api.openai.com/v1/responses` |
 | `glossaryPath` | Optional. Defaults to `~/App_Data/OpenAITranslation/glossary.json` |
+| `promptInstructions` | Optional. Editable Leapmotor business/style prompt. Use `\n` for line breaks if the CMS value field is single-line. |
+| `avoidRegionalLanguages` | Optional. Defaults to `false`. Set to `true` to translate regional cultures such as `fr-MQ`, `fr-BE`, `de-CH`, and `en-AU` as their main languages (`fr`, `de`, `en`). |
 | `cachePath` | Optional. Defaults to `~/App_Data/OpenAITranslation/cache.json` |
 | `timeoutSeconds` | Optional. Defaults to `30` |
 | `maxRetries` | Optional. Defaults to `2` |
 | `enableCache` | Optional. Defaults to `true` |
 
-5. Set **Enabled** to `true`.
-6. Save changes.
-7. Restart the IIS application pool.
+5. Optionally edit `promptInstructions` when brand tone or market guidance changes. The connector still appends fixed rules for JSON output, HTML, URLs, and placeholder preservation.
+6. Set **Enabled** to `true`.
+7. Save changes.
+8. Restart the IIS application pool.
 
 ## Step 6 - Configure Languages
 
 Sitefinity may pass cultures such as `fr-BE`, `de-CH`, or `en-AU`. The connector normalizes case and underscores, but keeps regional intent. Configure Sitefinity culture mappings only if your CMS emits a culture code that is not the target locale you want OpenAI to receive.
+
+If you do not want regional variants, set `avoidRegionalLanguages=true`. The connector then sends and caches only the main language code, for example `fr-MQ` -> `fr`, `de-CH` -> `de`, and `en-AU` -> `en`.
 
 Leapmotor target set:
 

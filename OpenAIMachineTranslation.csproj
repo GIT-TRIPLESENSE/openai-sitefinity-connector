@@ -59,6 +59,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="App_Data\OpenAITranslation\glossary.json" />
     <None Include="App_Data\OpenAITranslation\glossary.sample.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

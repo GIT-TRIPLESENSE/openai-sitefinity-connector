@@ -27,6 +27,8 @@ using Telerik.Sitefinity.Translations;
                                     OpenAIMachineTranslationConnector.Model,
                                     OpenAIMachineTranslationConnector.ApiUrl,
                                     OpenAIMachineTranslationConnector.GlossaryPath,
+                                    OpenAIMachineTranslationConnector.PromptInstructions,
+                                    OpenAIMachineTranslationConnector.AvoidRegionalLanguages,
                                     OpenAIMachineTranslationConnector.CachePath,
                                     OpenAIMachineTranslationConnector.TimeoutSeconds,
                                     OpenAIMachineTranslationConnector.MaxRetries,
@@ -50,6 +52,9 @@ namespace Progress.Sitefinity.Translations
             this.maxRetries = GetOptionalInt(config, MaxRetries, DefaultMaxRetries, 0, 5);
             this.enableCache = GetOptionalBool(config, EnableCache, true);
             this.glossaryPath = ResolveSitePath(GetOptional(config, GlossaryPath, DefaultGlossaryPath));
+            this.promptInstructions = NormalizePromptInstructions(GetOptional(config, PromptInstructions, DefaultPromptInstructions));
+            this.promptInstructionsHash = ComputeHash(this.promptInstructions);
+            this.avoidRegionalLanguages = GetOptionalBool(config, AvoidRegionalLanguages, false);
             this.cachePath = ResolveSitePath(GetOptional(config, CachePath, DefaultCachePath));
 
             ServicePointManager.SecurityProtocol = ServicePointManager.SecurityProtocol | SecurityProtocolType.Tls12;
@@ -75,6 +80,12 @@ namespace Progress.Sitefinity.Translations
 
             var sourceLanguage = NormalizeLanguageCode(translationOptions.SourceLanguage);
             var targetLanguage = NormalizeLanguageCode(translationOptions.TargetLanguage);
+            if (this.avoidRegionalLanguages)
+            {
+                sourceLanguage = GetMainLanguageCode(sourceLanguage);
+                targetLanguage = GetMainLanguageCode(targetLanguage);
+            }
+
             if (!string.IsNullOrEmpty(sourceLanguage) && string.Equals(sourceLanguage, targetLanguage, StringComparison.OrdinalIgnoreCase))
             {
                 return new List<string>(input);
@@ -225,7 +236,7 @@ namespace Progress.Sitefinity.Translations
             {
                 { "model", this.model },
                 { "store", false },
-                { "prompt_cache_key", "sitefinity-openai-translation-" + this.glossaryHash.Substring(0, 12) + "-" + targetLanguage },
+                { "prompt_cache_key", "sitefinity-openai-translation-" + this.glossaryHash.Substring(0, 12) + "-" + this.promptInstructionsHash.Substring(0, 12) + "-" + targetLanguage },
                 { "input", new JArray
                     {
                         new JObject
@@ -252,13 +263,11 @@ namespace Progress.Sitefinity.Translations
         private string BuildDeveloperInstructions()
         {
             var builder = new StringBuilder();
-            builder.AppendLine("You are a professional automotive website translator for Leapmotor CMS content.");
-            builder.AppendLine("Translate short website fragments accurately and naturally for the requested target locale.");
-            builder.AppendLine("Use the Leapmotor context and glossary exactly where applicable.");
+            builder.AppendLine(this.promptInstructions);
+            builder.AppendLine();
+            builder.AppendLine("Connector requirements:");
             builder.AppendLine("Preserve all protected tokens that look like @@SFMT_*@@ exactly as written.");
             builder.AppendLine("Preserve HTML tags, URLs, placeholders, whitespace intent, punctuation intent, model names, trim names, units, and legal wording.");
-            builder.AppendLine("For regional English targets, localize spelling and automotive terminology while keeping the text in English.");
-            builder.AppendLine("For single words or CTAs, prefer concise native marketing copy over literal word-by-word translation.");
             builder.AppendLine("Return only JSON that matches the supplied schema, with one translation per input id.");
             builder.AppendLine("Leapmotor context and glossary JSON:");
             builder.AppendLine(this.glossaryJson);
@@ -528,6 +537,7 @@ namespace Progress.Sitefinity.Translations
         {
             var builder = new StringBuilder();
             builder.AppendLine(this.promptVersion);
+            builder.AppendLine(this.promptInstructionsHash);
             builder.AppendLine(this.glossaryHash);
             builder.AppendLine(this.model);
             builder.AppendLine(sourceLanguage);
@@ -592,6 +602,17 @@ namespace Progress.Sitefinity.Translations
             return languageCode.Trim().Replace('_', '-').ToLowerInvariant();
         }
 
+        private static string GetMainLanguageCode(string languageCode)
+        {
+            if (string.IsNullOrEmpty(languageCode))
+            {
+                return languageCode;
+            }
+
+            var dashIndex = languageCode.IndexOf('-');
+            return dashIndex > 0 ? languageCode.Substring(0, dashIndex) : languageCode;
+        }
+
         private static string ResolveSitePath(string path)
         {
             if (string.IsNullOrWhiteSpace(path))
@@ -617,6 +638,19 @@ namespace Progress.Sitefinity.Translations
             }
 
             return value;
+        }
+
+        private static string NormalizePromptInstructions(string promptInstructions)
+        {
+            if (string.IsNullOrWhiteSpace(promptInstructions))
+            {
+                return DefaultPromptInstructions.Trim();
+            }
+
+            return promptInstructions
+                .Replace("\\r\\n", Environment.NewLine)
+                .Replace("\\n", Environment.NewLine)
+                .Trim();
         }
 
         private static string GetRequired(NameValueCollection config, string key, string errorMessage)
@@ -713,6 +747,8 @@ namespace Progress.Sitefinity.Translations
         internal const string Model = "model";
         internal const string ApiUrl = "apiUrl";
         internal const string GlossaryPath = "glossaryPath";
+        internal const string PromptInstructions = "promptInstructions";
+        internal const string AvoidRegionalLanguages = "avoidRegionalLanguages";
         internal const string CachePath = "cachePath";
         internal const string TimeoutSeconds = "timeoutSeconds";
         internal const string MaxRetries = "maxRetries";
@@ -727,15 +763,22 @@ namespace Progress.Sitefinity.Translations
         private const int DefaultTimeoutSeconds = 30;
         private const int DefaultMaxRetries = 2;
         private const int MaxItemsPerRequest = 20;
-        private const string DefaultPromptVersion = "leapmotor-openai-translation-v1";
+        private const string DefaultPromptVersion = "leapmotor-openai-translation-v2";
+        private const string DefaultPromptInstructions = @"You are a professional automotive website translator for Leapmotor CMS content.
+Translate short website fragments accurately and naturally for the requested target locale.
+Use the Leapmotor context and glossary exactly where applicable.
+When glossary entries define targets, use the target for target_language exactly; for regional target_language values, fall back to the base language target before translating freely.
+For regional English targets, localize spelling and automotive terminology while keeping the text in English.
+For single words or CTAs, prefer concise native marketing copy over literal word-by-word translation.";
         private const string DefaultGlossaryJson = @"{
-  ""version"": ""leapmotor-openai-translation-v1"",
+  ""version"": ""leapmotor-openai-translation-v2"",
   ""brandContext"": ""Leapmotor is an electric vehicle brand. Translate concise CMS fragments for Leapmotor website pages, product pages, offers, forms, navigation, legal notices, and CTAs."",
   ""styleGuide"": [
     ""Keep Leapmotor as Leapmotor."",
     ""Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged unless the locale convention requires punctuation or spacing changes."",
     ""Use clear automotive retail language. CTAs should sound native and concise."",
-    ""Do not expand or invent claims that are not present in the source.""
+    ""Do not expand or invent claims that are not present in the source."",
+    ""When a glossary entry has targets, use the requested target locale first, then fall back to the base language target.""
   ],
   ""terms"": [
     { ""source"": ""Leapmotor"", ""target"": ""Leapmotor"", ""note"": ""Brand name. Do not translate."" },
@@ -771,10 +814,13 @@ namespace Progress.Sitefinity.Translations
         private string cachePath;
         private string glossaryJson;
         private string glossaryHash;
+        private string promptInstructions;
+        private string promptInstructionsHash;
         private string promptVersion;
         private int timeoutSeconds;
         private int maxRetries;
         private bool enableCache;
+        private bool avoidRegionalLanguages;
         private bool cacheDirty;
         private HttpClient httpClient;
         private Dictionary<string, string> cache;

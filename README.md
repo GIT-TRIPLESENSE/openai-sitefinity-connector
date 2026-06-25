@@ -29,18 +29,24 @@ Configure the connector in Sitefinity under **Administration > Settings > Advanc
 | `model` | No | `gpt-5.4-mini` | OpenAI model used for translation. |
 | `apiUrl` | No | `https://api.openai.com/v1/responses` | Responses API endpoint. |
 | `glossaryPath` | No | `~/App_Data/OpenAITranslation/glossary.json` | Leapmotor glossary/context JSON. |
+| `promptInstructions` | No | Built-in Leapmotor translation prompt | Editable business/style prompt. Use `\n` for line breaks if the CMS field is single-line. |
+| `avoidRegionalLanguages` | No | `false` | When `true`, regional codes such as `fr-mq`, `fr-be`, `de-ch`, and `en-au` are translated as `fr`, `fr`, `de`, and `en`. |
 | `cachePath` | No | `~/App_Data/OpenAITranslation/cache.json` | Persistent translation-memory cache. |
 | `timeoutSeconds` | No | `30` | Per-request HTTP timeout. |
 | `maxRetries` | No | `2` | Retries for transient failures, rate limits, and malformed provider output. |
 | `enableCache` | No | `true` | Enables local persistent cache. |
 
-Copy `App_Data/OpenAITranslation/glossary.sample.json` to the Sitefinity web app as:
+The repository includes the Leapmotor EN-to-IT/FR/DE glossary at:
 
 ```text
 App_Data\OpenAITranslation\glossary.json
 ```
 
-Update it with the approved Leapmotor glossary before production translation.
+Deploy that file to the same path in the Sitefinity web app, or set `glossaryPath` to another approved JSON glossary. `glossary.sample.json` remains available as a small template for new markets.
+
+Glossary entries can contain per-language `targets`. For regional locales such as `fr-be`, `de-ch`, and `it-ch`, the connector keeps the full target locale in the prompt and the glossary instructs OpenAI to fall back to the base `fr`, `de`, or `it` target when no regional override exists.
+
+The `promptInstructions` setting lets CMS administrators tune tone, brand guidance, and translation style without rebuilding the connector. The connector always appends fixed output-safety rules for JSON structure, protected tokens, placeholders, URLs, and HTML. Changing `promptInstructions` changes the cache key, so old cached translations are not reused with a new prompt.
 
 ## Translation Behavior
 
@@ -51,6 +57,8 @@ The connector keeps regional language intent instead of collapsing cultures to n
 - `de-at`, `de-de`, `de-ch`: regional German variants
 - `it-it`, `it-ch`: regional Italian variants
 - `nl-be`, `nl-nl`: regional Dutch variants
+
+Set `avoidRegionalLanguages=true` when regional variants should intentionally reuse the main language translation. In that mode, `fr-mq`, `fr-be`, and `fr-fr` are sent to OpenAI and cached as `fr`; `de-at` and `de-ch` as `de`; and regional English targets as `en`.
 
 Protected content is masked before the OpenAI call and restored afterwards:
 

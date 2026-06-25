@@ -1,0 +1,2270 @@
+{
+  "version": "leapmotor-openai-translation-v2",
+  "brandContext": "Leapmotor is an electric vehicle brand. Translate concise CMS fragments for Leapmotor website pages, product pages, offers, forms, navigation, legal notices, and CTAs.",
+  "styleGuide": [
+    "Keep Leapmotor as Leapmotor.",
+    "Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged unless the locale convention requires punctuation or spacing changes.",
+    "Use clear automotive retail language. CTAs should sound native and concise.",
+    "Do not expand or invent claims that are not present in the source.",
+    "When a glossary entry has targets, use the target for the requested target locale. For regional targets, use the exact locale first, then fall back to the base language target."
+  ],
+  "targetFallbacks": {
+    "it-it": "it",
+    "it-ch": "it",
+    "fr-fr": "fr",
+    "fr-be": "fr",
+    "fr-ch": "fr",
+    "fr-lu": "fr",
+    "fr-gp": "fr",
+    "fr-mq": "fr",
+    "fr-mu": "fr",
+    "fr-ma": "fr",
+    "fr-re": "fr",
+    "de-de": "de",
+    "de-at": "de",
+    "de-ch": "de"
+  },
+  "sourceFiles": [
+    {
+      "locale": "it",
+      "file": "Leapmotor_EN-IT_Glossary_Systran_final.xlsx",
+      "rows": 153
+    },
+    {
+      "locale": "fr",
+      "file": "Leapmotor_EN-FR_Glossary_Systran_final.xlsx",
+      "rows": 153
+    },
+    {
+      "locale": "de",
+      "file": "Leapmotor_EN-DE_Glossary_Systran_final.xlsx",
+      "rows": 153
+    }
+  ],
+  "normalizationNotes": [
+    {
+      "language": "de",
+      "row": 14,
+      "source": "LEP OS 4.0",
+      "normalizedSource": "LEAP OS 4.0",
+      "reason": "Aligned product name spelling in source and target with the IT/FR glossaries."
+    },
+    {
+      "language": "de",
+      "row": 154,
+      "source": "Trim",
+      "normalizedSource": "Trims",
+      "reason": "German target is plural and aligns with the IT/FR Trims row."
+    }
+  ],
+  "terms": [
+    {
+      "source": "B10",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "B10",
+        "fr": "B10",
+        "de": "B10"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 2,
+        "fr": 2,
+        "de": 2
+      }
+    },
+    {
+      "source": "C01",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "C01",
+        "fr": "C01",
+        "de": "C01"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 3,
+        "fr": 3,
+        "de": 3
+      }
+    },
+    {
+      "source": "C10",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "C10",
+        "fr": "C10",
+        "de": "C10"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 4,
+        "fr": 4,
+        "de": 4
+      }
+    },
+    {
+      "source": "C16",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "C16",
+        "fr": "C16",
+        "de": "C16"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 5,
+        "fr": 5,
+        "de": 5
+      }
+    },
+    {
+      "source": "CTC (Cell-to-Chassis)",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "CTC (Cell-to-Chassis)",
+        "fr": "CTC (Cell-to-Chassis)",
+        "de": "CTC (Cell-to-Chassis)"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 6,
+        "fr": 6,
+        "de": 6
+      }
+    },
+    {
+      "source": "LEAP 3.0",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "LEAP 3.0",
+        "fr": "LEAP 3.0",
+        "de": "LEAP 3.0"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 7,
+        "fr": 7,
+        "de": 15
+      }
+    },
+    {
+      "source": "LEAP OS 4.0",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "LEAP OS 4.0",
+        "fr": "LEAP OS 4.0",
+        "de": "LEAP OS 4.0"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 8,
+        "fr": 8,
+        "de": 14
+      }
+    },
+    {
+      "source": "Leapmotor",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "Leapmotor",
+        "fr": "Leapmotor",
+        "de": "Leapmotor"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 9,
+        "fr": 9,
+        "de": 16
+      }
+    },
+    {
+      "source": "Leapmotor International",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "Leapmotor International",
+        "fr": "Leapmotor International",
+        "de": "Leapmotor International"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 10,
+        "fr": 10,
+        "de": 17
+      }
+    },
+    {
+      "source": "T03",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "T03",
+        "fr": "T03",
+        "de": "T03"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 11,
+        "fr": 11,
+        "de": 18
+      }
+    },
+    {
+      "source": "B05",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "B05",
+        "fr": "B05",
+        "de": "B05"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 12,
+        "fr": 12,
+        "de": 7
+      }
+    },
+    {
+      "source": "B03X",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "B03X",
+        "fr": "B03X",
+        "de": "B03X"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 13,
+        "fr": 13,
+        "de": 8
+      }
+    },
+    {
+      "source": "C10 AWD",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "C10 AWD",
+        "fr": "C10 AWD",
+        "de": "C10 AWD"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 14,
+        "fr": 14,
+        "de": 9
+      }
+    },
+    {
+      "source": "C10 HYBRID EV",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "C10 HYBRID EV",
+        "fr": "C10 HYBRID EV",
+        "de": "C10 HYBRID EV"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 15,
+        "fr": 15,
+        "de": 10
+      }
+    },
+    {
+      "source": "B10 HYBRID EV",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "B10 HYBRID EV",
+        "fr": "B10 HYBRID EV",
+        "de": "B10 HYBRID EV"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 16,
+        "fr": 16,
+        "de": 11
+      }
+    },
+    {
+      "source": "Leapmotor App",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "Leapmotor App",
+        "fr": "Leapmotor App",
+        "de": "Leapmotor App"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 17,
+        "fr": 17,
+        "de": 12
+      }
+    },
+    {
+      "source": "LEAP OS",
+      "category": "Brand & Product Names",
+      "targets": {
+        "it": "LEAP OS",
+        "fr": "LEAP OS",
+        "de": "LEAP OS"
+      },
+      "note": "Do not translate",
+      "sourceRows": {
+        "it": 18,
+        "fr": 18,
+        "de": 13
+      }
+    },
+    {
+      "source": "Acceleration",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Accelerazione",
+        "fr": "Accélération",
+        "de": "Beschleunigung"
+      },
+      "sourceRows": {
+        "it": 19,
+        "fr": 19,
+        "de": 19
+      }
+    },
+    {
+      "source": "All-wheel drive (AWD)",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Trazione integrale (AWD)",
+        "fr": "Transmission intégrale",
+        "de": "Allradantrieb (AWD)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 20,
+        "fr": 20,
+        "de": 20
+      }
+    },
+    {
+      "source": "Chassis",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Telaio",
+        "fr": "Châssis",
+        "de": "Fahrgestell"
+      },
+      "sourceRows": {
+        "it": 21,
+        "fr": 21,
+        "de": 21
+      }
+    },
+    {
+      "source": "Combined power",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Potenza combinata",
+        "fr": "Puissance combinée",
+        "de": "Kombinierte Leistung"
+      },
+      "note": "NEW",
+      "sourceRows": {
+        "it": 22,
+        "fr": 22,
+        "de": 22
+      }
+    },
+    {
+      "source": "Drivetrain",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Catena cinematica",
+        "fr": "Chaîne cinématique",
+        "de": "Antriebsstrang"
+      },
+      "sourceRows": {
+        "it": 23,
+        "fr": 23,
+        "de": 23
+      }
+    },
+    {
+      "source": "Front-wheel drive (FWD)",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Trazione anteriore (FWD)",
+        "fr": "Traction avant",
+        "de": "Frontantrieb (FWD)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 24,
+        "fr": 24,
+        "de": 24
+      }
+    },
+    {
+      "source": "Horsepower (hp)",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Cavalli (CV)",
+        "fr": "Chevaux (ch)",
+        "de": "PS (Pferdestärke)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 25,
+        "fr": 25,
+        "de": 25
+      }
+    },
+    {
+      "source": "Kerb weight",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Peso a vuoto",
+        "fr": "Poids à vide",
+        "de": "Leergewicht"
+      },
+      "sourceRows": {
+        "it": 26,
+        "fr": 26,
+        "de": 26
+      }
+    },
+    {
+      "source": "Payload",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Portata utile",
+        "fr": "Charge utile",
+        "de": "Nutzlast"
+      },
+      "sourceRows": {
+        "it": 27,
+        "fr": 27,
+        "de": 27
+      }
+    },
+    {
+      "source": "Peak torque",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Coppia massima",
+        "fr": "Couple maximal",
+        "de": "Maximales Drehmoment"
+      },
+      "note": "NEW",
+      "sourceRows": {
+        "it": 28,
+        "fr": 28,
+        "de": 28
+      }
+    },
+    {
+      "source": "Powertrain",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Gruppo motopropulsore",
+        "fr": "Groupe motopropulseur",
+        "de": "Antriebsstrang"
+      },
+      "sourceRows": {
+        "it": 29,
+        "fr": 29,
+        "de": 29
+      }
+    },
+    {
+      "source": "Rear-wheel drive (RWD)",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Trazione posteriore (RWD)",
+        "fr": "Propulsion (traction arrière)",
+        "de": "Hinterradantrieb (RWD)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 30,
+        "fr": 30,
+        "de": 30
+      }
+    },
+    {
+      "source": "Steering",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Sterzo",
+        "fr": "Direction",
+        "de": "Lenkung"
+      },
+      "sourceRows": {
+        "it": 31,
+        "fr": 31,
+        "de": 31
+      }
+    },
+    {
+      "source": "Suspension",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Sospensioni",
+        "fr": "Suspension",
+        "de": "Federung"
+      },
+      "sourceRows": {
+        "it": 32,
+        "fr": 32,
+        "de": 32
+      }
+    },
+    {
+      "source": "Top speed",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Velocità massima",
+        "fr": "Vitesse maximale",
+        "de": "Höchstgeschwindigkeit"
+      },
+      "sourceRows": {
+        "it": 33,
+        "fr": 33,
+        "de": 33
+      }
+    },
+    {
+      "source": "Torque",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Coppia",
+        "fr": "Couple",
+        "de": "Drehmoment"
+      },
+      "sourceRows": {
+        "it": 34,
+        "fr": 34,
+        "de": 34
+      }
+    },
+    {
+      "source": "Towing capacity",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Capacità di traino",
+        "fr": "Capacité de remorquage",
+        "de": "Anhängelast"
+      },
+      "sourceRows": {
+        "it": 35,
+        "fr": 35,
+        "de": 35
+      }
+    },
+    {
+      "source": "Wheelbase",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Passo",
+        "fr": "Empattement",
+        "de": "Radstand"
+      },
+      "sourceRows": {
+        "it": 36,
+        "fr": 36,
+        "de": 36
+      }
+    },
+    {
+      "source": "Max Power",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Potenza massima",
+        "fr": "Puissance maximale",
+        "de": "Maximale Leistung"
+      },
+      "sourceRows": {
+        "it": 37,
+        "fr": 37,
+        "de": 37
+      }
+    },
+    {
+      "source": "CO2 consumption",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Emissioni di CO₂",
+        "fr": "Émissions de CO₂",
+        "de": "CO2-Emissionen kombiniert gemäß WLTP"
+      },
+      "sourceRows": {
+        "it": 38,
+        "fr": 38,
+        "de": 38
+      }
+    },
+    {
+      "source": "0-100 km/h acceleration",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Accelerazione 0-100 km/h",
+        "fr": "Accélération 0-100 km/h",
+        "de": "Beschleunigung 0-100 km/h"
+      },
+      "sourceRows": {
+        "it": 39,
+        "fr": 39,
+        "de": 39
+      }
+    },
+    {
+      "source": "Fuel tank",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Serbatoio del carburante",
+        "fr": "Capacité du réservoir de carburant",
+        "de": "Kraftstofftank Füllmenge"
+      },
+      "sourceRows": {
+        "it": 40,
+        "fr": 40,
+        "de": 40
+      }
+    },
+    {
+      "source": "Fuel consumption",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Consumo di carburante",
+        "fr": "Consommation combiné",
+        "de": "Kaftstoffverbrauch gemäß WLTP"
+      },
+      "sourceRows": {
+        "it": 41,
+        "fr": 41,
+        "de": 41
+      }
+    },
+    {
+      "source": "Petrol engine",
+      "category": "Automotive Technical Terms",
+      "targets": {
+        "it": "Cilindrata",
+        "fr": "Cylindrée",
+        "de": "Hubraum"
+      },
+      "sourceRows": {
+        "it": 42,
+        "fr": 42,
+        "de": 42
+      }
+    },
+    {
+      "source": "AC charging",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Ricarica in corrente alternata (AC)",
+        "fr": "Recharge en courant alternatif (AC)",
+        "de": "AC-Laden"
+      },
+      "sourceRows": {
+        "it": 43,
+        "fr": 43,
+        "de": 43
+      }
+    },
+    {
+      "source": "Battery",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Batteria",
+        "fr": "Batterie",
+        "de": "Batterie"
+      },
+      "sourceRows": {
+        "it": 44,
+        "fr": 44,
+        "de": 44
+      }
+    },
+    {
+      "source": "Battery management system (BMS)",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Sistema di gestione della batteria (BMS)",
+        "fr": "Système de gestion de batterie (BMS)",
+        "de": "Batteriemanagementsystem (BMS)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 45,
+        "fr": 45,
+        "de": 45
+      }
+    },
+    {
+      "source": "Battery pack",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Pacco batteria",
+        "fr": "Pack batterie",
+        "de": "Batteriepaket"
+      },
+      "sourceRows": {
+        "it": 46,
+        "fr": 46,
+        "de": 46
+      }
+    },
+    {
+      "source": "Cell-to-Pack (CTP)",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Cell-to-Pack (CTP)",
+        "fr": "Cell-to-Pack (CTP)",
+        "de": "Cell-to-Pack (CTP)"
+      },
+      "note": "NEW - Do not translate",
+      "sourceRows": {
+        "it": 47,
+        "fr": 47,
+        "de": 47
+      }
+    },
+    {
+      "source": "Charging",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Ricarica",
+        "fr": "Recharge",
+        "de": "Laden"
+      },
+      "sourceRows": {
+        "it": 48,
+        "fr": 48,
+        "de": 48
+      }
+    },
+    {
+      "source": "Charging port",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Porta di ricarica",
+        "fr": "Prise de recharge",
+        "de": "Ladeanschluss"
+      },
+      "sourceRows": {
+        "it": 49,
+        "fr": 49,
+        "de": 49
+      }
+    },
+    {
+      "source": "Charging station",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Stazione di ricarica",
+        "fr": "Borne de recharge",
+        "de": "Ladestation"
+      },
+      "sourceRows": {
+        "it": 50,
+        "fr": 50,
+        "de": 50
+      }
+    },
+    {
+      "source": "DC fast charging",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Ricarica rapida in corrente continua (DC)",
+        "fr": "Recharge rapide en courant continu (DC)",
+        "de": "DC-Schnellladen"
+      },
+      "sourceRows": {
+        "it": 51,
+        "fr": 51,
+        "de": 51
+      }
+    },
+    {
+      "source": "Electric motor",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Motore elettrico",
+        "fr": "Moteur électrique",
+        "de": "Elektromotor"
+      },
+      "sourceRows": {
+        "it": 52,
+        "fr": 52,
+        "de": 52
+      }
+    },
+    {
+      "source": "Energy consumption",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Consumo energetico combinato",
+        "fr": "Consommation d'énergie combinée",
+        "de": "Kombinierter Energieverbrauch"
+      },
+      "sourceRows": {
+        "it": 53,
+        "fr": 53,
+        "de": 53
+      }
+    },
+    {
+      "source": "Fast charging",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Ricarica rapida",
+        "fr": "Recharge rapide",
+        "de": "Schnellladen"
+      },
+      "sourceRows": {
+        "it": 54,
+        "fr": 54,
+        "de": 54
+      }
+    },
+    {
+      "source": "Heat pump",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Pompa di calore",
+        "fr": "Pompe à chaleur",
+        "de": "Wärmepumpe"
+      },
+      "sourceRows": {
+        "it": 55,
+        "fr": 55,
+        "de": 55
+      }
+    },
+    {
+      "source": "Plug-in",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Plug-in",
+        "fr": "Rechargeable",
+        "de": "Plug-in"
+      },
+      "sourceRows": {
+        "it": 56,
+        "fr": 56,
+        "de": 56
+      }
+    },
+    {
+      "source": "Range",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Autonomia",
+        "fr": "Autonomie",
+        "de": "Reichweite"
+      },
+      "sourceRows": {
+        "it": 57,
+        "fr": 57,
+        "de": 57
+      }
+    },
+    {
+      "source": "Range Extender (REEV)",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Estensore di autonomia (REEV)",
+        "fr": "Prolongateur d'autonomie (REEV)",
+        "de": "Reichweitenverlängerung (REEV)"
+      },
+      "note": "NEW - Acronym - keep in original form",
+      "sourceRows": {
+        "it": 58,
+        "fr": 58,
+        "de": 58
+      }
+    },
+    {
+      "source": "Range anxiety",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Ansia da autonomia",
+        "fr": "Angoisse de l'autonomie",
+        "de": "Reichweitenangst"
+      },
+      "sourceRows": {
+        "it": 59,
+        "fr": 59,
+        "de": 59
+      }
+    },
+    {
+      "source": "Regenerative braking",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Frenata rigenerativa",
+        "fr": "Freinage régénératif",
+        "de": "Rekuperationsbremsung"
+      },
+      "sourceRows": {
+        "it": 60,
+        "fr": 60,
+        "de": 60
+      }
+    },
+    {
+      "source": "State of charge (SoC)",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Stato di carica (SoC)",
+        "fr": "État de charge (SoC)",
+        "de": "Ladezustand (SoC)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 61,
+        "fr": 61,
+        "de": 61
+      }
+    },
+    {
+      "source": "Thermal management",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Gestione termica",
+        "fr": "Gestion thermique",
+        "de": "Thermomanagement"
+      },
+      "sourceRows": {
+        "it": 62,
+        "fr": 62,
+        "de": 62
+      }
+    },
+    {
+      "source": "Zero emissions",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Zero emissioni",
+        "fr": "Zéro émission",
+        "de": "Null Emissionen"
+      },
+      "sourceRows": {
+        "it": 63,
+        "fr": 63,
+        "de": 63
+      }
+    },
+    {
+      "source": "kWh",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "kWh",
+        "fr": "kWh",
+        "de": "kWh"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 64,
+        "fr": 64,
+        "de": 64
+      }
+    },
+    {
+      "source": "Battery Size",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Capacità della batteria",
+        "fr": "Capacité de la batterie",
+        "de": "Batteriekapazität"
+      },
+      "sourceRows": {
+        "it": 65,
+        "fr": 65,
+        "de": 65
+      }
+    },
+    {
+      "source": "Electric WLTP* range",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Autonomia elettrica WLTP*",
+        "fr": "Autonomie électrique WLTP*",
+        "de": "Elektrische Reichweite gemäß WLTP*"
+      },
+      "sourceRows": {
+        "it": 66,
+        "fr": 66,
+        "de": 66
+      }
+    },
+    {
+      "source": "Total WLTP* Range",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Autonomia totale WLTP*",
+        "fr": "Autonomie totale en cycle combiné",
+        "de": "Reichweite kombiniert gemäß WLTP*"
+      },
+      "sourceRows": {
+        "it": 67,
+        "fr": 67,
+        "de": 67
+      }
+    },
+    {
+      "source": "DC Charging Max Power",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Potenza massima di ricarica in corrente continua (DC)",
+        "fr": "Puissance max de charge DC",
+        "de": "DC-Schnellladen"
+      },
+      "sourceRows": {
+        "it": 68,
+        "fr": 68,
+        "de": 68
+      }
+    },
+    {
+      "source": "Fast-charge time (30-80%)",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Tempo di ricarica (30 - 80%)",
+        "fr": "Temps de carge 30-80%",
+        "de": "Ladedauer DC (30%-80%)"
+      },
+      "sourceRows": {
+        "it": 69,
+        "fr": 69,
+        "de": 69
+      }
+    },
+    {
+      "source": "Electric Consumption",
+      "category": "EV-Specific Terms",
+      "targets": {
+        "it": "Consumo di energia elettrica",
+        "fr": "Consommation d’énergie WLTP",
+        "de": "Energieverbrauch kombiniert gemäß WLTP"
+      },
+      "sourceRows": {
+        "it": 70,
+        "fr": 70,
+        "de": 70
+      }
+    },
+    {
+      "source": "360° camera",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Telecamera a 360°",
+        "fr": "Caméra 360°",
+        "de": "360°-Kamera"
+      },
+      "sourceRows": {
+        "it": 71,
+        "fr": 71,
+        "de": 71
+      }
+    },
+    {
+      "source": "ADAS",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "ADAS",
+        "fr": "ADAS",
+        "de": "ADAS"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 72,
+        "fr": 72,
+        "de": 72
+      }
+    },
+    {
+      "source": "OTA",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "OTA",
+        "fr": "OTA",
+        "de": "OTA"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 73,
+        "fr": 73,
+        "de": 73
+      }
+    },
+    {
+      "source": "Adaptive Intelligent Cruise Control",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Cruise Control Adattivo Intelligente",
+        "fr": "Régulateur de vitesse adaptatif intelligent",
+        "de": "Adaptiver intelligenter Tempomat"
+      },
+      "note": "NEW",
+      "sourceRows": {
+        "it": 74,
+        "fr": 74,
+        "de": 74
+      }
+    },
+    {
+      "source": "Adaptive cruise control",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Cruise control adattivo",
+        "fr": "Régulateur de vitesse adaptatif",
+        "de": "Adaptiver Tempomat"
+      },
+      "sourceRows": {
+        "it": 75,
+        "fr": 75,
+        "de": 75
+      }
+    },
+    {
+      "source": "Automatic emergency braking",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Frenata automatica di emergenza",
+        "fr": "Freinage d'urgence automatique",
+        "de": "Automatische Notbremsung"
+      },
+      "sourceRows": {
+        "it": 76,
+        "fr": 76,
+        "de": 76
+      }
+    },
+    {
+      "source": "Autonomous driving",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Guida autonoma",
+        "fr": "Conduite autonome",
+        "de": "Autonomes Fahren"
+      },
+      "sourceRows": {
+        "it": 77,
+        "fr": 77,
+        "de": 77
+      }
+    },
+    {
+      "source": "Blind spot monitoring",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Monitoraggio dell'angolo cieco",
+        "fr": "Surveillance des angles morts",
+        "de": "Totwinkelüberwachung"
+      },
+      "sourceRows": {
+        "it": 78,
+        "fr": 78,
+        "de": 78
+      }
+    },
+    {
+      "source": "Face recognition",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Riconoscimento facciale",
+        "fr": "Reconnaissance faciale",
+        "de": "Gesichtserkennung"
+      },
+      "sourceRows": {
+        "it": 79,
+        "fr": 79,
+        "de": 79
+      }
+    },
+    {
+      "source": "Intelligent driving",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Guida intelligente",
+        "fr": "Conduite intelligente",
+        "de": "Intelligentes Fahren"
+      },
+      "sourceRows": {
+        "it": 80,
+        "fr": 80,
+        "de": 80
+      }
+    },
+    {
+      "source": "Lane Centering",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Lane Centering",
+        "fr": "Centrage dans la voie",
+        "de": "Spurzentrierung"
+      },
+      "note": "NEW - Do not translate (Stellantis standard)",
+      "notesByLocale": {
+        "it": "NEW - Do not translate (Stellantis standard)",
+        "fr": "NEW",
+        "de": "NEW"
+      },
+      "sourceRows": {
+        "it": 81,
+        "fr": 81,
+        "de": 81
+      }
+    },
+    {
+      "source": "Lane keeping assist",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Assistente al mantenimento di corsia",
+        "fr": "Aide au maintien de voie",
+        "de": "Spurhalteassistent"
+      },
+      "sourceRows": {
+        "it": 82,
+        "fr": 82,
+        "de": 82
+      }
+    },
+    {
+      "source": "Level 2 Assisted Driving",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Guida assistita di Livello 2",
+        "fr": "Conduite assistée de Niveau 2",
+        "de": "Assistiertes Fahren Level 2"
+      },
+      "note": "NEW",
+      "sourceRows": {
+        "it": 83,
+        "fr": 83,
+        "de": 83
+      }
+    },
+    {
+      "source": "OTA (Over-the-Air) update",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Aggiornamento OTA (Over-the-Air)",
+        "fr": "Mise à jour OTA (Over-the-Air)",
+        "de": "OTA-Update (Over-the-Air)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 84,
+        "fr": 84,
+        "de": 84
+      }
+    },
+    {
+      "source": "Parking assist",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Assistente al parcheggio",
+        "fr": "Aide au stationnement",
+        "de": "Einparkhilfe"
+      },
+      "sourceRows": {
+        "it": 85,
+        "fr": 85,
+        "de": 85
+      }
+    },
+    {
+      "source": "Surround view",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Visuale perimetrale",
+        "fr": "Vision périphérique",
+        "de": "Rundumsicht"
+      },
+      "sourceRows": {
+        "it": 86,
+        "fr": 86,
+        "de": 86
+      }
+    },
+    {
+      "source": "Traffic Assist",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Assistente al Traffico",
+        "fr": "Aide au trafic",
+        "de": "Verkehrsassistent"
+      },
+      "note": "NEW",
+      "sourceRows": {
+        "it": 87,
+        "fr": 87,
+        "de": 87
+      }
+    },
+    {
+      "source": "Voice control",
+      "category": "Features & Technologies",
+      "targets": {
+        "it": "Controllo vocale",
+        "fr": "Commande vocale",
+        "de": "Sprachsteuerung"
+      },
+      "sourceRows": {
+        "it": 88,
+        "fr": 88,
+        "de": 88
+      }
+    },
+    {
+      "source": "Ambient lighting",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Illuminazione ambientale",
+        "fr": "Éclairage d'ambiance",
+        "de": "Ambientebeleuchtung"
+      },
+      "sourceRows": {
+        "it": 89,
+        "fr": 89,
+        "de": 89
+      }
+    },
+    {
+      "source": "Bluetooth",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Bluetooth",
+        "fr": "Bluetooth",
+        "de": "Bluetooth"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 90,
+        "fr": 90,
+        "de": 90
+      }
+    },
+    {
+      "source": "Central console",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Console centrale",
+        "fr": "Console centrale",
+        "de": "Mittelkonsole"
+      },
+      "sourceRows": {
+        "it": 91,
+        "fr": 91,
+        "de": 91
+      }
+    },
+    {
+      "source": "Connectivity",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Connettività",
+        "fr": "Connectivité",
+        "de": "Konnektivität"
+      },
+      "sourceRows": {
+        "it": 92,
+        "fr": 92,
+        "de": 92
+      }
+    },
+    {
+      "source": "Digital key",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Digital key",
+        "fr": "Clé numérique",
+        "de": "Digitaler Schlüssel"
+      },
+      "sourceRows": {
+        "it": 93,
+        "fr": 93,
+        "de": 93
+      }
+    },
+    {
+      "source": "Head-up display (HUD)",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Head-up display (HUD)",
+        "fr": "Affichage tête haute (HUD)",
+        "de": "Head-up-Display (HUD)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 94,
+        "fr": 94,
+        "de": 94
+      }
+    },
+    {
+      "source": "Infotainment",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Infotainment",
+        "fr": "Infodivertissement",
+        "de": "Infotainment"
+      },
+      "sourceRows": {
+        "it": 95,
+        "fr": 95,
+        "de": 95
+      }
+    },
+    {
+      "source": "Instrument cluster",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Quadro strumenti",
+        "fr": "Combiné d'instruments",
+        "de": "Kombiinstrument"
+      },
+      "sourceRows": {
+        "it": 96,
+        "fr": 96,
+        "de": 96
+      }
+    },
+    {
+      "source": "NFC",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "NFC",
+        "fr": "NFC",
+        "de": "NFC"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 97,
+        "fr": 97,
+        "de": 97
+      }
+    },
+    {
+      "source": "Navigation",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Navigazione",
+        "fr": "Navigation",
+        "de": "Navigation"
+      },
+      "sourceRows": {
+        "it": 98,
+        "fr": 98,
+        "de": 98
+      }
+    },
+    {
+      "source": "Smartphone integration",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Integrazione smartphone",
+        "fr": "Intégration smartphone",
+        "de": "Smartphone-Integration"
+      },
+      "sourceRows": {
+        "it": 99,
+        "fr": 99,
+        "de": 99
+      }
+    },
+    {
+      "source": "Touchscreen",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Touchscreen",
+        "fr": "Écran tactile",
+        "de": "Touchscreen"
+      },
+      "sourceRows": {
+        "it": 100,
+        "fr": 100,
+        "de": 100
+      }
+    },
+    {
+      "source": "Wi-Fi",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Wi-Fi",
+        "fr": "Wi-Fi",
+        "de": "WLAN"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 101,
+        "fr": 101,
+        "de": 101
+      }
+    },
+    {
+      "source": "Wireless charging",
+      "category": "UI/UX & Digital Terms",
+      "targets": {
+        "it": "Ricarica wireless",
+        "fr": "Recharge sans fil",
+        "de": "Kabelloses Laden"
+      },
+      "sourceRows": {
+        "it": 102,
+        "fr": 102,
+        "de": 102
+      }
+    },
+    {
+      "source": "Aftersales",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Post-vendita",
+        "fr": "Après-vente",
+        "de": "Kundendienst"
+      },
+      "sourceRows": {
+        "it": 103,
+        "fr": 103,
+        "de": 103
+      }
+    },
+    {
+      "source": "Configurator",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Configuratore",
+        "fr": "Configurateur",
+        "de": "Konfigurator"
+      },
+      "sourceRows": {
+        "it": 104,
+        "fr": 104,
+        "de": 104
+      }
+    },
+    {
+      "source": "Customer service",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Servizio clienti",
+        "fr": "Service client",
+        "de": "Kundenservice"
+      },
+      "sourceRows": {
+        "it": 105,
+        "fr": 105,
+        "de": 105
+      }
+    },
+    {
+      "source": "Dealership",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Concessionaria",
+        "fr": "Concessionnaire",
+        "de": "Händler"
+      },
+      "sourceRows": {
+        "it": 106,
+        "fr": 106,
+        "de": 106
+      }
+    },
+    {
+      "source": "Delivery",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Consegna",
+        "fr": "Livraison",
+        "de": "Lieferung"
+      },
+      "sourceRows": {
+        "it": 107,
+        "fr": 107,
+        "de": 107
+      }
+    },
+    {
+      "source": "Financing",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Finanziamento",
+        "fr": "Financement",
+        "de": "Finanzierung"
+      },
+      "sourceRows": {
+        "it": 108,
+        "fr": 108,
+        "de": 108
+      }
+    },
+    {
+      "source": "Fleet",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Flotta",
+        "fr": "Flotte",
+        "de": "Flotte"
+      },
+      "sourceRows": {
+        "it": 109,
+        "fr": 109,
+        "de": 109
+      }
+    },
+    {
+      "source": "Leasing",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Leasing",
+        "fr": "Leasing",
+        "de": "Leasing"
+      },
+      "sourceRows": {
+        "it": 110,
+        "fr": 110,
+        "de": 110
+      }
+    },
+    {
+      "source": "Offer",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Offerta",
+        "fr": "Offre",
+        "de": "Angebot"
+      },
+      "sourceRows": {
+        "it": 111,
+        "fr": 111,
+        "de": 111
+      }
+    },
+    {
+      "source": "Order",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Ordine",
+        "fr": "Commande",
+        "de": "Bestellung"
+      },
+      "sourceRows": {
+        "it": 112,
+        "fr": 112,
+        "de": 112
+      }
+    },
+    {
+      "source": "Price list",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Listino prezzi",
+        "fr": "Tarif",
+        "de": "Preisliste"
+      },
+      "sourceRows": {
+        "it": 113,
+        "fr": 113,
+        "de": 113
+      }
+    },
+    {
+      "source": "Showroom",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Showroom",
+        "fr": "Showroom",
+        "de": "Showroom"
+      },
+      "sourceRows": {
+        "it": 114,
+        "fr": 114,
+        "de": 114
+      }
+    },
+    {
+      "source": "Test drive",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Test drive",
+        "fr": "Essai",
+        "de": "Probefahrt"
+      },
+      "sourceRows": {
+        "it": 115,
+        "fr": 115,
+        "de": 115
+      }
+    },
+    {
+      "source": "Trade-in",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Permuta",
+        "fr": "Reprise",
+        "de": "Inzahlungnahme"
+      },
+      "sourceRows": {
+        "it": 116,
+        "fr": 116,
+        "de": 116
+      }
+    },
+    {
+      "source": "Warranty",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Garanzia",
+        "fr": "Garantie",
+        "de": "Garantie"
+      },
+      "sourceRows": {
+        "it": 117,
+        "fr": 117,
+        "de": 117
+      }
+    },
+    {
+      "source": "ELV",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "ELV",
+        "fr": "ELV",
+        "de": "ELV"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 118,
+        "fr": 118,
+        "de": 118
+      }
+    },
+    {
+      "source": "End-of-life vehicle",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Veicolo fuori uso",
+        "fr": "Véhicule hors d'usag",
+        "de": "Altfahrzeug"
+      },
+      "sourceRows": {
+        "it": 119,
+        "fr": 119,
+        "de": 119
+      }
+    },
+    {
+      "source": "End-of-life vehicles",
+      "category": "Commercial/Marketing Terms",
+      "targets": {
+        "it": "Veicoli fuori uso",
+        "fr": "Véhicules hors d'usag",
+        "de": "Altfahrzeuge"
+      },
+      "sourceRows": {
+        "it": 120,
+        "fr": 120,
+        "de": 120
+      }
+    },
+    {
+      "source": "ABS",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "ABS",
+        "fr": "ABS",
+        "de": "ABS"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 121,
+        "fr": 121,
+        "de": 121
+      }
+    },
+    {
+      "source": "Active safety",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Sicurezza attiva",
+        "fr": "Sécurité active",
+        "de": "Aktive Sicherheit"
+      },
+      "sourceRows": {
+        "it": 122,
+        "fr": 122,
+        "de": 122
+      }
+    },
+    {
+      "source": "Airbag",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Airbag",
+        "fr": "Airbag",
+        "de": "Airbag"
+      },
+      "sourceRows": {
+        "it": 123,
+        "fr": 123,
+        "de": 123
+      }
+    },
+    {
+      "source": "Crash test",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Crash test",
+        "fr": "Crash test",
+        "de": "Crashtest"
+      },
+      "sourceRows": {
+        "it": 124,
+        "fr": 124,
+        "de": 124
+      }
+    },
+    {
+      "source": "ESC/ESP",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "ESC/ESP",
+        "fr": "ESC/ESP",
+        "de": "ESC/ESP"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 125,
+        "fr": 125,
+        "de": 125
+      }
+    },
+    {
+      "source": "Emergency call (eCall)",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Chiamata di emergenza (eCall)",
+        "fr": "Appel d'urgence (eCall)",
+        "de": "Notrufsystem (eCall)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 126,
+        "fr": 126,
+        "de": 126
+      }
+    },
+    {
+      "source": "Euro NCAP",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Euro NCAP",
+        "fr": "Euro NCAP",
+        "de": "Euro NCAP"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 127,
+        "fr": 127,
+        "de": 127
+      }
+    },
+    {
+      "source": "Hill start assist",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Assistente alla partenza in salita",
+        "fr": "Aide au démarrage en côte",
+        "de": "Berganfahrassistent"
+      },
+      "sourceRows": {
+        "it": 128,
+        "fr": 128,
+        "de": 128
+      }
+    },
+    {
+      "source": "ISOFIX",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "ISOFIX",
+        "fr": "ISOFIX",
+        "de": "ISOFIX"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 129,
+        "fr": 129,
+        "de": 129
+      }
+    },
+    {
+      "source": "Passive safety",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Sicurezza passiva",
+        "fr": "Sécurité passive",
+        "de": "Passive Sicherheit"
+      },
+      "sourceRows": {
+        "it": 130,
+        "fr": 130,
+        "de": 130
+      }
+    },
+    {
+      "source": "Pedestrian protection",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Protezione pedoni",
+        "fr": "Protection des piétons",
+        "de": "Fußgängerschutz"
+      },
+      "sourceRows": {
+        "it": 131,
+        "fr": 131,
+        "de": 131
+      }
+    },
+    {
+      "source": "Rollover protection",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Protezione anti-ribaltamento",
+        "fr": "Protection anti-retournement",
+        "de": "Überschlagschutz"
+      },
+      "sourceRows": {
+        "it": 132,
+        "fr": 132,
+        "de": 132
+      }
+    },
+    {
+      "source": "Seatbelt pretensioner",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Pretensionatore cintura",
+        "fr": "Prétensionneur de ceinture",
+        "de": "Gurtstraffer"
+      },
+      "sourceRows": {
+        "it": 133,
+        "fr": 133,
+        "de": 133
+      }
+    },
+    {
+      "source": "TPMS (Tyre Pressure Monitoring System)",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Sistema di monitoraggio pressione pneumatici (TPMS)",
+        "fr": "Système de surveillance de pression des pneus (TPMS)",
+        "de": "Reifendruckkontrollsystem (TPMS)"
+      },
+      "note": "NEW - Acronym - keep in original form",
+      "sourceRows": {
+        "it": 134,
+        "fr": 134,
+        "de": 134
+      }
+    },
+    {
+      "source": "Traction control",
+      "category": "Safety Terms",
+      "targets": {
+        "it": "Controllo di trazione",
+        "fr": "Antipatinage",
+        "de": "Traktionskontrolle"
+      },
+      "sourceRows": {
+        "it": 135,
+        "fr": 135,
+        "de": 135
+      }
+    },
+    {
+      "source": "Aerodynamic",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Aerodinamico",
+        "fr": "Aérodynamique",
+        "de": "Aerodynamisch"
+      },
+      "sourceRows": {
+        "it": 136,
+        "fr": 136,
+        "de": 136
+      }
+    },
+    {
+      "source": "Alloy wheels",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Cerchi in lega",
+        "fr": "Jantes en alliage",
+        "de": "Leichtmetallfelgen"
+      },
+      "sourceRows": {
+        "it": 137,
+        "fr": 137,
+        "de": 137
+      }
+    },
+    {
+      "source": "Boot/Trunk capacity",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Capacità del bagagliaio",
+        "fr": "Capacité du coffre",
+        "de": "Kofferraumvolumen"
+      },
+      "sourceRows": {
+        "it": 138,
+        "fr": 138,
+        "de": 138
+      }
+    },
+    {
+      "source": "Boot capacity",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Capacità del bagagliaio",
+        "fr": "Capacité du coffre",
+        "de": "Kofferraumvolumen"
+      },
+      "sourceRows": {
+        "it": 139,
+        "fr": 139,
+        "de": 139
+      }
+    },
+    {
+      "source": "Trunk capacity",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Capacità del bagagliaio",
+        "fr": "Capacité du coffre",
+        "de": "Kofferraumvolumen"
+      },
+      "sourceRows": {
+        "it": 140,
+        "fr": 140,
+        "de": 140
+      }
+    },
+    {
+      "source": "Crossover",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Crossover",
+        "fr": "Crossover",
+        "de": "Crossover"
+      },
+      "sourceRows": {
+        "it": 141,
+        "fr": 141,
+        "de": 141
+      }
+    },
+    {
+      "source": "Daytime running lights (DRL)",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Luci diurne (DRL)",
+        "fr": "Feux de jour (DRL)",
+        "de": "Tagfahrlicht (TFL)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 142,
+        "fr": 142,
+        "de": 142
+      }
+    },
+    {
+      "source": "Drag coefficient (Cd)",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Coefficiente di resistenza aerodinamica (Cd)",
+        "fr": "Coefficient de traînée (Cx)",
+        "de": "Luftwiderstandsbeiwert (cw)"
+      },
+      "note": "Acronym - keep in original form",
+      "sourceRows": {
+        "it": 143,
+        "fr": 143,
+        "de": 143
+      }
+    },
+    {
+      "source": "Ground clearance",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Altezza da terra",
+        "fr": "Garde au sol",
+        "de": "Bodenfreiheit"
+      },
+      "sourceRows": {
+        "it": 144,
+        "fr": 144,
+        "de": 144
+      }
+    },
+    {
+      "source": "Hatchback",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Berlina compatta",
+        "fr": "Berline compacte",
+        "de": "Schrägheck"
+      },
+      "sourceRows": {
+        "it": 145,
+        "fr": 145,
+        "de": 145
+      }
+    },
+    {
+      "source": "LED headlights",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Fari a LED",
+        "fr": "Phares LED",
+        "de": "LED-Scheinwerfer"
+      },
+      "sourceRows": {
+        "it": 146,
+        "fr": 146,
+        "de": 146
+      }
+    },
+    {
+      "source": "Panoramic roof",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Tetto panoramico",
+        "fr": "Toit panoramique",
+        "de": "Panoramadach"
+      },
+      "sourceRows": {
+        "it": 147,
+        "fr": 147,
+        "de": 147
+      }
+    },
+    {
+      "source": "Roof rails",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Barre portatutto",
+        "fr": "Barres de toit",
+        "de": "Dachreling"
+      },
+      "sourceRows": {
+        "it": 148,
+        "fr": 148,
+        "de": 148
+      }
+    },
+    {
+      "source": "SUV",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "SUV",
+        "fr": "SUV",
+        "de": "SUV"
+      },
+      "sourceRows": {
+        "it": 149,
+        "fr": 149,
+        "de": 149
+      }
+    },
+    {
+      "source": "Sedan",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Berlina",
+        "fr": "Berline",
+        "de": "Limousine"
+      },
+      "sourceRows": {
+        "it": 150,
+        "fr": 150,
+        "de": 150
+      }
+    },
+    {
+      "source": "Tailgate",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Portellone",
+        "fr": "Hayon",
+        "de": "Heckklappe"
+      },
+      "sourceRows": {
+        "it": 151,
+        "fr": 151,
+        "de": 151
+      }
+    },
+    {
+      "source": "Turning radius",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Raggio di sterzata",
+        "fr": "Rayon de braquage",
+        "de": "Wendekreis"
+      },
+      "sourceRows": {
+        "it": 152,
+        "fr": 152,
+        "de": 152
+      }
+    },
+    {
+      "source": "Trim",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Allestimento",
+        "fr": "Finition",
+        "de": "Ausstattung"
+      },
+      "sourceRows": {
+        "it": 153,
+        "fr": 153,
+        "de": 153
+      }
+    },
+    {
+      "source": "Trims",
+      "category": "Body & Design Terms",
+      "targets": {
+        "it": "Allestimenti",
+        "fr": "Finitions",
+        "de": "Ausstattungen"
+      },
+      "sourceRows": {
+        "it": 154,
+        "fr": 154,
+        "de": 154
+      }
+    }
+  ],
+  "marketNotes": {
+    "en-gb": "Use British English.",
+    "en-ie": "Use Irish/British English conventions.",
+    "en-au": "Use Australian English.",
+    "en-nz": "Use New Zealand English.",
+    "en-za": "Use South African English.",
+    "fr-be": "Use French suitable for Belgium, applying the French glossary targets unless a Belgian variant is explicitly added.",
+    "fr-ch": "Use French suitable for Switzerland, applying the French glossary targets unless a Swiss variant is explicitly added.",
+    "de-at": "Use German suitable for Austria, applying the German glossary targets unless an Austrian variant is explicitly added.",
+    "de-ch": "Use German suitable for Switzerland, applying the German glossary targets unless a Swiss variant is explicitly added.",
+    "it-ch": "Use Italian suitable for Switzerland, applying the Italian glossary targets unless a Swiss variant is explicitly added.",
+    "nl-be": "Use Dutch suitable for Belgium."
+  }
+}
