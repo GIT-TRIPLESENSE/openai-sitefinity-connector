@@ -127,13 +127,19 @@ namespace Progress.Sitefinity.Translations
                 return output;
             }
 
-            var translated = this.TranslateMissesAsync(misses, sourceLanguage, targetLanguage).GetAwaiter().GetResult();
-            foreach (var item in translated)
+            try
             {
-                output[item.Key] = item.Value;
+                var translated = this.TranslateMissesAsync(misses, sourceLanguage, targetLanguage).GetAwaiter().GetResult();
+                foreach (var item in translated)
+                {
+                    output[item.Key] = item.Value;
+                }
+            }
+            finally
+            {
+                this.SaveCache();
             }
 
-            this.SaveCache();
             return output;
         }
 
@@ -166,13 +172,33 @@ namespace Progress.Sitefinity.Translations
 
         private async Task<Dictionary<int, string>> TranslateBatchWithRetriesAsync(List<TranslationItem> batch, string sourceLanguage, string targetLanguage)
         {
+            var output = new Dictionary<int, string>();
+            var pending = batch;
             Exception lastError = null;
 
             for (var attempt = 0; attempt <= this.maxRetries; attempt++)
             {
                 try
                 {
-                    return await this.TranslateBatchAsync(batch, sourceLanguage, targetLanguage).ConfigureAwait(false);
+                    var response = await this.TranslateBatchAsync(pending, sourceLanguage, targetLanguage).ConfigureAwait(false);
+                    var validation = ValidateBatchResponse(response, pending);
+                    foreach (var item in validation.ValidTranslations)
+                    {
+                        output[item.Key] = item.Value;
+                    }
+
+                    if (validation.FailedItems.Count == 0)
+                    {
+                        return output;
+                    }
+
+                    lastError = new OpenAIProviderOutputException(validation.ErrorMessage);
+                    if (attempt >= this.maxRetries)
+                    {
+                        throw lastError;
+                    }
+
+                    pending = validation.FailedItems;
                 }
                 catch (Exception ex)
                 {
@@ -187,6 +213,34 @@ namespace Progress.Sitefinity.Translations
             }
 
             throw new InvalidOperationException("OpenAI translation failed after retries.", lastError);
+        }
+
+        private static BatchValidationResult ValidateBatchResponse(Dictionary<int, string> response, List<TranslationItem> batch)
+        {
+            var result = new BatchValidationResult();
+            foreach (var item in batch)
+            {
+                string translatedText;
+                if (response == null || !response.TryGetValue(item.Index, out translatedText))
+                {
+                    result.FailedItems.Add(item);
+                    result.Errors.Add("OpenAI response did not contain a translation for input index " + item.Index + ".");
+                    continue;
+                }
+
+                try
+                {
+                    ValidateProtectedValues(translatedText, item.ProtectedValues, item.Index);
+                    result.ValidTranslations[item.Index] = translatedText;
+                }
+                catch (OpenAIProviderOutputException ex)
+                {
+                    result.FailedItems.Add(item);
+                    result.Errors.Add(ex.Message);
+                }
+            }
+
+            return result;
         }
 
         private async Task<Dictionary<int, string>> TranslateBatchAsync(List<TranslationItem> batch, string sourceLanguage, string targetLanguage)
@@ -221,7 +275,8 @@ namespace Progress.Sitefinity.Translations
                 items.Add(new JObject
                 {
                     { "id", item.Index.ToString(CultureInfo.InvariantCulture) },
-                    { "text", item.MaskedText }
+                    { "text", item.MaskedText },
+                    { "protected_tokens", BuildProtectedTokensJson(item.ProtectedValues) }
                 });
             }
 
@@ -260,6 +315,22 @@ namespace Progress.Sitefinity.Translations
             };
         }
 
+        private static JArray BuildProtectedTokensJson(Dictionary<string, string> protectedValues)
+        {
+            var tokens = new JArray();
+            if (protectedValues == null)
+            {
+                return tokens;
+            }
+
+            foreach (var token in protectedValues.Keys.OrderBy(x => x, StringComparer.Ordinal))
+            {
+                tokens.Add(token);
+            }
+
+            return tokens;
+        }
+
         private string BuildDeveloperInstructions()
         {
             var builder = new StringBuilder();
@@ -267,6 +338,7 @@ namespace Progress.Sitefinity.Translations
             builder.AppendLine();
             builder.AppendLine("Connector requirements:");
             builder.AppendLine("Preserve all protected tokens that look like @@SFMT_*@@ exactly as written.");
+            builder.AppendLine("Each input item includes protected_tokens. Every listed token must appear in that item's translated text exactly once, byte-for-byte, with no spaces or character changes inside the token.");
             builder.AppendLine("Preserve HTML tags, URLs, placeholders, whitespace intent, punctuation intent, model names, trim names, units, and legal wording.");
             builder.AppendLine("Return only JSON that matches the supplied schema, with one translation per input id.");
             builder.AppendLine("Leapmotor context and glossary JSON:");
@@ -574,10 +646,38 @@ namespace Progress.Sitefinity.Translations
         {
             foreach (var token in protectedValues.Keys)
             {
-                if (translatedText == null || translatedText.IndexOf(token, StringComparison.Ordinal) < 0)
+                var occurrenceCount = CountOccurrences(translatedText, token);
+                if (occurrenceCount == 0)
                 {
-                    throw new InvalidOperationException("OpenAI response for input index " + index + " did not preserve protected token " + token + ".");
+                    throw new OpenAIProviderOutputException("OpenAI response for input index " + index + " did not preserve protected token " + token + ".");
                 }
+
+                if (occurrenceCount > 1)
+                {
+                    throw new OpenAIProviderOutputException("OpenAI response for input index " + index + " repeated protected token " + token + ".");
+                }
+            }
+        }
+
+        private static int CountOccurrences(string text, string value)
+        {
+            if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(value))
+            {
+                return 0;
+            }
+
+            var count = 0;
+            var startIndex = 0;
+            while (true)
+            {
+                var foundIndex = text.IndexOf(value, startIndex, StringComparison.Ordinal);
+                if (foundIndex < 0)
+                {
+                    return count;
+                }
+
+                count++;
+                startIndex = foundIndex + value.Length;
             }
         }
 
@@ -838,6 +938,36 @@ For single words or CTAs, prefer concise native marketing copy over literal word
         {
             public string Text { get; set; }
             public Dictionary<string, string> ProtectedValues { get; set; }
+        }
+
+        private sealed class BatchValidationResult
+        {
+            public BatchValidationResult()
+            {
+                this.ValidTranslations = new Dictionary<int, string>();
+                this.FailedItems = new List<TranslationItem>();
+                this.Errors = new List<string>();
+            }
+
+            public Dictionary<int, string> ValidTranslations { get; private set; }
+            public List<TranslationItem> FailedItems { get; private set; }
+            public List<string> Errors { get; private set; }
+
+            public string ErrorMessage
+            {
+                get
+                {
+                    return string.Join(" ", this.Errors);
+                }
+            }
+        }
+
+        private sealed class OpenAIProviderOutputException : InvalidOperationException
+        {
+            public OpenAIProviderOutputException(string message)
+                : base(message)
+            {
+            }
         }
 
         private sealed class OpenAIRequestException : Exception
