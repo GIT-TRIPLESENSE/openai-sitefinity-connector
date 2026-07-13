@@ -53,7 +53,6 @@ namespace Progress.Sitefinity.Translations
             this.enableCache = GetOptionalBool(config, EnableCache, true);
             this.glossaryPath = ResolveSitePath(GetOptional(config, GlossaryPath, DefaultGlossaryPath));
             this.promptInstructions = NormalizePromptInstructions(GetOptional(config, PromptInstructions, DefaultPromptInstructions));
-            this.promptInstructionsHash = ComputeHash(this.promptInstructions);
             this.avoidRegionalLanguages = GetOptionalBool(config, AvoidRegionalLanguages, false);
             this.cachePath = ResolveSitePath(GetOptional(config, CachePath, DefaultCachePath));
 
@@ -63,6 +62,8 @@ namespace Progress.Sitefinity.Translations
             this.httpClient.Timeout = TimeSpan.FromSeconds(this.timeoutSeconds);
 
             this.LoadGlossary();
+            this.developerInstructions = this.BuildDeveloperInstructions();
+            this.developerInstructionsHash = ComputeHash(this.developerInstructions);
             this.LoadCache();
         }
 
@@ -291,13 +292,13 @@ namespace Progress.Sitefinity.Translations
             {
                 { "model", this.model },
                 { "store", false },
-                { "prompt_cache_key", "sitefinity-openai-translation-" + this.glossaryHash.Substring(0, 12) + "-" + this.promptInstructionsHash.Substring(0, 12) + "-" + targetLanguage },
+                { "prompt_cache_key", "sitefinity-openai-translation-" + this.developerInstructionsHash.Substring(0, 24) + "-" + targetLanguage },
                 { "input", new JArray
                     {
                         new JObject
                         {
                             { "role", "developer" },
-                            { "content", this.BuildDeveloperInstructions() }
+                            { "content", this.developerInstructions }
                         },
                         new JObject
                         {
@@ -340,6 +341,8 @@ namespace Progress.Sitefinity.Translations
             builder.AppendLine("Preserve all protected tokens that look like @@SFMT_*@@ exactly as written.");
             builder.AppendLine("Each input item includes protected_tokens. Every listed token must appear in that item's translated text exactly once, byte-for-byte, with no spaces or character changes inside the token.");
             builder.AppendLine("Preserve HTML tags, URLs, placeholders, whitespace intent, punctuation intent, model names, trim names, units, and legal wording.");
+            builder.AppendLine("Treat every item in items as an independent CMS fragment; item order and neighbouring items are not context. Use only that item's text together with the shared source and target locales, Leapmotor context, glossary, style guide, and applicable market note. Do not infer or borrow product, model, referent, grammatical gender, content type, creative intent, wordplay, or meaning from another item in the batch.");
+            builder.AppendLine("When an isolated item is genuinely ambiguous, choose the most conventional neutral interpretation for the target locale's automotive context; rephrase neutrally where natural, and do not invent wordplay or unsupported meaning.");
             builder.AppendLine("Return only JSON that matches the supplied schema, with one translation per input id.");
             builder.AppendLine("Leapmotor context and glossary JSON:");
             builder.AppendLine(this.glossaryJson);
@@ -512,9 +515,7 @@ namespace Progress.Sitefinity.Translations
                     glossary["version"] = DefaultPromptVersion;
                 }
 
-                this.promptVersion = (string)glossary["version"];
                 this.glossaryJson = glossary.ToString(Formatting.None);
-                this.glossaryHash = ComputeHash(this.glossaryJson);
             }
             catch (JsonException ex)
             {
@@ -608,9 +609,7 @@ namespace Progress.Sitefinity.Translations
         private string CreateCacheKey(string sourceText, string sourceLanguage, string targetLanguage)
         {
             var builder = new StringBuilder();
-            builder.AppendLine(this.promptVersion);
-            builder.AppendLine(this.promptInstructionsHash);
-            builder.AppendLine(this.glossaryHash);
+            builder.AppendLine(this.developerInstructionsHash);
             builder.AppendLine(this.model);
             builder.AppendLine(sourceLanguage);
             builder.AppendLine(targetLanguage);
@@ -863,22 +862,37 @@ namespace Progress.Sitefinity.Translations
         private const int DefaultTimeoutSeconds = 30;
         private const int DefaultMaxRetries = 2;
         private const int MaxItemsPerRequest = 20;
-        private const string DefaultPromptVersion = "leapmotor-openai-translation-v2";
-        private const string DefaultPromptInstructions = @"You are a professional automotive website translator for Leapmotor CMS content.
-Translate short website fragments accurately and naturally for the requested target locale.
-Use the Leapmotor context and glossary exactly where applicable.
-When glossary entries define targets, use the target for target_language exactly; for regional target_language values, fall back to the base language target before translating freely.
-For regional English targets, localize spelling and automotive terminology while keeping the text in English.
-For single words or CTAs, prefer concise native marketing copy over literal word-by-word translation.";
+        private const string DefaultPromptVersion = "leapmotor-openai-translation-v4";
+        private const string DefaultPromptInstructions = @"You are Leapmotor's professional automotive website translator.
+Translate each CMS fragment for the requested target locale as natural target-language copy, not as a literal 1:1 translation. Apply the Leapmotor context, tone, style guide, and glossary exactly where relevant.
+Before translating each item, silently assess whether it is a label, CTA, headline, tagline, idiom, or wordplay, and detect rhythm, repetition, rhyme, alliteration, double meanings, and other creative devices.
+For ordinary copy, preserve the source meaning, facts, intent, content type, function, level of certainty, and amount of information while choosing idiomatic target-locale wording.
+When literal translation would lose a creative effect, transcreate a natural target-locale equivalent that preserves the same idea, tone, brevity, function, and rhetorical impact. If the device has no direct equivalent, prioritize the intended effect over the original wording. Do not explain the choice.
+Do not add explanations, questions, sensory framing, benefits, specifications, promises, superlatives, or claims absent from the source.
+Use approved glossary targets exactly. For regional locales, prefer an exact-locale target, then the base-language target. Preserve glossary-marked fixed brand expressions.
+Localize spelling, punctuation, idiom, automotive terminology, and CTA conventions for target_language. Keep short fragments concise and natural.";
         private const string DefaultGlossaryJson = @"{
-  ""version"": ""leapmotor-openai-translation-v2"",
-  ""brandContext"": ""Leapmotor is an electric vehicle brand. Translate concise CMS fragments for Leapmotor website pages, product pages, offers, forms, navigation, legal notices, and CTAs."",
+  ""version"": ""leapmotor-openai-translation-v4"",
+  ""brandContext"": ""Leapmotor is an electric vehicle brand whose website communication makes innovation meaningful, accessible, human, and forward-looking through a human-centred sense of progress. Translate concise CMS fragments for product pages, brand stories, offers, forms, navigation, services, legal notices, and CTAs."",
   ""styleGuide"": [
     ""Keep Leapmotor as Leapmotor."",
-    ""Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged unless the locale convention requires punctuation or spacing changes."",
-    ""Use clear automotive retail language. CTAs should sound native and concise."",
-    ""Do not expand or invent claims that are not present in the source."",
-    ""When a glossary entry has targets, use the requested target locale first, then fall back to the base language target.""
+    ""Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged, except for target-locale punctuation or spacing conventions."",
+    ""Apply approved glossary targets exactly: use the exact target locale first, then the base-language target; translate freely only when neither exists."",
+    ""Write natural automotive retail copy for the requested locale, using its spelling and terminology; keep CTAs concise and idiomatic."",
+    ""Where the target language marks grammatical gender or noun class, follow any market-specific vehicle or model convention first. Otherwise, take agreement from the explicit or clearly implied head noun and established target-locale usage, not from source-language gender or the spelling of the model name."",
+    ""Keep articles, determiners, adjectives, participles, and pronouns consistent with the chosen vehicle or model reference throughout each item. Change gender only when the head noun or meaning changes; rephrase naturally if the reference would otherwise be ambiguous."",
+    ""Preserve the source meaning and level of certainty. Never add, strengthen, or invent product, performance, legal, or sustainability claims."",
+    ""Match the source content's purpose and tonal intent: keep technical or legal information clear and reassuring, brand or design storytelling sensorial, and guidance or services warm, without adding content absent from the source."",
+    ""Keep the voice simple and light: use familiar everyday words, short or medium sentences, active verbs, and direct messages."",
+    ""Express one clear idea per sentence; split dense sentences when the content format allows."",
+    ""Render necessary technical concepts in plain language when the source permits; do not add explanations or omit essential meaning."",
+    ""When the source is experiential, preserve or recreate sensory language such as light, flow, sound, movement, and comfort. Do not replace specifications or add sensations absent from the source; use light metaphors only when supported."",
+    ""Preserve a warm and reassuring tone where the source supports it: human, inclusive, positive, conversational, and confidently expert. Recreate direct questions or reassuring cues when present, but do not add them to neutral copy."",
+    ""Avoid jargon, cold corporate or institutional formulas, slang, gimmicks, and forced informality."",
+    ""Use adjectives sparingly and deliberately; prefer specific sensory words to generic praise, superlatives, or inflated claims."",
+    ""Preserve vivid, active verbs and user agency where supported by the source, helping people imagine what they can do, feel, or discover."",
+    ""When the source and format allow, preserve a push-and-breathe rhythm by alternating punchy lines with slightly more descriptive ones."",
+    ""Detect wordplay, taglines, idioms, rhyme, alliteration, repetition, and double meanings. Transcreate them to preserve effect, tone, brevity, and brand intent rather than literal wording, without adding unsupported claims.""
   ],
   ""terms"": [
     { ""source"": ""Leapmotor"", ""target"": ""Leapmotor"", ""note"": ""Brand name. Do not translate."" },
@@ -897,7 +911,8 @@ For single words or CTAs, prefer concise native marketing copy over literal word
     ""fr-ch"": ""Use French suitable for Switzerland."",
     ""de-at"": ""Use German suitable for Austria."",
     ""de-ch"": ""Use German suitable for Switzerland."",
-    ""it-ch"": ""Use Italian suitable for Switzerland."",
+    ""it-it"": ""Use Italian suitable for Italy. Vehicle gender in Italian: treat T03 as feminine when the model name stands alone or is referenced without an explicit head noun (for example, \""la T03\"" and \""T03 è compatta\""). Use masculine for SUV as the head noun (for example, \""il SUV\"" and \""un SUV spazioso\""). When an explicit head noun is present, agreement follows that noun: feminine with auto, automobile, macchina, vettura, city car, or versione; masculine with modello, veicolo, SUV, crossover, or fuoristrada (for example, \""il modello T03 è compatto\""). For other model names, follow the explicit or clearly implied vehicle category and approved Italian usage; keep articles, adjectives, participles, and pronouns consistent throughout the item."",
+    ""it-ch"": ""Use Italian suitable for Switzerland, applying the Italian glossary targets unless a Swiss variant is explicitly added. Vehicle gender in Italian: treat T03 as feminine when the model name stands alone or is referenced without an explicit head noun (for example, \""la T03\"" and \""T03 è compatta\""). Use masculine for SUV as the head noun (for example, \""il SUV\"" and \""un SUV spazioso\""). When an explicit head noun is present, agreement follows that noun: feminine with auto, automobile, macchina, vettura, city car, or versione; masculine with modello, veicolo, SUV, crossover, or fuoristrada (for example, \""il modello T03 è compatto\""). For other model names, follow the explicit or clearly implied vehicle category and approved Italian usage; keep articles, adjectives, participles, and pronouns consistent throughout the item."",
     ""nl-be"": ""Use Dutch suitable for Belgium.""
   }
 }";
@@ -913,10 +928,9 @@ For single words or CTAs, prefer concise native marketing copy over literal word
         private string glossaryPath;
         private string cachePath;
         private string glossaryJson;
-        private string glossaryHash;
         private string promptInstructions;
-        private string promptInstructionsHash;
-        private string promptVersion;
+        private string developerInstructions;
+        private string developerInstructionsHash;
         private int timeoutSeconds;
         private int maxRetries;
         private bool enableCache;

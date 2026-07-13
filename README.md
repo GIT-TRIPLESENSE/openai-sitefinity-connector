@@ -1,6 +1,6 @@
 # Progress.Sitefinity.Translations.OpenAIMachineTranslationConnector
 
-> **Supported baseline**: Sitefinity CMS 15.4.8626.0, .NET Framework 4.8
+> **Supported baseline**: Sitefinity CMS 15.4.8632.0, .NET Framework 4.8
 
 This repository contains a custom Sitefinity machine translation connector that calls the OpenAI Responses API directly from the Sitefinity backend. It is intended for Leapmotor website translations where CMS text may arrive as very small fragments, including CTAs, labels, menu items, legal snippets, and single words.
 
@@ -29,7 +29,7 @@ Configure the connector in Sitefinity under **Administration > Settings > Advanc
 | `model` | No | `gpt-5.4-mini` | OpenAI model used for translation. |
 | `apiUrl` | No | `https://api.openai.com/v1/responses` | Responses API endpoint. |
 | `glossaryPath` | No | `~/App_Data/OpenAITranslation/glossary.json` | Leapmotor glossary/context JSON. |
-| `promptInstructions` | No | Built-in Leapmotor translation prompt | Editable business/style prompt. Use `\n` for line breaks if the CMS field is single-line. |
+| `promptInstructions` | No | Built-in Leapmotor translation prompt | Editable tone, style, and transcreation prompt. Use `\n` for line breaks if the CMS field is single-line. |
 | `avoidRegionalLanguages` | No | `false` | When `true`, regional codes such as `fr-mq`, `fr-be`, `de-ch`, and `en-au` are translated as `fr`, `fr`, `de`, and `en`. |
 | `cachePath` | No | `~/App_Data/OpenAITranslation/cache.json` | Persistent translation-memory cache. |
 | `timeoutSeconds` | No | `30` | Per-request HTTP timeout. |
@@ -46,9 +46,17 @@ Deploy that file to the same path in the Sitefinity web app, or set `glossaryPat
 
 Glossary entries can contain per-language `targets`. For regional locales such as `fr-be`, `de-ch`, and `it-ch`, the connector keeps the full target locale in the prompt and the glossary instructs OpenAI to fall back to the base `fr`, `de`, or `it` target when no regional override exists.
 
-The `promptInstructions` setting lets CMS administrators tune tone, brand guidance, and translation style without rebuilding the connector. The connector always appends fixed output-safety rules for JSON structure, protected tokens, placeholders, URLs, and HTML. Changing `promptInstructions` changes the cache key, so old cached translations are not reused with a new prompt.
+The `promptInstructions` setting lets CMS administrators tune tone, brand guidance, and translation style without rebuilding the connector. The default follows Leapmotor's Simple & light, Sensorial & aspirational, and Warm & reassuring tone pillars and asks the model to transcreate wordplay instead of producing literal calques. The connector always appends fixed rules for JSON structure, protected tokens, placeholders, URLs, HTML, independent treatment of batch items, and conservative handling of genuinely ambiguous fragments. The complete developer instructions are hashed into both cache identities, so changing the configured prompt, fixed requirements, glossary, or market notes prevents reuse of translations produced under different guidance.
+
+An explicitly configured `promptInstructions` value replaces the built-in default. Existing installations must clear that value to adopt the new default, or update the configured value with the same tone and transcreation guidance. The external glossary style guide is still appended in either case.
 
 ## Translation Behavior
+
+Before translating each fragment, the default prompt asks the model to infer whether it is a label, CTA, headline, tagline, idiom, or wordplay. For creative copy it should preserve the intended meaning, tone, brevity, and rhetorical effect with a natural target-locale equivalent rather than matching the source word for word. It must not invent or strengthen product, performance, legal, or sustainability claims.
+
+Items sent together in a batch are still treated as independent CMS fragments. The model must not transfer a product, model, grammatical gender, meaning, or creative device from one item to another. If an isolated fragment remains genuinely ambiguous, it uses the most conventional neutral automotive interpretation instead of manufacturing wordplay or unsupported meaning.
+
+For languages with grammatical gender or noun classes, the glossary also makes vehicle agreement locale-aware: market-specific conventions take priority, otherwise agreement follows the explicit or implied vehicle-category noun. The Italian guidance treats standalone `T03` references as feminine and `SUV` as a masculine head noun, while explicit nouns still control agreement, for example `la T03` but `il modello T03`.
 
 The connector keeps regional language intent instead of collapsing cultures to neutral language codes. Examples:
 
@@ -101,6 +109,6 @@ Actual costs should be recalibrated from OpenAI usage logs after the first produ
 1. Configure the Progress NuGet feed.
 2. Restore NuGet packages.
 3. Build `OpenAIMachineTranslation.sln` in Release mode.
-4. Deploy `bin\Release\OpenAIMachineTranslation.dll` and `Newtonsoft.Json.dll` if the Sitefinity web app does not already provide the same compatible version.
+4. Deploy `bin\Release\net48\OpenAIMachineTranslation.dll` and `Newtonsoft.Json.dll` if the Sitefinity web app does not already provide the same compatible version.
 
 See `INSTALL.md` for the full integration guide.
