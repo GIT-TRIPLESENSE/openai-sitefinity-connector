@@ -6,7 +6,7 @@ This guide walks through integrating `OpenAIMachineTranslation` into an existing
 
 | Requirement | Details |
 |---|---|
-| Sitefinity CMS | 15.4.8626 on-premises |
+| Sitefinity CMS | 15.4.8632 on-premises |
 | .NET Framework | 4.8 |
 | Visual Studio | 2022 recommended |
 | Progress NuGet feed | Required for `Telerik.Sitefinity.*` packages |
@@ -43,7 +43,7 @@ nuget restore OpenAIMachineTranslation.sln
 3. Confirm the connector DLL exists at:
 
 ```text
-OpenAIMachineTranslation\bin\Release\OpenAIMachineTranslation.dll
+OpenAIMachineTranslation\bin\Release\net48\OpenAIMachineTranslation.dll
 ```
 
 When the web app references the project, the DLL is copied to the web app `bin` folder during build. If deploying manually, copy:
@@ -88,14 +88,14 @@ The connector automatically includes the glossary content in the prompt. The loc
 | `model` | Optional. Defaults to `gpt-5.4-mini` |
 | `apiUrl` | Optional. Defaults to `https://api.openai.com/v1/responses` |
 | `glossaryPath` | Optional. Defaults to `~/App_Data/OpenAITranslation/glossary.json` |
-| `promptInstructions` | Optional. Editable Leapmotor business/style prompt. Use `\n` for line breaks if the CMS value field is single-line. |
+| `promptInstructions` | Optional. Editable Leapmotor tone, style, and transcreation prompt. Use `\n` for line breaks if the CMS value field is single-line. |
 | `avoidRegionalLanguages` | Optional. Defaults to `false`. Set to `true` to translate regional cultures such as `fr-MQ`, `fr-BE`, `de-CH`, and `en-AU` as their main languages (`fr`, `de`, `en`). |
 | `cachePath` | Optional. Defaults to `~/App_Data/OpenAITranslation/cache.json` |
 | `timeoutSeconds` | Optional. Defaults to `30` |
 | `maxRetries` | Optional. Defaults to `2` |
 | `enableCache` | Optional. Defaults to `true` |
 
-5. Optionally edit `promptInstructions` when brand tone or market guidance changes. The connector still appends fixed rules for JSON output, HTML, URLs, and placeholder preservation.
+5. Optionally edit `promptInstructions` when brand tone or market guidance changes. A configured value replaces the built-in default, so clear an older override to adopt the v4 Simple & light, Sensorial & aspirational, Warm & reassuring, and wordplay-transcreation prompt. Vehicle-agreement guidance comes from the glossary and is appended even with a custom prompt, along with fixed rules for JSON output, HTML, URLs, placeholder preservation, independent batch items, and conservative handling of genuinely ambiguous fragments.
 6. Set **Enabled** to `true`.
 7. Save changes.
 8. Restart the IIS application pool.
@@ -120,7 +120,10 @@ cs-cz, el-gr, hu-hu, is-is, ro-ro, sl-si
 Translate a small page that includes:
 
 - A CTA such as `Book a test drive`
+- A headline, idiom, or wordplay fragment whose effect would be lost in a literal 1:1 translation
+- A single batch containing unrelated fragments for different products or content types
 - Vehicle terms such as `range`, `charging`, and `electric vehicle`
+- An Italian vehicle-agreement fragment such as `The new T03 is compact` and `The SUV is spacious`
 - HTML tags such as `<strong>Leapmotor</strong>`
 - A URL
 - A placeholder such as `{0}` or `{{vehicleName}}`
@@ -130,6 +133,9 @@ Translate a small page that includes:
 Confirm:
 
 - Markup and placeholders are unchanged.
+- Creative copy reads naturally in the target locale and preserves the source idea and effect without adding claims.
+- Unrelated batch items do not borrow model names, grammatical gender, meaning, or creative treatment from one another; genuinely ambiguous fragments remain neutral rather than acquiring invented wordplay.
+- Italian standalone T03 references use feminine agreement, SUV uses masculine agreement, and explicit nouns still control agreement (`la T03`, but `il modello T03`).
 - The connector returns one translated string for each source string.
 - `App_Data\OpenAITranslation\cache.json` is created after the first successful uncached translation.
 - Repeating the same translation reuses the cache and avoids another OpenAI call.

@@ -1,11 +1,29 @@
 {
-  "version": "leapmotor-openai-translation-v1",
-  "brandContext": "Leapmotor is an electric vehicle brand. Translate concise CMS fragments for Leapmotor website pages, product pages, offers, forms, navigation, legal notices, and CTAs.",
+  "version": "leapmotor-openai-translation-v5",
+  "brandContext": "Leapmotor is an electric vehicle brand whose website communication makes innovation meaningful, accessible, human, and forward-looking through a human-centred sense of progress. Translate concise CMS fragments for product pages, brand stories, offers, forms, navigation, services, legal notices, and CTAs.",
   "styleGuide": [
     "Keep Leapmotor as Leapmotor.",
-    "Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged unless the locale convention requires punctuation or spacing changes.",
-    "Use clear automotive retail language. CTAs should sound native and concise.",
-    "Do not expand or invent claims that are not present in the source."
+    "Keep model names, trim names, vehicle codes, measurements, charging units, warranty numbers, and legal references unchanged, except for target-locale punctuation or spacing conventions.",
+    "Apply approved glossary targets exactly: use the exact target locale first, then the base-language target; translate freely only when neither exists.",
+    "Write natural automotive retail copy for the requested locale, using its spelling and terminology; keep CTAs concise and idiomatic.",
+    "Where the target language marks grammatical gender or noun class, follow any market-specific vehicle or model convention first. Otherwise, take agreement from the explicit or clearly implied head noun and established target-locale usage, not from source-language gender or the spelling of the model name.",
+    "Keep articles, determiners, adjectives, participles, and pronouns consistent with the chosen vehicle or model reference throughout each item. Change gender only when the head noun or meaning changes; rephrase naturally if the reference would otherwise be ambiguous.",
+    "Preserve the source meaning and level of certainty. Never add, strengthen, or invent product, performance, legal, or sustainability claims.",
+    "Match the source content's purpose and tonal intent: keep technical or legal information clear and reassuring, brand or design storytelling sensorial, and guidance or services warm, without adding content absent from the source.",
+    "Keep the voice simple and light: use familiar everyday words, short or medium sentences, active verbs, and direct messages.",
+    "Express one clear idea per sentence; split dense sentences when the content format allows.",
+    "Render necessary technical concepts in plain language when the source permits; do not add explanations or omit essential meaning.",
+    "When the source is experiential, preserve or recreate sensory language such as light, flow, sound, movement, and comfort. Do not replace specifications or add sensations absent from the source; use light metaphors only when supported.",
+    "Preserve a warm and reassuring tone where the source supports it: human, inclusive, positive, conversational, and confidently expert. Recreate direct questions or reassuring cues when present, but do not add them to neutral copy.",
+    "Avoid jargon, cold corporate or institutional formulas, slang, gimmicks, and forced informality.",
+    "Use adjectives sparingly and deliberately; prefer specific sensory words to generic praise, superlatives, or inflated claims.",
+    "Preserve vivid, active verbs and user agency where supported by the source, helping people imagine what they can do, feel, or discover.",
+    "When the source and format allow, preserve a push-and-breathe rhythm by alternating punchy lines with slightly more descriptive ones.",
+    "Detect wordplay, taglines, idioms, rhyme, alliteration, repetition, and double meanings. Transcreate them to preserve effect, tone, brevity, and brand intent rather than literal wording, without adding unsupported claims. For legal, regulatory, warranty, and compliance content, legal fidelity takes precedence over wordplay or transcreation.",
+    "For languages with potentially longer compound words, especially German, prefer concise and natural alternatives when they reduce layout risk without changing meaning, tone, or terminology accuracy. Do not split, hyphenate, or paraphrase compounds unnaturally when the established technical or legal term must be preserved.",
+    "Use consistent approved translations for recurring phrases, taglines, and terminology across all touchpoints. When a recurring phrase has an approved market version in the glossary, reuse it consistently rather than retranslating or retranscreating it independently for each item.",
+    "Apply the punctuation, spacing, quotation marks, capitalization, hyphenation, number formatting, and typographic conventions of the target locale throughout the translation, not only to model names, trim names, or other protected terms.",
+    "Translate legal, regulatory, warranty, and compliance content with maximum legal accuracy. Preserve legal meaning, scope, mandatory wording, disclaimers, conditions, exceptions, limitations, dates, figures, and references. Do not omit, soften, strengthen, or creatively transcreate legal content; adapt only grammar, approved legal terminology, punctuation, and target-locale conventions."
   ],
   "terms": [
     {
@@ -40,7 +58,8 @@
     "fr-ch": "Use French suitable for Switzerland.",
     "de-at": "Use German suitable for Austria.",
     "de-ch": "Use German suitable for Switzerland.",
-    "it-ch": "Use Italian suitable for Switzerland.",
+    "it-it": "Use Italian suitable for Italy. Vehicle gender in Italian: treat T03 as feminine when the model name stands alone or is referenced without an explicit head noun (for example, \"la T03\" and \"T03 è compatta\"). Use masculine for SUV as the head noun (for example, \"il SUV\" and \"un SUV spazioso\"). When an explicit head noun is present, agreement follows that noun: feminine with auto, automobile, macchina, vettura, city car, or versione; masculine with modello, veicolo, SUV, crossover, or fuoristrada (for example, \"il modello T03 è compatto\"). For other model names, follow the explicit or clearly implied vehicle category and approved Italian usage; keep articles, adjectives, participles, and pronouns consistent throughout the item.",
+    "it-ch": "Use Italian suitable for Switzerland, applying the Italian glossary targets unless a Swiss variant is explicitly added. Vehicle gender in Italian: treat T03 as feminine when the model name stands alone or is referenced without an explicit head noun (for example, \"la T03\" and \"T03 è compatta\"). Use masculine for SUV as the head noun (for example, \"il SUV\" and \"un SUV spazioso\"). When an explicit head noun is present, agreement follows that noun: feminine with auto, automobile, macchina, vettura, city car, or versione; masculine with modello, veicolo, SUV, crossover, or fuoristrada (for example, \"il modello T03 è compatto\"). For other model names, follow the explicit or clearly implied vehicle category and approved Italian usage; keep articles, adjectives, participles, and pronouns consistent throughout the item.",
     "nl-be": "Use Dutch suitable for Belgium."
   }
 }
