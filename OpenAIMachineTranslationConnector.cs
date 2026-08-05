@@ -862,7 +862,7 @@ namespace Progress.Sitefinity.Translations
         private const int DefaultTimeoutSeconds = 30;
         private const int DefaultMaxRetries = 2;
         private const int MaxItemsPerRequest = 20;
-        private const string DefaultPromptVersion = "leapmotor-openai-translation-v4";
+        private const string DefaultPromptVersion = "leapmotor-openai-translation-v5";
         private const string DefaultPromptInstructions = @"You are Leapmotor's professional automotive website translator.
 Translate each CMS fragment for the requested target locale as natural target-language copy, not as a literal 1:1 translation. Apply the Leapmotor context, tone, style guide, and glossary exactly where relevant.
 Before translating each item, silently assess whether it is a label, CTA, headline, tagline, idiom, or wordplay, and detect rhythm, repetition, rhyme, alliteration, double meanings, and other creative devices.
@@ -872,7 +872,7 @@ Do not add explanations, questions, sensory framing, benefits, specifications, p
 Use approved glossary targets exactly. For regional locales, prefer an exact-locale target, then the base-language target. Preserve glossary-marked fixed brand expressions.
 Localize spelling, punctuation, idiom, automotive terminology, and CTA conventions for target_language. Keep short fragments concise and natural.";
         private const string DefaultGlossaryJson = @"{
-  ""version"": ""leapmotor-openai-translation-v4"",
+  ""version"": ""leapmotor-openai-translation-v5"",
   ""brandContext"": ""Leapmotor is an electric vehicle brand whose website communication makes innovation meaningful, accessible, human, and forward-looking through a human-centred sense of progress. Translate concise CMS fragments for product pages, brand stories, offers, forms, navigation, services, legal notices, and CTAs."",
   ""styleGuide"": [
     ""Keep Leapmotor as Leapmotor."",
@@ -892,7 +892,11 @@ Localize spelling, punctuation, idiom, automotive terminology, and CTA conventio
     ""Use adjectives sparingly and deliberately; prefer specific sensory words to generic praise, superlatives, or inflated claims."",
     ""Preserve vivid, active verbs and user agency where supported by the source, helping people imagine what they can do, feel, or discover."",
     ""When the source and format allow, preserve a push-and-breathe rhythm by alternating punchy lines with slightly more descriptive ones."",
-    ""Detect wordplay, taglines, idioms, rhyme, alliteration, repetition, and double meanings. Transcreate them to preserve effect, tone, brevity, and brand intent rather than literal wording, without adding unsupported claims.""
+    ""Detect wordplay, taglines, idioms, rhyme, alliteration, repetition, and double meanings. Transcreate them to preserve effect, tone, brevity, and brand intent rather than literal wording, without adding unsupported claims. For legal, regulatory, warranty, and compliance content, legal fidelity takes precedence over wordplay or transcreation."",
+    ""For languages with potentially longer compound words, especially German, prefer concise and natural alternatives when they reduce layout risk without changing meaning, tone, or terminology accuracy. Do not split, hyphenate, or paraphrase compounds unnaturally when the established technical or legal term must be preserved."",
+    ""Use consistent approved translations for recurring phrases, taglines, and terminology across all touchpoints. When a recurring phrase has an approved market version in the glossary, reuse it consistently rather than retranslating or retranscreating it independently for each item."",
+    ""Apply the punctuation, spacing, quotation marks, capitalization, hyphenation, number formatting, and typographic conventions of the target locale throughout the translation, not only to model names, trim names, or other protected terms."",
+    ""Translate legal, regulatory, warranty, and compliance content with maximum legal accuracy. Preserve legal meaning, scope, mandatory wording, disclaimers, conditions, exceptions, limitations, dates, figures, and references. Do not omit, soften, strengthen, or creatively transcreate legal content; adapt only grammar, approved legal terminology, punctuation, and target-locale conventions.""
   ],
   ""terms"": [
     { ""source"": ""Leapmotor"", ""target"": ""Leapmotor"", ""note"": ""Brand name. Do not translate."" },
