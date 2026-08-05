@@ -313,13 +313,17 @@
     },
     {
       "source": "LEAP OS",
+      "sourceVariants": [
+        "leap os",
+        "leap-os"
+      ],
       "category": "Brand & Product Names",
       "targets": {
         "it": "LEAP OS",
         "fr": "LEAP OS",
         "de": "LEAP OS"
       },
-      "note": "Do not translate",
+      "note": "Do not translate. Treat the listed case and hyphen variants as the same product name and always render them as LEAP OS.",
       "sourceRows": {
         "it": 18,
         "fr": 18,
@@ -1259,13 +1263,16 @@
     },
     {
       "source": "OTA (Over-the-Air) update",
+      "sourceVariants": [
+        "Over-the-air"
+      ],
       "category": "Features & Technologies",
       "targets": {
         "it": "Aggiornamento OTA (Over-the-Air)",
         "fr": "Mise à jour OTA (Over-the-Air)",
         "de": "OTA-Update (Over-the-Air)"
       },
-      "note": "Acronym - keep in original form",
+      "note": "Keep OTA and Over-the-Air in English. When the listed standalone variant appears, preserve it as Over-the-Air rather than translating it.",
       "sourceRows": {
         "it": 84,
         "fr": 84,
