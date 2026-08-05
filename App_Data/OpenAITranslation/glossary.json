@@ -39,7 +39,26 @@
     "fr-re": "fr",
     "de-de": "de",
     "de-at": "de",
-    "de-ch": "de"
+    "de-ch": "de",
+    "cs-cz": "cs",
+    "el-gr": "el",
+    "en-gb": "en",
+    "en-au": "en",
+    "en-ie": "en",
+    "en-mt": "en",
+    "en-nz": "en",
+    "en-za": "en",
+    "es-es": "es",
+    "hr-hr": "hr",
+    "hu-hu": "hu",
+    "is-is": "is",
+    "nl-nl": "nl",
+    "nl-be": "nl",
+    "pl-pl": "pl",
+    "pt-pt": "pt",
+    "ro-ro": "ro",
+    "sk-sk": "sk",
+    "sl-si": "sl"
   },
   "sourceFiles": [
     {
@@ -81,7 +100,20 @@
       "targets": {
         "it": "B10",
         "fr": "B10",
-        "de": "B10"
+        "de": "B10",
+        "cs": "B10",
+        "el": "B10",
+        "en": "B10",
+        "es": "B10",
+        "hr": "B10",
+        "hu": "B10",
+        "is": "B10",
+        "nl": "B10",
+        "pl": "B10",
+        "pt": "B10",
+        "ro": "B10",
+        "sk": "B10",
+        "sl": "B10"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -96,7 +128,20 @@
       "targets": {
         "it": "C01",
         "fr": "C01",
-        "de": "C01"
+        "de": "C01",
+        "cs": "C01",
+        "el": "C01",
+        "en": "C01",
+        "es": "C01",
+        "hr": "C01",
+        "hu": "C01",
+        "is": "C01",
+        "nl": "C01",
+        "pl": "C01",
+        "pt": "C01",
+        "ro": "C01",
+        "sk": "C01",
+        "sl": "C01"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -111,7 +156,20 @@
       "targets": {
         "it": "C10",
         "fr": "C10",
-        "de": "C10"
+        "de": "C10",
+        "cs": "C10",
+        "el": "C10",
+        "en": "C10",
+        "es": "C10",
+        "hr": "C10",
+        "hu": "C10",
+        "is": "C10",
+        "nl": "C10",
+        "pl": "C10",
+        "pt": "C10",
+        "ro": "C10",
+        "sk": "C10",
+        "sl": "C10"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -126,7 +184,20 @@
       "targets": {
         "it": "C16",
         "fr": "C16",
-        "de": "C16"
+        "de": "C16",
+        "cs": "C16",
+        "el": "C16",
+        "en": "C16",
+        "es": "C16",
+        "hr": "C16",
+        "hu": "C16",
+        "is": "C16",
+        "nl": "C16",
+        "pl": "C16",
+        "pt": "C16",
+        "ro": "C16",
+        "sk": "C16",
+        "sl": "C16"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -141,7 +212,20 @@
       "targets": {
         "it": "CTC (Cell-to-Chassis)",
         "fr": "CTC (Cell-to-Chassis)",
-        "de": "CTC (Cell-to-Chassis)"
+        "de": "CTC (Cell-to-Chassis)",
+        "cs": "CTC (Cell-to-Chassis)",
+        "el": "CTC (Cell-to-Chassis)",
+        "en": "CTC (Cell-to-Chassis)",
+        "es": "CTC (Cell-to-Chassis)",
+        "hr": "CTC (Cell-to-Chassis)",
+        "hu": "CTC (Cell-to-Chassis)",
+        "is": "CTC (Cell-to-Chassis)",
+        "nl": "CTC (Cell-to-Chassis)",
+        "pl": "CTC (Cell-to-Chassis)",
+        "pt": "CTC (Cell-to-Chassis)",
+        "ro": "CTC (Cell-to-Chassis)",
+        "sk": "CTC (Cell-to-Chassis)",
+        "sl": "CTC (Cell-to-Chassis)"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -156,7 +240,20 @@
       "targets": {
         "it": "LEAP 3.0",
         "fr": "LEAP 3.0",
-        "de": "LEAP 3.0"
+        "de": "LEAP 3.0",
+        "cs": "LEAP 3.0",
+        "el": "LEAP 3.0",
+        "en": "LEAP 3.0",
+        "es": "LEAP 3.0",
+        "hr": "LEAP 3.0",
+        "hu": "LEAP 3.0",
+        "is": "LEAP 3.0",
+        "nl": "LEAP 3.0",
+        "pl": "LEAP 3.0",
+        "pt": "LEAP 3.0",
+        "ro": "LEAP 3.0",
+        "sk": "LEAP 3.0",
+        "sl": "LEAP 3.0"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -171,7 +268,20 @@
       "targets": {
         "it": "LEAP OS 4.0",
         "fr": "LEAP OS 4.0",
-        "de": "LEAP OS 4.0"
+        "de": "LEAP OS 4.0",
+        "cs": "LEAP OS 4.0",
+        "el": "LEAP OS 4.0",
+        "en": "LEAP OS 4.0",
+        "es": "LEAP OS 4.0",
+        "hr": "LEAP OS 4.0",
+        "hu": "LEAP OS 4.0",
+        "is": "LEAP OS 4.0",
+        "nl": "LEAP OS 4.0",
+        "pl": "LEAP OS 4.0",
+        "pt": "LEAP OS 4.0",
+        "ro": "LEAP OS 4.0",
+        "sk": "LEAP OS 4.0",
+        "sl": "LEAP OS 4.0"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -186,7 +296,20 @@
       "targets": {
         "it": "Leapmotor",
         "fr": "Leapmotor",
-        "de": "Leapmotor"
+        "de": "Leapmotor",
+        "cs": "Leapmotor",
+        "el": "Leapmotor",
+        "en": "Leapmotor",
+        "es": "Leapmotor",
+        "hr": "Leapmotor",
+        "hu": "Leapmotor",
+        "is": "Leapmotor",
+        "nl": "Leapmotor",
+        "pl": "Leapmotor",
+        "pt": "Leapmotor",
+        "ro": "Leapmotor",
+        "sk": "Leapmotor",
+        "sl": "Leapmotor"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -201,7 +324,20 @@
       "targets": {
         "it": "Leapmotor International",
         "fr": "Leapmotor International",
-        "de": "Leapmotor International"
+        "de": "Leapmotor International",
+        "cs": "Leapmotor International",
+        "el": "Leapmotor International",
+        "en": "Leapmotor International",
+        "es": "Leapmotor International",
+        "hr": "Leapmotor International",
+        "hu": "Leapmotor International",
+        "is": "Leapmotor International",
+        "nl": "Leapmotor International",
+        "pl": "Leapmotor International",
+        "pt": "Leapmotor International",
+        "ro": "Leapmotor International",
+        "sk": "Leapmotor International",
+        "sl": "Leapmotor International"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -216,7 +352,20 @@
       "targets": {
         "it": "T03",
         "fr": "T03",
-        "de": "T03"
+        "de": "T03",
+        "cs": "T03",
+        "el": "T03",
+        "en": "T03",
+        "es": "T03",
+        "hr": "T03",
+        "hu": "T03",
+        "is": "T03",
+        "nl": "T03",
+        "pl": "T03",
+        "pt": "T03",
+        "ro": "T03",
+        "sk": "T03",
+        "sl": "T03"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -231,7 +380,20 @@
       "targets": {
         "it": "B05",
         "fr": "B05",
-        "de": "B05"
+        "de": "B05",
+        "cs": "B05",
+        "el": "B05",
+        "en": "B05",
+        "es": "B05",
+        "hr": "B05",
+        "hu": "B05",
+        "is": "B05",
+        "nl": "B05",
+        "pl": "B05",
+        "pt": "B05",
+        "ro": "B05",
+        "sk": "B05",
+        "sl": "B05"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -246,7 +408,20 @@
       "targets": {
         "it": "B03X",
         "fr": "B03X",
-        "de": "B03X"
+        "de": "B03X",
+        "cs": "B03X",
+        "el": "B03X",
+        "en": "B03X",
+        "es": "B03X",
+        "hr": "B03X",
+        "hu": "B03X",
+        "is": "B03X",
+        "nl": "B03X",
+        "pl": "B03X",
+        "pt": "B03X",
+        "ro": "B03X",
+        "sk": "B03X",
+        "sl": "B03X"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -261,7 +436,20 @@
       "targets": {
         "it": "C10 AWD",
         "fr": "C10 AWD",
-        "de": "C10 AWD"
+        "de": "C10 AWD",
+        "cs": "C10 AWD",
+        "el": "C10 AWD",
+        "en": "C10 AWD",
+        "es": "C10 AWD",
+        "hr": "C10 AWD",
+        "hu": "C10 AWD",
+        "is": "C10 AWD",
+        "nl": "C10 AWD",
+        "pl": "C10 AWD",
+        "pt": "C10 AWD",
+        "ro": "C10 AWD",
+        "sk": "C10 AWD",
+        "sl": "C10 AWD"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -276,7 +464,20 @@
       "targets": {
         "it": "C10 HYBRID EV",
         "fr": "C10 HYBRID EV",
-        "de": "C10 HYBRID EV"
+        "de": "C10 HYBRID EV",
+        "cs": "C10 HYBRID EV",
+        "el": "C10 HYBRID EV",
+        "en": "C10 HYBRID EV",
+        "es": "C10 HYBRID EV",
+        "hr": "C10 HYBRID EV",
+        "hu": "C10 HYBRID EV",
+        "is": "C10 HYBRID EV",
+        "nl": "C10 HYBRID EV",
+        "pl": "C10 HYBRID EV",
+        "pt": "C10 HYBRID EV",
+        "ro": "C10 HYBRID EV",
+        "sk": "C10 HYBRID EV",
+        "sl": "C10 HYBRID EV"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -291,7 +492,20 @@
       "targets": {
         "it": "B10 HYBRID EV",
         "fr": "B10 HYBRID EV",
-        "de": "B10 HYBRID EV"
+        "de": "B10 HYBRID EV",
+        "cs": "B10 HYBRID EV",
+        "el": "B10 HYBRID EV",
+        "en": "B10 HYBRID EV",
+        "es": "B10 HYBRID EV",
+        "hr": "B10 HYBRID EV",
+        "hu": "B10 HYBRID EV",
+        "is": "B10 HYBRID EV",
+        "nl": "B10 HYBRID EV",
+        "pl": "B10 HYBRID EV",
+        "pt": "B10 HYBRID EV",
+        "ro": "B10 HYBRID EV",
+        "sk": "B10 HYBRID EV",
+        "sl": "B10 HYBRID EV"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -306,7 +520,20 @@
       "targets": {
         "it": "Leapmotor App",
         "fr": "Leapmotor App",
-        "de": "Leapmotor App"
+        "de": "Leapmotor App",
+        "cs": "Leapmotor App",
+        "el": "Leapmotor App",
+        "en": "Leapmotor App",
+        "es": "Leapmotor App",
+        "hr": "Leapmotor App",
+        "hu": "Leapmotor App",
+        "is": "Leapmotor App",
+        "nl": "Leapmotor App",
+        "pl": "Leapmotor App",
+        "pt": "Leapmotor App",
+        "ro": "Leapmotor App",
+        "sk": "Leapmotor App",
+        "sl": "Leapmotor App"
       },
       "note": "Do not translate",
       "sourceRows": {
@@ -317,15 +544,25 @@
     },
     {
       "source": "LEAP OS",
-      "sourceVariants": [
-        "leap os",
-        "leap-os"
-      ],
+      "sourceVariants": ["leap os", "leap-os"],
       "category": "Brand & Product Names",
       "targets": {
         "it": "LEAP OS",
         "fr": "LEAP OS",
-        "de": "LEAP OS"
+        "de": "LEAP OS",
+        "cs": "LEAP OS",
+        "el": "LEAP OS",
+        "en": "LEAP OS",
+        "es": "LEAP OS",
+        "hr": "LEAP OS",
+        "hu": "LEAP OS",
+        "is": "LEAP OS",
+        "nl": "LEAP OS",
+        "pl": "LEAP OS",
+        "pt": "LEAP OS",
+        "ro": "LEAP OS",
+        "sk": "LEAP OS",
+        "sl": "LEAP OS"
       },
       "note": "Do not translate. Treat the listed case and hyphen variants as the same product name and always render them as LEAP OS.",
       "sourceRows": {
@@ -340,7 +577,20 @@
       "targets": {
         "it": "Accelerazione",
         "fr": "Accélération",
-        "de": "Beschleunigung"
+        "de": "Beschleunigung",
+        "cs": "Zrychlení",
+        "el": "Επιτάχυνση",
+        "en": "Acceleration",
+        "es": "Aceleración",
+        "hr": "Ubrzanje",
+        "hu": "Gyorsulás",
+        "is": "Hröðun",
+        "nl": "Acceleratie",
+        "pl": "Przyspieszenie",
+        "pt": "Aceleração",
+        "ro": "Accelerație",
+        "sk": "Zrýchlenie",
+        "sl": "Pospešek"
       },
       "sourceRows": {
         "it": 19,
@@ -354,7 +604,20 @@
       "targets": {
         "it": "Trazione integrale (AWD)",
         "fr": "Transmission intégrale",
-        "de": "Allradantrieb (AWD)"
+        "de": "Allradantrieb (AWD)",
+        "cs": "Pohon všech kol (AWD)",
+        "el": "All-wheel drive (AWD)",
+        "en": "All-wheel drive (AWD)",
+        "es": "Tracción total (AWD)",
+        "hr": "Pogon na sve kotače (AWD)",
+        "hu": "Összkerékhajtás (AWD)",
+        "is": "All-wheel drive (AWD)",
+        "nl": "vierwielaandrijving (AWD)",
+        "pl": "napęd na wszystkie koła (AWD)",
+        "pt": "Tração integral (AWD)",
+        "ro": "Tracțiune integrală (AWD)",
+        "sk": "Pohon všetkých kolies (AWD)",
+        "sl": "Pogon na vsa kolesa (AWD)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -369,7 +632,20 @@
       "targets": {
         "it": "Telaio",
         "fr": "Châssis",
-        "de": "Fahrgestell"
+        "de": "Fahrgestell",
+        "cs": "Podvozek",
+        "el": "Πλαίσιο",
+        "en": "Chassis",
+        "es": "Chasis",
+        "hr": "Šasija",
+        "hu": "Alváz",
+        "is": "Undirvagn",
+        "nl": "Chassis",
+        "pl": "Podwozie",
+        "pt": "Chassi",
+        "ro": "Șasiu",
+        "sk": "Podvozok",
+        "sl": "Podvozje"
       },
       "sourceRows": {
         "it": 21,
@@ -383,7 +659,20 @@
       "targets": {
         "it": "Potenza combinata",
         "fr": "Puissance combinée",
-        "de": "Kombinierte Leistung"
+        "de": "Kombinierte Leistung",
+        "cs": "Kombinovaný výkon",
+        "el": "Συνδυασμένη ισχύς",
+        "en": "Combined power",
+        "es": "Potencia combinada",
+        "hr": "Ukupna snaga",
+        "hu": "Rendszerteljesítmény",
+        "is": "Heildarafl",
+        "nl": "Gecombineerd vermogen",
+        "pl": "Moc łączna",
+        "pt": "Potência combinada",
+        "ro": "Putere combinată",
+        "sk": "Kombinovaný výkon",
+        "sl": "Skupna moč"
       },
       "note": "NEW",
       "sourceRows": {
@@ -398,7 +687,20 @@
       "targets": {
         "it": "Catena cinematica",
         "fr": "Chaîne cinématique",
-        "de": "Antriebsstrang"
+        "de": "Antriebsstrang",
+        "cs": "Pohon",
+        "el": "Σύστημα μετάδοσης κίνησης",
+        "en": "Drivetrain",
+        "es": "Sistema de propulsión",
+        "hr": "Pogonski sklop",
+        "hu": "Hajtáslánc",
+        "is": "Drifkerfi",
+        "nl": "Aandrijflijn",
+        "pl": "Układ napędowy",
+        "pt": "Transmissão",
+        "ro": "Transmisie",
+        "sk": "Pohon",
+        "sl": "Pogon"
       },
       "sourceRows": {
         "it": 23,
@@ -412,7 +714,20 @@
       "targets": {
         "it": "Trazione anteriore (FWD)",
         "fr": "Traction avant",
-        "de": "Frontantrieb (FWD)"
+        "de": "Frontantrieb (FWD)",
+        "cs": "Pohon předních kol (FWD)",
+        "el": "Front-wheel drive (FWD)",
+        "en": "Front-wheel drive (FWD)",
+        "es": "Tracción delantera (FWD)",
+        "hr": "Pogon na prednje kotače (FWD)",
+        "hu": "Elsőkerék-hajtás (FWD)",
+        "is": "Front-wheel drive (FWD)",
+        "nl": "voorwielaandrijving (FWD)",
+        "pl": "napęd na przednie koła (FWD)",
+        "pt": "Tração dianteira (FWD)",
+        "ro": "Tracțiune față (FWD)",
+        "sk": "Pohon predných kolies (FWD)",
+        "sl": "Pogon na sprednja kolesa (FWD)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -427,7 +742,20 @@
       "targets": {
         "it": "Cavalli (CV)",
         "fr": "Chevaux (ch)",
-        "de": "PS (Pferdestärke)"
+        "de": "PS (Pferdestärke)",
+        "cs": "Výkon (hp)",
+        "el": "Horsepower (hp)",
+        "en": "Horsepower (hp)",
+        "es": "Caballos de potencia (hp)",
+        "hr": "Konjska snaga (hp)",
+        "hu": "Lóerő (hp)",
+        "is": "Hestöfl (hp)",
+        "nl": "Paardenkracht (hp)",
+        "pl": "Moc (hp)",
+        "pt": "Potência (hp)",
+        "ro": "Cai putere (hp)",
+        "sk": "Konská sila (hp)",
+        "sl": "Konjska moč (hp)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -442,7 +770,20 @@
       "targets": {
         "it": "Peso a vuoto",
         "fr": "Poids à vide",
-        "de": "Leergewicht"
+        "de": "Leergewicht",
+        "cs": "Pohotovostní hmotnost",
+        "el": "Βάρος χωρίς φορτίο",
+        "en": "Kerb weight",
+        "es": "Peso en orden de marcha",
+        "hr": "Masa praznog vozila",
+        "hu": "Saját tömeg",
+        "is": "Eiginþyngd",
+        "nl": "Rijklaar gewicht",
+        "pl": "Masa własna",
+        "pt": "Peso em ordem de marcha",
+        "ro": "Masă la gol",
+        "sk": "Pohotovostná hmotnosť",
+        "sl": "Masa vozila"
       },
       "sourceRows": {
         "it": 26,
@@ -456,7 +797,20 @@
       "targets": {
         "it": "Portata utile",
         "fr": "Charge utile",
-        "de": "Nutzlast"
+        "de": "Nutzlast",
+        "cs": "Užitečné zatížení",
+        "el": "Ωφέλιμο φορτίο",
+        "en": "Payload",
+        "es": "Carga útil",
+        "hr": "Nosivost",
+        "hu": "Terhelhetőség",
+        "is": "Burðargeta",
+        "nl": "Laadvermogen",
+        "pl": "Ładowność",
+        "pt": "Carga útil",
+        "ro": "Sarcină utilă",
+        "sk": "Užitočné zaťaženie",
+        "sl": "Nosilnost"
       },
       "sourceRows": {
         "it": 27,
@@ -470,7 +824,20 @@
       "targets": {
         "it": "Coppia massima",
         "fr": "Couple maximal",
-        "de": "Maximales Drehmoment"
+        "de": "Maximales Drehmoment",
+        "cs": "Maximální točivý moment",
+        "el": "Μέγιστη ροπή",
+        "en": "Peak torque",
+        "es": "Par máximo",
+        "hr": "Najveći okretni moment",
+        "hu": "Maximális nyomaték",
+        "is": "Hámarkstog",
+        "nl": "Piekkoppel",
+        "pl": "Maksymalny moment obrotowy",
+        "pt": "Torque máximo",
+        "ro": "Cuplu maxim",
+        "sk": "Maximálny krútiaci moment",
+        "sl": "Največji navor"
       },
       "note": "NEW",
       "sourceRows": {
@@ -485,7 +852,20 @@
       "targets": {
         "it": "Gruppo motopropulsore",
         "fr": "Groupe motopropulseur",
-        "de": "Antriebsstrang"
+        "de": "Antriebsstrang",
+        "cs": "Pohon",
+        "el": "Σύστημα κίνησης",
+        "en": "Powertrain",
+        "es": "Sistema de propulsión",
+        "hr": "Pogonski sustav",
+        "hu": "Hajtáslánc",
+        "is": "Aflrás",
+        "nl": "Aandrijfsysteem",
+        "pl": "Układ napędowy",
+        "pt": "Conjunto motopropulsor",
+        "ro": "Sistem de propulsie",
+        "sk": "Pohon",
+        "sl": "Pogonski sklop"
       },
       "sourceRows": {
         "it": 29,
@@ -499,7 +879,20 @@
       "targets": {
         "it": "Trazione posteriore (RWD)",
         "fr": "Propulsion (traction arrière)",
-        "de": "Hinterradantrieb (RWD)"
+        "de": "Hinterradantrieb (RWD)",
+        "cs": "Pohon zadních kol (RWD)",
+        "el": "Rear-wheel drive (RWD)",
+        "en": "Rear-wheel drive (RWD)",
+        "es": "Tracción trasera (RWD)",
+        "hr": "Pogon na stražnje kotače (RWD)",
+        "hu": "Hátsókerék-hajtás (RWD)",
+        "is": "Rear-wheel drive (RWD)",
+        "nl": "achterwielaandrijving (RWD)",
+        "pl": "napęd na tylne koła (RWD)",
+        "pt": "Tração traseira (RWD)",
+        "ro": "Tracțiune spate (RWD)",
+        "sk": "Pohon zadných kolies (RWD)",
+        "sl": "Pogon na zadnja kolesa (RWD)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -514,7 +907,20 @@
       "targets": {
         "it": "Sterzo",
         "fr": "Direction",
-        "de": "Lenkung"
+        "de": "Lenkung",
+        "cs": "Řízení",
+        "el": "Σύστημα διεύθυνσης",
+        "en": "Steering",
+        "es": "Dirección",
+        "hr": "Upravljanje",
+        "hu": "Kormányzás",
+        "is": "Stýri",
+        "nl": "Stuurinrichting",
+        "pl": "Układ kierowniczy",
+        "pt": "Direção",
+        "ro": "Direcție",
+        "sk": "Riadenie",
+        "sl": "Krmiljenje"
       },
       "sourceRows": {
         "it": 31,
@@ -528,7 +934,20 @@
       "targets": {
         "it": "Sospensioni",
         "fr": "Suspension",
-        "de": "Federung"
+        "de": "Federung",
+        "cs": "Odpružení",
+        "el": "Ανάρτηση",
+        "en": "Suspension",
+        "es": "Suspensión",
+        "hr": "Ovjes",
+        "hu": "Felfüggesztés",
+        "is": "Fjöðrun",
+        "nl": "Ophanging",
+        "pl": "Zawieszenie",
+        "pt": "Suspensão",
+        "ro": "Suspensie",
+        "sk": "Zavesenie kolies",
+        "sl": "Vzmetenje"
       },
       "sourceRows": {
         "it": 32,
@@ -542,7 +961,20 @@
       "targets": {
         "it": "Velocità massima",
         "fr": "Vitesse maximale",
-        "de": "Höchstgeschwindigkeit"
+        "de": "Höchstgeschwindigkeit",
+        "cs": "Maximální rychlost",
+        "el": "Τελική ταχύτητα",
+        "en": "Top speed",
+        "es": "Velocidad máxima",
+        "hr": "Najveća brzina",
+        "hu": "Végsebesség",
+        "is": "Hámarkshraði",
+        "nl": "Topsnelheid",
+        "pl": "Prędkość maksymalna",
+        "pt": "Velocidade máxima",
+        "ro": "Viteză maximă",
+        "sk": "Maximálna rýchlosť",
+        "sl": "Največja hitrost"
       },
       "sourceRows": {
         "it": 33,
@@ -556,7 +988,20 @@
       "targets": {
         "it": "Coppia",
         "fr": "Couple",
-        "de": "Drehmoment"
+        "de": "Drehmoment",
+        "cs": "Točivý moment",
+        "el": "Ροπή",
+        "en": "Torque",
+        "es": "Par",
+        "hr": "Okretni moment",
+        "hu": "Nyomaték",
+        "is": "Tog",
+        "nl": "Koppel",
+        "pl": "Moment obrotowy",
+        "pt": "Torque",
+        "ro": "Cuplu",
+        "sk": "Krútiaci moment",
+        "sl": "Navor"
       },
       "sourceRows": {
         "it": 34,
@@ -570,7 +1015,20 @@
       "targets": {
         "it": "Capacità di traino",
         "fr": "Capacité de remorquage",
-        "de": "Anhängelast"
+        "de": "Anhängelast",
+        "cs": "Tažná kapacita",
+        "el": "Ικανότητα ρυμούλκησης",
+        "en": "Towing capacity",
+        "es": "Capacidad de remolque",
+        "hr": "Vučna sposobnost",
+        "hu": "Vontatható tömeg",
+        "is": "Dráttargeta",
+        "nl": "Trekvermogen",
+        "pl": "Maksymalna masa holowana",
+        "pt": "Capacidade de reboque",
+        "ro": "Capacitate de tractare",
+        "sk": "Ťažná kapacita",
+        "sl": "Vlečna zmogljivost"
       },
       "sourceRows": {
         "it": 35,
@@ -584,7 +1042,20 @@
       "targets": {
         "it": "Passo",
         "fr": "Empattement",
-        "de": "Radstand"
+        "de": "Radstand",
+        "cs": "Rozvor",
+        "el": "Μεταξόνιο",
+        "en": "Wheelbase",
+        "es": "Distancia entre ejes",
+        "hr": "Međuosovinski razmak",
+        "hu": "Tengelytáv",
+        "is": "Hjólhaf",
+        "nl": "Wielbasis",
+        "pl": "Rozstaw osi",
+        "pt": "Distância entre eixos",
+        "ro": "Ampatament",
+        "sk": "Rázvor",
+        "sl": "Medosna razdalja"
       },
       "sourceRows": {
         "it": 36,
@@ -598,7 +1069,20 @@
       "targets": {
         "it": "Potenza massima",
         "fr": "Puissance maximale",
-        "de": "Maximale Leistung"
+        "de": "Maximale Leistung",
+        "cs": "Max. výkon",
+        "el": "Μέγιστη ισχύς",
+        "en": "Max Power",
+        "es": "Potencia máxima",
+        "hr": "Maks. snaga",
+        "hu": "Max. teljesítmény",
+        "is": "Hámarksafl",
+        "nl": "Max. vermogen",
+        "pl": "Maks. moc",
+        "pt": "Potência máxima",
+        "ro": "Putere maximă",
+        "sk": "Max. výkon",
+        "sl": "Največja moč"
       },
       "sourceRows": {
         "it": 37,
@@ -612,7 +1096,20 @@
       "targets": {
         "it": "Emissioni di CO₂",
         "fr": "Émissions de CO₂",
-        "de": "CO2-Emissionen kombiniert gemäß WLTP"
+        "de": "CO2-Emissionen kombiniert gemäß WLTP",
+        "cs": "Emise CO2",
+        "el": "Κατανάλωση CO2",
+        "en": "CO2 consumption",
+        "es": "Consumo de CO2",
+        "hr": "Potrošnja CO2",
+        "hu": "CO2-fogyasztás",
+        "is": "CO2 consumption",
+        "nl": "CO2-verbruik",
+        "pl": "Zużycie CO2",
+        "pt": "Consumo de CO2",
+        "ro": "Consum de CO2",
+        "sk": "Spotreba CO2",
+        "sl": "Poraba CO2"
       },
       "sourceRows": {
         "it": 38,
@@ -626,7 +1123,20 @@
       "targets": {
         "it": "Accelerazione 0-100 km/h",
         "fr": "Accélération 0-100 km/h",
-        "de": "Beschleunigung 0-100 km/h"
+        "de": "Beschleunigung 0-100 km/h",
+        "cs": "Zrychlení 0–100 km/h",
+        "el": "Επιτάχυνση 0-100 km/h",
+        "en": "0-100 km/h acceleration",
+        "es": "Aceleración de 0 a 100 km/h",
+        "hr": "Ubrzanje 0-100 km/h",
+        "hu": "0–100 km/h gyorsulás",
+        "is": "0-100 km/h acceleration",
+        "nl": "0-100 km/h acceleratie",
+        "pl": "Przyspieszenie 0–100 km/h",
+        "pt": "Aceleração de 0 a 100 km/h",
+        "ro": "Accelerație 0-100 km/h",
+        "sk": "Zrýchlenie 0–100 km/h",
+        "sl": "Pospešek 0–100 km/h"
       },
       "sourceRows": {
         "it": 39,
@@ -640,7 +1150,20 @@
       "targets": {
         "it": "Serbatoio del carburante",
         "fr": "Capacité du réservoir de carburant",
-        "de": "Kraftstofftank Füllmenge"
+        "de": "Kraftstofftank Füllmenge",
+        "cs": "Palivová nádrž",
+        "el": "Ρεζερβουάρ καυσίμου",
+        "en": "Fuel tank",
+        "es": "Depósito de combustible",
+        "hr": "Spremnik goriva",
+        "hu": "Üzemanyagtartály",
+        "is": "Eldsneytistankur",
+        "nl": "Brandstoftank",
+        "pl": "Zbiornik paliwa",
+        "pt": "Tanque de combustível",
+        "ro": "Rezervor de combustibil",
+        "sk": "Palivová nádrž",
+        "sl": "Rezervoar za gorivo"
       },
       "sourceRows": {
         "it": 40,
@@ -654,7 +1177,20 @@
       "targets": {
         "it": "Consumo di carburante",
         "fr": "Consommation combiné",
-        "de": "Kaftstoffverbrauch gemäß WLTP"
+        "de": "Kaftstoffverbrauch gemäß WLTP",
+        "cs": "Spotřeba paliva",
+        "el": "Κατανάλωση καυσίμου",
+        "en": "Fuel consumption",
+        "es": "Consumo de combustible",
+        "hr": "Potrošnja goriva",
+        "hu": "Üzemanyag-fogyasztás",
+        "is": "Eldsneytiseyðsla",
+        "nl": "Brandstofverbruik",
+        "pl": "Zużycie paliwa",
+        "pt": "Consumo de combustível",
+        "ro": "Consum de combustibil",
+        "sk": "Spotreba paliva",
+        "sl": "Poraba goriva"
       },
       "sourceRows": {
         "it": 41,
@@ -668,7 +1204,20 @@
       "targets": {
         "it": "Cilindrata",
         "fr": "Cylindrée",
-        "de": "Hubraum"
+        "de": "Hubraum",
+        "cs": "Benzínový motor",
+        "el": "Βενζινοκινητήρας",
+        "en": "Petrol engine",
+        "es": "Motor de gasolina",
+        "hr": "Benzinski motor",
+        "hu": "Benzinmotor",
+        "is": "Bensínvél",
+        "nl": "Benzinemotor",
+        "pl": "Silnik benzynowy",
+        "pt": "Motor a gasolina",
+        "ro": "Motor pe benzină",
+        "sk": "Benzínový motor",
+        "sl": "Bencinski motor"
       },
       "sourceRows": {
         "it": 42,
@@ -682,7 +1231,20 @@
       "targets": {
         "it": "Ricarica in corrente alternata (AC)",
         "fr": "Recharge en courant alternatif (AC)",
-        "de": "AC-Laden"
+        "de": "AC-Laden",
+        "cs": "AC nabíjení",
+        "el": "Φόρτιση AC",
+        "en": "AC charging",
+        "es": "Carga en CA",
+        "hr": "Punjenje izmjeničnom strujom",
+        "hu": "AC töltés",
+        "is": "AC charging",
+        "nl": "AC-laden",
+        "pl": "Ładowanie AC",
+        "pt": "Carregamento AC",
+        "ro": "Încărcare AC",
+        "sk": "AC nabíjanie",
+        "sl": "Polnjenje z izmeničnim tokom"
       },
       "sourceRows": {
         "it": 43,
@@ -696,7 +1258,20 @@
       "targets": {
         "it": "Batteria",
         "fr": "Batterie",
-        "de": "Batterie"
+        "de": "Batterie",
+        "cs": "Baterie",
+        "el": "Μπαταρία",
+        "en": "Battery",
+        "es": "Batería",
+        "hr": "Baterija",
+        "hu": "Akkumulátor",
+        "is": "Rafhlaða",
+        "nl": "Accu",
+        "pl": "Akumulator",
+        "pt": "Bateria",
+        "ro": "Baterie",
+        "sk": "Batéria",
+        "sl": "Baterija"
       },
       "sourceRows": {
         "it": 44,
@@ -710,7 +1285,20 @@
       "targets": {
         "it": "Sistema di gestione della batteria (BMS)",
         "fr": "Système de gestion de batterie (BMS)",
-        "de": "Batteriemanagementsystem (BMS)"
+        "de": "Batteriemanagementsystem (BMS)",
+        "cs": "Battery management system (BMS)",
+        "el": "Battery management system (BMS)",
+        "en": "Battery management system (BMS)",
+        "es": "Battery management system (BMS)",
+        "hr": "Sustav upravljanja baterijom (BMS)",
+        "hu": "Akkumulátor-kezelő rendszer (BMS)",
+        "is": "Battery management system (BMS)",
+        "nl": "Battery management system (BMS)",
+        "pl": "Battery management system (BMS)",
+        "pt": "Sistema de gestão da bateria (BMS)",
+        "ro": "Sistem de management al bateriei (BMS)",
+        "sk": "Battery management system (BMS)",
+        "sl": "Sistem za upravljanje baterije (BMS)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -725,7 +1313,20 @@
       "targets": {
         "it": "Pacco batteria",
         "fr": "Pack batterie",
-        "de": "Batteriepaket"
+        "de": "Batteriepaket",
+        "cs": "Bateriový blok",
+        "el": "Συστοιχία μπαταριών",
+        "en": "Battery pack",
+        "es": "Paquete de baterías",
+        "hr": "Baterijski paket",
+        "hu": "Akkumulátorcsomag",
+        "is": "Rafhlöðupakki",
+        "nl": "Accupakket",
+        "pl": "Pakiet akumulatorów",
+        "pt": "Pack de bateria",
+        "ro": "Pachet de baterii",
+        "sk": "Batériový blok",
+        "sl": "Baterijski sklop"
       },
       "sourceRows": {
         "it": 46,
@@ -739,7 +1340,20 @@
       "targets": {
         "it": "Cell-to-Pack (CTP)",
         "fr": "Cell-to-Pack (CTP)",
-        "de": "Cell-to-Pack (CTP)"
+        "de": "Cell-to-Pack (CTP)",
+        "cs": "Cell-to-Pack (CTP)",
+        "el": "Cell-to-Pack (CTP)",
+        "en": "Cell-to-Pack (CTP)",
+        "es": "Cell-to-Pack (CTP)",
+        "hr": "Cell-to-Pack (CTP)",
+        "hu": "Cell-to-Pack (CTP)",
+        "is": "Cell-to-Pack (CTP)",
+        "nl": "Cell-to-Pack (CTP)",
+        "pl": "Cell-to-Pack (CTP)",
+        "pt": "Cell-to-Pack (CTP)",
+        "ro": "Cell-to-Pack (CTP)",
+        "sk": "Cell-to-Pack (CTP)",
+        "sl": "Cell-to-Pack (CTP)"
       },
       "note": "NEW - Do not translate",
       "sourceRows": {
@@ -754,7 +1368,20 @@
       "targets": {
         "it": "Ricarica",
         "fr": "Recharge",
-        "de": "Laden"
+        "de": "Laden",
+        "cs": "Nabíjení",
+        "el": "Φόρτιση",
+        "en": "Charging",
+        "es": "Carga",
+        "hr": "Punjenje",
+        "hu": "Töltés",
+        "is": "Hleðsla",
+        "nl": "Laden",
+        "pl": "Ładowanie",
+        "pt": "Carregamento",
+        "ro": "Încărcare",
+        "sk": "Nabíjanie",
+        "sl": "Polnjenje"
       },
       "sourceRows": {
         "it": 48,
@@ -768,7 +1395,20 @@
       "targets": {
         "it": "Porta di ricarica",
         "fr": "Prise de recharge",
-        "de": "Ladeanschluss"
+        "de": "Ladeanschluss",
+        "cs": "Nabíjecí port",
+        "el": "Θύρα φόρτισης",
+        "en": "Charging port",
+        "es": "Puerto de carga",
+        "hr": "Priključak za punjenje",
+        "hu": "Töltőcsatlakozó",
+        "is": "Hleðslutengi",
+        "nl": "Laadpoort",
+        "pl": "Port ładowania",
+        "pt": "Porta de carregamento",
+        "ro": "Port de încărcare",
+        "sk": "Nabíjací port",
+        "sl": "Polnilni priključek"
       },
       "sourceRows": {
         "it": 49,
@@ -782,7 +1422,20 @@
       "targets": {
         "it": "Stazione di ricarica",
         "fr": "Borne de recharge",
-        "de": "Ladestation"
+        "de": "Ladestation",
+        "cs": "Nabíjecí stanice",
+        "el": "Σταθμός φόρτισης",
+        "en": "Charging station",
+        "es": "Estación de carga",
+        "hr": "Stanica za punjenje",
+        "hu": "Töltőállomás",
+        "is": "Hleðslustöð",
+        "nl": "Laadstation",
+        "pl": "Stacja ładowania",
+        "pt": "Estação de carregamento",
+        "ro": "Stație de încărcare",
+        "sk": "Nabíjacia stanica",
+        "sl": "Polnilna postaja"
       },
       "sourceRows": {
         "it": 50,
@@ -796,7 +1449,20 @@
       "targets": {
         "it": "Ricarica rapida in corrente continua (DC)",
         "fr": "Recharge rapide en courant continu (DC)",
-        "de": "DC-Schnellladen"
+        "de": "DC-Schnellladen",
+        "cs": "DC rychlonabíjení",
+        "el": "Ταχεία φόρτιση DC",
+        "en": "DC fast charging",
+        "es": "Carga rápida en CC",
+        "hr": "Brzo punjenje istosmjernom strujom",
+        "hu": "DC gyorstöltés",
+        "is": "DC hraðhleðsla",
+        "nl": "DC-snelladen",
+        "pl": "Szybkie ładowanie DC",
+        "pt": "Carregamento rápido DC",
+        "ro": "Încărcare rapidă DC",
+        "sk": "DC rýchlonabíjanie",
+        "sl": "Hitro polnjenje z enosmernim tokom"
       },
       "sourceRows": {
         "it": 51,
@@ -810,7 +1476,20 @@
       "targets": {
         "it": "Motore elettrico",
         "fr": "Moteur électrique",
-        "de": "Elektromotor"
+        "de": "Elektromotor",
+        "cs": "Elektromotor",
+        "el": "Ηλεκτροκινητήρας",
+        "en": "Electric motor",
+        "es": "Motor eléctrico",
+        "hr": "Električni motor",
+        "hu": "Elektromos motor",
+        "is": "Rafmótor",
+        "nl": "Elektromotor",
+        "pl": "Silnik elektryczny",
+        "pt": "Motor elétrico",
+        "ro": "Motor electric",
+        "sk": "Elektrický motor",
+        "sl": "Električni motor"
       },
       "sourceRows": {
         "it": 52,
@@ -824,7 +1503,20 @@
       "targets": {
         "it": "Consumo energetico combinato",
         "fr": "Consommation d'énergie combinée",
-        "de": "Kombinierter Energieverbrauch"
+        "de": "Kombinierter Energieverbrauch",
+        "cs": "Spotřeba energie",
+        "el": "Κατανάλωση ενέργειας",
+        "en": "Energy consumption",
+        "es": "Consumo de energía",
+        "hr": "Potrošnja energije",
+        "hu": "Energiafogyasztás",
+        "is": "Orkunotkun",
+        "nl": "Energieverbruik",
+        "pl": "Zużycie energii",
+        "pt": "Consumo de energia",
+        "ro": "Consum de energie",
+        "sk": "Spotreba energie",
+        "sl": "Poraba energije"
       },
       "sourceRows": {
         "it": 53,
@@ -838,7 +1530,20 @@
       "targets": {
         "it": "Ricarica rapida",
         "fr": "Recharge rapide",
-        "de": "Schnellladen"
+        "de": "Schnellladen",
+        "cs": "Rychlonabíjení",
+        "el": "Ταχεία φόρτιση",
+        "en": "Fast charging",
+        "es": "Carga rápida",
+        "hr": "Brzo punjenje",
+        "hu": "Gyorstöltés",
+        "is": "Hraðhleðsla",
+        "nl": "Snelladen",
+        "pl": "Szybkie ładowanie",
+        "pt": "Carregamento rápido",
+        "ro": "Încărcare rapidă",
+        "sk": "Rýchlonabíjanie",
+        "sl": "Hitro polnjenje"
       },
       "sourceRows": {
         "it": 54,
@@ -852,7 +1557,20 @@
       "targets": {
         "it": "Pompa di calore",
         "fr": "Pompe à chaleur",
-        "de": "Wärmepumpe"
+        "de": "Wärmepumpe",
+        "cs": "Tepelné čerpadlo",
+        "el": "Αντλία θερμότητας",
+        "en": "Heat pump",
+        "es": "Bomba de calor",
+        "hr": "Toplinska pumpa",
+        "hu": "Hőszivattyú",
+        "is": "Varmadæla",
+        "nl": "Warmtepomp",
+        "pl": "Pompa ciepła",
+        "pt": "Bomba de calor",
+        "ro": "Pompă de căldură",
+        "sk": "Tepelné čerpadlo",
+        "sl": "Toplotna črpalka"
       },
       "sourceRows": {
         "it": 55,
@@ -866,7 +1584,20 @@
       "targets": {
         "it": "Plug-in",
         "fr": "Rechargeable",
-        "de": "Plug-in"
+        "de": "Plug-in",
+        "cs": "Plug-in",
+        "el": "Plug-in",
+        "en": "Plug-in",
+        "es": "Plug-in",
+        "hr": "Plug-in",
+        "hu": "Plug-in",
+        "is": "Plug-in",
+        "nl": "Plug-in",
+        "pl": "Plug-in",
+        "pt": "Plug-in",
+        "ro": "Plug-in",
+        "sk": "Plug-in",
+        "sl": "Priključni hibrid"
       },
       "sourceRows": {
         "it": 56,
@@ -880,7 +1611,20 @@
       "targets": {
         "it": "Autonomia",
         "fr": "Autonomie",
-        "de": "Reichweite"
+        "de": "Reichweite",
+        "cs": "Dojezd",
+        "el": "Αυτονομία",
+        "en": "Range",
+        "es": "Autonomía",
+        "hr": "Doseg",
+        "hu": "Hatótáv",
+        "is": "Drægni",
+        "nl": "Actieradius",
+        "pl": "Zasięg",
+        "pt": "Autonomia",
+        "ro": "Autonomie",
+        "sk": "Dojazd",
+        "sl": "Doseg"
       },
       "sourceRows": {
         "it": 57,
@@ -894,7 +1638,20 @@
       "targets": {
         "it": "Estensore di autonomia (REEV)",
         "fr": "Prolongateur d'autonomie (REEV)",
-        "de": "Reichweitenverlängerung (REEV)"
+        "de": "Reichweitenverlängerung (REEV)",
+        "cs": "Range Extender (REEV)",
+        "el": "Range Extender (REEV)",
+        "en": "Range Extender (REEV)",
+        "es": "Range Extender (REEV)",
+        "hr": "Range Extender (REEV)",
+        "hu": "Hatótávnövelő (REEV)",
+        "is": "Range Extender (REEV)",
+        "nl": "Range Extender (REEV)",
+        "pl": "Range Extender (REEV)",
+        "pt": "Range Extender (REEV)",
+        "ro": "Range Extender (REEV)",
+        "sk": "Range Extender (REEV)",
+        "sl": "Podaljševalnik dosega (REEV)"
       },
       "note": "NEW - Acronym - keep in original form",
       "sourceRows": {
@@ -909,7 +1666,20 @@
       "targets": {
         "it": "Ansia da autonomia",
         "fr": "Angoisse de l'autonomie",
-        "de": "Reichweitenangst"
+        "de": "Reichweitenangst",
+        "cs": "Obavy z dojezdu",
+        "el": "Άγχος αυτονομίας",
+        "en": "Range anxiety",
+        "es": "Ansiedad por la autonomía",
+        "hr": "Anksioznost zbog dosega",
+        "hu": "Hatótávszorongás",
+        "is": "Drægnikvíði",
+        "nl": "Actieradiusangst",
+        "pl": "Lęk przed zasięgiem",
+        "pt": "Ansiedade de autonomia",
+        "ro": "Anxietate legată de autonomie",
+        "sk": "Obavy z dojazdu",
+        "sl": "Tesnoba zaradi dosega"
       },
       "sourceRows": {
         "it": 59,
@@ -923,7 +1693,20 @@
       "targets": {
         "it": "Frenata rigenerativa",
         "fr": "Freinage régénératif",
-        "de": "Rekuperationsbremsung"
+        "de": "Rekuperationsbremsung",
+        "cs": "Rekuperační brzdění",
+        "el": "Αναγεννητική πέδηση",
+        "en": "Regenerative braking",
+        "es": "Frenada regenerativa",
+        "hr": "Regenerativno kočenje",
+        "hu": "Rekuperatív fékezés",
+        "is": "Endurnýjandi hemlun",
+        "nl": "Regeneratief remmen",
+        "pl": "Rekuperacja",
+        "pt": "Travagem regenerativa",
+        "ro": "Frânare regenerativă",
+        "sk": "Rekuperačné brzdenie",
+        "sl": "Regenerativno zaviranje"
       },
       "sourceRows": {
         "it": 60,
@@ -937,7 +1720,20 @@
       "targets": {
         "it": "Stato di carica (SoC)",
         "fr": "État de charge (SoC)",
-        "de": "Ladezustand (SoC)"
+        "de": "Ladezustand (SoC)",
+        "cs": "State of charge (SoC)",
+        "el": "State of charge (SoC)",
+        "en": "State of charge (SoC)",
+        "es": "State of charge (SoC)",
+        "hr": "Stanje napunjenosti (SoC)",
+        "hu": "Töltöttségi szint (SoC)",
+        "is": "State of charge (SoC)",
+        "nl": "State of charge (SoC)",
+        "pl": "State of charge (SoC)",
+        "pt": "State of charge (SoC)",
+        "ro": "State of charge (SoC)",
+        "sk": "State of charge (SoC)",
+        "sl": "Stanje napolnjenosti (SoC)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -952,7 +1748,20 @@
       "targets": {
         "it": "Gestione termica",
         "fr": "Gestion thermique",
-        "de": "Thermomanagement"
+        "de": "Thermomanagement",
+        "cs": "Tepelné řízení",
+        "el": "Thermal management",
+        "en": "Thermal management",
+        "es": "Gestión térmica",
+        "hr": "Toplinsko upravljanje",
+        "hu": "Hőmenedzsment",
+        "is": "Hitastýring",
+        "nl": "Thermisch beheer",
+        "pl": "Zarządzanie temperaturą",
+        "pt": "Gestão térmica",
+        "ro": "Management termic",
+        "sk": "Tepelné riadenie",
+        "sl": "Toplotno upravljanje"
       },
       "sourceRows": {
         "it": 62,
@@ -966,7 +1775,20 @@
       "targets": {
         "it": "Zero emissioni",
         "fr": "Zéro émission",
-        "de": "Null Emissionen"
+        "de": "Null Emissionen",
+        "cs": "Zero emissions",
+        "el": "Μηδενικές εκπομπές",
+        "en": "Zero emissions",
+        "es": "Cero emisiones",
+        "hr": "Nulte emisije",
+        "hu": "Zéró kibocsátás",
+        "is": "Núll útblástur",
+        "nl": "Nul emissies",
+        "pl": "Zero emissions",
+        "pt": "Zero emissões",
+        "ro": "Zero emisii",
+        "sk": "Nulové emisie",
+        "sl": "Nič emisij"
       },
       "sourceRows": {
         "it": 63,
@@ -980,7 +1802,20 @@
       "targets": {
         "it": "kWh",
         "fr": "kWh",
-        "de": "kWh"
+        "de": "kWh",
+        "cs": "kWh",
+        "el": "kWh",
+        "en": "kWh",
+        "es": "kWh",
+        "hr": "kWh",
+        "hu": "kWh",
+        "is": "kWh",
+        "nl": "kWh",
+        "pl": "kWh",
+        "pt": "kWh",
+        "ro": "kWh",
+        "sk": "kWh",
+        "sl": "kWh"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -995,7 +1830,20 @@
       "targets": {
         "it": "Capacità della batteria",
         "fr": "Capacité de la batterie",
-        "de": "Batteriekapazität"
+        "de": "Batteriekapazität",
+        "cs": "Kapacita baterie",
+        "el": "Χωρητικότητα μπαταρίας",
+        "en": "Battery Size",
+        "es": "Tamaño de la batería",
+        "hr": "Veličina baterije",
+        "hu": "Akkumulátor mérete",
+        "is": "Rafhlöðustærð",
+        "nl": "Accugrootte",
+        "pl": "Pojemność akumulatora",
+        "pt": "Capacidade da bateria",
+        "ro": "Dimensiunea bateriei",
+        "sk": "Veľkosť batérie",
+        "sl": "Velikost baterije"
       },
       "sourceRows": {
         "it": 65,
@@ -1009,7 +1857,20 @@
       "targets": {
         "it": "Autonomia elettrica WLTP*",
         "fr": "Autonomie électrique WLTP*",
-        "de": "Elektrische Reichweite gemäß WLTP*"
+        "de": "Elektrische Reichweite gemäß WLTP*",
+        "cs": "Elektrický dojezd podle WLTP*",
+        "el": "Ηλεκτρική αυτονομία WLTP*",
+        "en": "Electric WLTP* range",
+        "es": "Autonomía eléctrica WLTP*",
+        "hr": "Električni WLTP* doseg",
+        "hu": "Elektromos WLTP* hatótáv",
+        "is": "Rafdrægni samkvæmt WLTP*",
+        "nl": "Elektrische WLTP*-actieradius",
+        "pl": "Zasięg elektryczny WLTP*",
+        "pt": "Autonomia elétrica WLTP*",
+        "ro": "Autonomie electrică WLTP*",
+        "sk": "Elektrický dojazd WLTP*",
+        "sl": "Električni doseg po WLTP*"
       },
       "sourceRows": {
         "it": 66,
@@ -1023,7 +1884,20 @@
       "targets": {
         "it": "Autonomia totale WLTP*",
         "fr": "Autonomie totale en cycle combiné",
-        "de": "Reichweite kombiniert gemäß WLTP*"
+        "de": "Reichweite kombiniert gemäß WLTP*",
+        "cs": "Celkový dojezd podle WLTP*",
+        "el": "Συνολική αυτονομία WLTP*",
+        "en": "Total WLTP* Range",
+        "es": "Autonomía total WLTP*",
+        "hr": "Ukupni WLTP* doseg",
+        "hu": "Teljes WLTP* hatótáv",
+        "is": "Heildardrægni samkvæmt WLTP*",
+        "nl": "Totale WLTP*-actieradius",
+        "pl": "Łączny zasięg WLTP*",
+        "pt": "Autonomia total WLTP*",
+        "ro": "Autonomie totală WLTP*",
+        "sk": "Celkový dojazd WLTP*",
+        "sl": "Skupni doseg po WLTP*"
       },
       "sourceRows": {
         "it": 67,
@@ -1037,7 +1911,20 @@
       "targets": {
         "it": "Potenza massima di ricarica in corrente continua (DC)",
         "fr": "Puissance max de charge DC",
-        "de": "DC-Schnellladen"
+        "de": "DC-Schnellladen",
+        "cs": "Max. výkon DC nabíjení",
+        "el": "Μέγιστη ισχύς φόρτισης DC",
+        "en": "DC Charging Max Power",
+        "es": "Potencia máxima de carga en CC",
+        "hr": "Maks. snaga DC punjenja",
+        "hu": "DC töltés maximális teljesítménye",
+        "is": "Hámarksafl DC-hleðslu",
+        "nl": "Max. DC-laadvermogen",
+        "pl": "Maks. moc ładowania DC",
+        "pt": "Potência máxima de carregamento DC",
+        "ro": "Putere maximă de încărcare DC",
+        "sk": "Max. výkon DC nabíjania",
+        "sl": "Največja moč polnjenja z enosmernim tokom"
       },
       "sourceRows": {
         "it": 68,
@@ -1051,7 +1938,20 @@
       "targets": {
         "it": "Tempo di ricarica (30 - 80%)",
         "fr": "Temps de carge 30-80%",
-        "de": "Ladedauer DC (30%-80%)"
+        "de": "Ladedauer DC (30%-80%)",
+        "cs": "Doba rychlonabíjení (30–80 %)",
+        "el": "Χρόνος ταχείας φόρτισης (30-80%)",
+        "en": "Fast-charge time (30-80%)",
+        "es": "Tiempo de carga rápida (30-80%)",
+        "hr": "Vrijeme brzog punjenja (30-80%)",
+        "hu": "Gyorstöltési idő (30–80%)",
+        "is": "Hraðhleðslutími (30-80%)",
+        "nl": "Snellaadtijd (30-80%)",
+        "pl": "Czas szybkiego ładowania (30–80%)",
+        "pt": "Tempo de carregamento rápido (30-80%)",
+        "ro": "Timp de încărcare rapidă (30-80%)",
+        "sk": "Čas rýchlonabíjania (30–80 %)",
+        "sl": "Čas hitrega polnjenja (30–80 %)"
       },
       "sourceRows": {
         "it": 69,
@@ -1065,7 +1965,20 @@
       "targets": {
         "it": "Consumo di energia elettrica",
         "fr": "Consommation d’énergie WLTP",
-        "de": "Energieverbrauch kombiniert gemäß WLTP"
+        "de": "Energieverbrauch kombiniert gemäß WLTP",
+        "cs": "Spotřeba elektřiny",
+        "el": "Ηλεκτρική κατανάλωση",
+        "en": "Electric Consumption",
+        "es": "Consumo eléctrico",
+        "hr": "Električna potrošnja",
+        "hu": "Elektromos fogyasztás",
+        "is": "Raforkunotkun",
+        "nl": "Elektrisch verbruik",
+        "pl": "Zużycie energii elektrycznej",
+        "pt": "Consumo elétrico",
+        "ro": "Consum electric",
+        "sk": "Spotreba elektrickej energie",
+        "sl": "Poraba električne energije"
       },
       "sourceRows": {
         "it": 70,
@@ -1079,7 +1992,20 @@
       "targets": {
         "it": "Telecamera a 360°",
         "fr": "Caméra 360°",
-        "de": "360°-Kamera"
+        "de": "360°-Kamera",
+        "cs": "360° kamera",
+        "el": "Κάμερα 360°",
+        "en": "360° camera",
+        "es": "Cámara 360°",
+        "hr": "Kamera od 360°",
+        "hu": "360°-os kamera",
+        "is": "360° myndavél",
+        "nl": "360°-camera",
+        "pl": "Kamera 360°",
+        "pt": "Câmara 360°",
+        "ro": "Cameră 360°",
+        "sk": "360° kamera",
+        "sl": "360° kamera"
       },
       "sourceRows": {
         "it": 71,
@@ -1093,7 +2019,20 @@
       "targets": {
         "it": "ADAS",
         "fr": "ADAS",
-        "de": "ADAS"
+        "de": "ADAS",
+        "cs": "ADAS",
+        "el": "ADAS",
+        "en": "ADAS",
+        "es": "ADAS",
+        "hr": "ADAS",
+        "hu": "ADAS",
+        "is": "ADAS",
+        "nl": "ADAS",
+        "pl": "ADAS",
+        "pt": "ADAS",
+        "ro": "ADAS",
+        "sk": "ADAS",
+        "sl": "ADAS"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1108,7 +2047,20 @@
       "targets": {
         "it": "OTA",
         "fr": "OTA",
-        "de": "OTA"
+        "de": "OTA",
+        "cs": "OTA",
+        "el": "OTA",
+        "en": "OTA",
+        "es": "OTA",
+        "hr": "OTA",
+        "hu": "OTA",
+        "is": "OTA",
+        "nl": "OTA",
+        "pl": "OTA",
+        "pt": "OTA",
+        "ro": "OTA",
+        "sk": "OTA",
+        "sl": "OTA"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1123,7 +2075,20 @@
       "targets": {
         "it": "Cruise Control Adattivo Intelligente",
         "fr": "Régulateur de vitesse adaptatif intelligent",
-        "de": "Adaptiver intelligenter Tempomat"
+        "de": "Adaptiver intelligenter Tempomat",
+        "cs": "Adaptivní inteligentní tempomat",
+        "el": "Adaptive Intelligent Cruise Control",
+        "en": "Adaptive Intelligent Cruise Control",
+        "es": "Control de crucero inteligente adaptativo",
+        "hr": "Adaptivni inteligentni tempomat",
+        "hu": "Adaptív intelligens tempomat",
+        "is": "Adaptive Intelligent Cruise Control",
+        "nl": "Adaptieve intelligente cruisecontrol",
+        "pl": "Adaptacyjny inteligentny tempomat",
+        "pt": "Controlo de cruzeiro inteligente adaptativo",
+        "ro": "Adaptive Intelligent Cruise Control",
+        "sk": "Adaptívny inteligentný tempomat",
+        "sl": "Prilagodljiv inteligentni tempomat"
       },
       "note": "NEW",
       "sourceRows": {
@@ -1138,7 +2103,20 @@
       "targets": {
         "it": "Cruise control adattivo",
         "fr": "Régulateur de vitesse adaptatif",
-        "de": "Adaptiver Tempomat"
+        "de": "Adaptiver Tempomat",
+        "cs": "Adaptivní tempomat",
+        "el": "Προσαρμοζόμενο cruise control",
+        "en": "Adaptive cruise control",
+        "es": "Control de crucero adaptativo",
+        "hr": "Adaptivni tempomat",
+        "hu": "Adaptív tempomat",
+        "is": "Aðlögunarhæfur hraðastillir",
+        "nl": "Adaptieve cruisecontrol",
+        "pl": "Adaptacyjny tempomat",
+        "pt": "Controlo de cruzeiro adaptativo",
+        "ro": "Cruise control adaptiv",
+        "sk": "Adaptívny tempomat",
+        "sl": "Prilagodljivi tempomat"
       },
       "sourceRows": {
         "it": 75,
@@ -1152,7 +2130,20 @@
       "targets": {
         "it": "Frenata automatica di emergenza",
         "fr": "Freinage d'urgence automatique",
-        "de": "Automatische Notbremsung"
+        "de": "Automatische Notbremsung",
+        "cs": "Automatické nouzové brzdění",
+        "el": "Αυτόματο φρενάρισμα έκτακτης ανάγκης",
+        "en": "Automatic emergency braking",
+        "es": "Frenado automático de emergencia",
+        "hr": "Automatsko kočenje u nuždi",
+        "hu": "Automatikus vészfékezés",
+        "is": "Sjálfvirk neyðarhemlun",
+        "nl": "Automatisch noodremmen",
+        "pl": "Automatyczne awaryjne hamowanie",
+        "pt": "Travagem automática de emergência",
+        "ro": "Frânare automată de urgență",
+        "sk": "Automatické núdzové brzdenie",
+        "sl": "Samodejno zaviranje v sili"
       },
       "sourceRows": {
         "it": 76,
@@ -1166,7 +2157,20 @@
       "targets": {
         "it": "Guida autonoma",
         "fr": "Conduite autonome",
-        "de": "Autonomes Fahren"
+        "de": "Autonomes Fahren",
+        "cs": "Autonomní řízení",
+        "el": "Αυτόνομη οδήγηση",
+        "en": "Autonomous driving",
+        "es": "Conducción autónoma",
+        "hr": "Autonomna vožnja",
+        "hu": "Önálló vezetés",
+        "is": "Sjálfvirkur akstur",
+        "nl": "Autonoom rijden",
+        "pl": "Autonomiczna jazda",
+        "pt": "Condução autónoma",
+        "ro": "Conducere autonomă",
+        "sk": "Autonómne riadenie",
+        "sl": "Avtonomna vožnja"
       },
       "sourceRows": {
         "it": 77,
@@ -1180,7 +2184,20 @@
       "targets": {
         "it": "Monitoraggio dell'angolo cieco",
         "fr": "Surveillance des angles morts",
-        "de": "Totwinkelüberwachung"
+        "de": "Totwinkelüberwachung",
+        "cs": "Monitorování mrtvého úhlu",
+        "el": "Παρακολούθηση τυφλού σημείου",
+        "en": "Blind spot monitoring",
+        "es": "Monitorización del ángulo muerto",
+        "hr": "Nadzor mrtvog kuta",
+        "hu": "Holttérfigyelés",
+        "is": "Blindsvæðiseftirlit",
+        "nl": "Dodehoekbewaking",
+        "pl": "Monitorowanie martwego pola",
+        "pt": "Monitorização do ângulo morto",
+        "ro": "Monitorizarea unghiului mort",
+        "sk": "Monitorovanie mŕtveho uhla",
+        "sl": "Spremljanje mrtvega kota"
       },
       "sourceRows": {
         "it": 78,
@@ -1194,7 +2211,20 @@
       "targets": {
         "it": "Riconoscimento facciale",
         "fr": "Reconnaissance faciale",
-        "de": "Gesichtserkennung"
+        "de": "Gesichtserkennung",
+        "cs": "Rozpoznávání obličeje",
+        "el": "Αναγνώριση προσώπου",
+        "en": "Face recognition",
+        "es": "Reconocimiento facial",
+        "hr": "Prepoznavanje lica",
+        "hu": "Arcfelismerés",
+        "is": "Andlitsgreining",
+        "nl": "Gezichtsherkenning",
+        "pl": "Rozpoznawanie twarzy",
+        "pt": "Reconhecimento facial",
+        "ro": "Recunoaștere facială",
+        "sk": "Rozpoznávanie tváre",
+        "sl": "Prepoznavanje obraza"
       },
       "sourceRows": {
         "it": 79,
@@ -1208,7 +2238,20 @@
       "targets": {
         "it": "Guida intelligente",
         "fr": "Conduite intelligente",
-        "de": "Intelligentes Fahren"
+        "de": "Intelligentes Fahren",
+        "cs": "Inteligentní řízení",
+        "el": "Έξυπνη οδήγηση",
+        "en": "Intelligent driving",
+        "es": "Conducción inteligente",
+        "hr": "Inteligentna vožnja",
+        "hu": "Intelligens vezetés",
+        "is": "Snjall akstur",
+        "nl": "Intelligent rijden",
+        "pl": "Inteligentna jazda",
+        "pt": "Condução inteligente",
+        "ro": "Conducere inteligentă",
+        "sk": "Inteligentné riadenie",
+        "sl": "Inteligentna vožnja"
       },
       "sourceRows": {
         "it": 80,
@@ -1222,7 +2265,20 @@
       "targets": {
         "it": "Lane Centering",
         "fr": "Centrage dans la voie",
-        "de": "Spurzentrierung"
+        "de": "Spurzentrierung",
+        "cs": "Lane Centering",
+        "el": "Lane Centering",
+        "en": "Lane Centering",
+        "es": "Lane Centering",
+        "hr": "Lane Centering",
+        "hu": "Lane Centering",
+        "is": "Lane Centering",
+        "nl": "Lane Centering",
+        "pl": "Lane Centering",
+        "pt": "Lane Centering",
+        "ro": "Lane Centering",
+        "sk": "Lane Centering",
+        "sl": "Lane Centering"
       },
       "note": "NEW - Do not translate (Stellantis standard)",
       "notesByLocale": {
@@ -1242,7 +2298,20 @@
       "targets": {
         "it": "Assistente al mantenimento di corsia",
         "fr": "Aide au maintien de voie",
-        "de": "Spurhalteassistent"
+        "de": "Spurhalteassistent",
+        "cs": "Asistent udržování v jízdním pruhu",
+        "el": "Υποβοήθηση διατήρησης λωρίδας",
+        "en": "Lane keeping assist",
+        "es": "Asistente de mantenimiento de carril",
+        "hr": "Pomoć pri zadržavanju vozila u traci",
+        "hu": "Sávtartó asszisztens",
+        "is": "Akgreinahjálp",
+        "nl": "Rijstrookassistent",
+        "pl": "Asystent utrzymania pasa ruchu",
+        "pt": "Assistente de manutenção na faixa",
+        "ro": "Asistență la menținerea benzii",
+        "sk": "Asistent udržiavania v jazdnom pruhu",
+        "sl": "Pomoč pri ohranjanju voznega pasu"
       },
       "sourceRows": {
         "it": 82,
@@ -1256,7 +2325,20 @@
       "targets": {
         "it": "Guida assistita di Livello 2",
         "fr": "Conduite assistée de Niveau 2",
-        "de": "Assistiertes Fahren Level 2"
+        "de": "Assistiertes Fahren Level 2",
+        "cs": "Asistovaná jízda úrovně 2",
+        "el": "Level 2 Assisted Driving",
+        "en": "Level 2 Assisted Driving",
+        "es": "Conducción asistida de nivel 2",
+        "hr": "Vožnja uz pomoć razine 2",
+        "hu": "2. szintű asszisztált vezetés",
+        "is": "Level 2 Assisted Driving",
+        "nl": "Geassisteerd rijden op niveau 2",
+        "pl": "Jazda wspomagana poziomu 2",
+        "pt": "Condução assistida de nível 2",
+        "ro": "Conducere asistată de nivel 2",
+        "sk": "Asistovaná jazda úrovne 2",
+        "sl": "Pomoč pri vožnji na ravni 2"
       },
       "note": "NEW",
       "sourceRows": {
@@ -1267,14 +2349,25 @@
     },
     {
       "source": "OTA (Over-the-Air) update",
-      "sourceVariants": [
-        "Over-the-air"
-      ],
+      "sourceVariants": ["Over-the-air"],
       "category": "Features & Technologies",
       "targets": {
         "it": "Aggiornamento OTA (Over-the-Air)",
         "fr": "Mise à jour OTA (Over-the-Air)",
-        "de": "OTA-Update (Over-the-Air)"
+        "de": "OTA-Update (Over-the-Air)",
+        "cs": "OTA (Over-the-Air) update",
+        "el": "OTA (Over-the-Air) update",
+        "en": "OTA (Over-the-Air) update",
+        "es": "OTA (Over-the-Air) update",
+        "hr": "OTA (Over-the-Air) ažuriranje",
+        "hu": "OTA (Over-the-Air) frissítés",
+        "is": "OTA (Over-the-Air) update",
+        "nl": "OTA (Over-the-Air)-update",
+        "pl": "OTA (Over-the-Air) update",
+        "pt": "OTA (Over-the-Air) update",
+        "ro": "Actualizare OTA (Over-the-Air)",
+        "sk": "OTA (Over-the-Air) update",
+        "sl": "OTA (Over-the-Air) posodobitev"
       },
       "note": "Keep OTA and Over-the-Air in English. When the listed standalone variant appears, preserve it as Over-the-Air rather than translating it.",
       "sourceRows": {
@@ -1289,7 +2382,20 @@
       "targets": {
         "it": "Assistente al parcheggio",
         "fr": "Aide au stationnement",
-        "de": "Einparkhilfe"
+        "de": "Einparkhilfe",
+        "cs": "Asistent parkování",
+        "el": "Υποβοήθηση στάθμευσης",
+        "en": "Parking assist",
+        "es": "Asistente de aparcamiento",
+        "hr": "Pomoć pri parkiranju",
+        "hu": "Parkolássegítő",
+        "is": "Bílastæðaaðstoð",
+        "nl": "Parkeerassistent",
+        "pl": "Asystent parkowania",
+        "pt": "Assistente de estacionamento",
+        "ro": "Asistență la parcare",
+        "sk": "Asistent parkovania",
+        "sl": "Pomoč pri parkiranju"
       },
       "sourceRows": {
         "it": 85,
@@ -1303,7 +2409,20 @@
       "targets": {
         "it": "Visuale perimetrale",
         "fr": "Vision périphérique",
-        "de": "Rundumsicht"
+        "de": "Rundumsicht",
+        "cs": "360° pohled",
+        "el": "Περιμετρική προβολή",
+        "en": "Surround view",
+        "es": "Vista envolvente",
+        "hr": "Pregled okoline",
+        "hu": "Körkörös nézet",
+        "is": "360° yfirsýn",
+        "nl": "Rondomzicht",
+        "pl": "Widok dookoła",
+        "pt": "Visão envolvente",
+        "ro": "Vedere panoramică",
+        "sk": "Pohľad okolo vozidla",
+        "sl": "Pogled okoli vozila"
       },
       "sourceRows": {
         "it": 86,
@@ -1317,7 +2436,20 @@
       "targets": {
         "it": "Assistente al Traffico",
         "fr": "Aide au trafic",
-        "de": "Verkehrsassistent"
+        "de": "Verkehrsassistent",
+        "cs": "Traffic Assist",
+        "el": "Traffic Assist",
+        "en": "Traffic Assist",
+        "es": "Traffic Assist",
+        "hr": "Traffic Assist",
+        "hu": "Traffic Assist",
+        "is": "Traffic Assist",
+        "nl": "Traffic Assist",
+        "pl": "Traffic Assist",
+        "pt": "Traffic Assist",
+        "ro": "Traffic Assist",
+        "sk": "Traffic Assist",
+        "sl": "Traffic Assist"
       },
       "note": "NEW",
       "sourceRows": {
@@ -1332,7 +2464,20 @@
       "targets": {
         "it": "Controllo vocale",
         "fr": "Commande vocale",
-        "de": "Sprachsteuerung"
+        "de": "Sprachsteuerung",
+        "cs": "Hlasové ovládání",
+        "el": "Φωνητικός έλεγχος",
+        "en": "Voice control",
+        "es": "Control por voz",
+        "hr": "Glasovno upravljanje",
+        "hu": "Hangvezérlés",
+        "is": "Raddstýring",
+        "nl": "Spraakbediening",
+        "pl": "Sterowanie głosowe",
+        "pt": "Controlo por voz",
+        "ro": "Comandă vocală",
+        "sk": "Hlasové ovládanie",
+        "sl": "Glasovno upravljanje"
       },
       "sourceRows": {
         "it": 88,
@@ -1346,7 +2491,20 @@
       "targets": {
         "it": "Illuminazione ambientale",
         "fr": "Éclairage d'ambiance",
-        "de": "Ambientebeleuchtung"
+        "de": "Ambientebeleuchtung",
+        "cs": "Ambientní osvětlení",
+        "el": "Ατμοσφαιρικός φωτισμός",
+        "en": "Ambient lighting",
+        "es": "Iluminación ambiental",
+        "hr": "Ambijentalna rasvjeta",
+        "hu": "Hangulatvilágítás",
+        "is": "Stemningslýsing",
+        "nl": "Sfeerverlichting",
+        "pl": "Oświetlenie ambientowe",
+        "pt": "Iluminação ambiente",
+        "ro": "Iluminare ambientală",
+        "sk": "Ambientné osvetlenie",
+        "sl": "Ambientna osvetlitev"
       },
       "sourceRows": {
         "it": 89,
@@ -1360,7 +2518,20 @@
       "targets": {
         "it": "Bluetooth",
         "fr": "Bluetooth",
-        "de": "Bluetooth"
+        "de": "Bluetooth",
+        "cs": "Bluetooth",
+        "el": "Bluetooth",
+        "en": "Bluetooth",
+        "es": "Bluetooth",
+        "hr": "Bluetooth",
+        "hu": "Bluetooth",
+        "is": "Bluetooth",
+        "nl": "Bluetooth",
+        "pl": "Bluetooth",
+        "pt": "Bluetooth",
+        "ro": "Bluetooth",
+        "sk": "Bluetooth",
+        "sl": "Bluetooth"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1375,7 +2546,20 @@
       "targets": {
         "it": "Console centrale",
         "fr": "Console centrale",
-        "de": "Mittelkonsole"
+        "de": "Mittelkonsole",
+        "cs": "Středová konzola",
+        "el": "Κεντρική κονσόλα",
+        "en": "Central console",
+        "es": "Consola central",
+        "hr": "Središnja konzola",
+        "hu": "Középkonzol",
+        "is": "Miðjustokkur",
+        "nl": "Middenconsole",
+        "pl": "Konsola centralna",
+        "pt": "Consola central",
+        "ro": "Consolă centrală",
+        "sk": "Stredová konzola",
+        "sl": "Sredinska konzola"
       },
       "sourceRows": {
         "it": 91,
@@ -1389,7 +2573,20 @@
       "targets": {
         "it": "Connettività",
         "fr": "Connectivité",
-        "de": "Konnektivität"
+        "de": "Konnektivität",
+        "cs": "Konektivita",
+        "el": "Συνδεσιμότητα",
+        "en": "Connectivity",
+        "es": "Conectividad",
+        "hr": "Povezivost",
+        "hu": "Kapcsolódás",
+        "is": "Tengimöguleikar",
+        "nl": "Connectiviteit",
+        "pl": "Łączność",
+        "pt": "Conectividade",
+        "ro": "Conectivitate",
+        "sk": "Konektivita",
+        "sl": "Povezljivost"
       },
       "sourceRows": {
         "it": 92,
@@ -1403,7 +2600,20 @@
       "targets": {
         "it": "Digital key",
         "fr": "Clé numérique",
-        "de": "Digitaler Schlüssel"
+        "de": "Digitaler Schlüssel",
+        "cs": "Digitální klíč",
+        "el": "Ψηφιακό κλειδί",
+        "en": "Digital key",
+        "es": "Llave digital",
+        "hr": "Digitalni ključ",
+        "hu": "Digitális kulcs",
+        "is": "Stafrænn lykill",
+        "nl": "Digitale sleutel",
+        "pl": "Cyfrowy klucz",
+        "pt": "Chave digital",
+        "ro": "Cheie digitală",
+        "sk": "Digitálny kľúč",
+        "sl": "Digitalni ključ"
       },
       "sourceRows": {
         "it": 93,
@@ -1417,7 +2627,20 @@
       "targets": {
         "it": "Head-up display (HUD)",
         "fr": "Affichage tête haute (HUD)",
-        "de": "Head-up-Display (HUD)"
+        "de": "Head-up-Display (HUD)",
+        "cs": "Head-up displej (HUD)",
+        "el": "Head-up display (HUD)",
+        "en": "Head-up display (HUD)",
+        "es": "Head-up display (HUD)",
+        "hr": "Head-up display (HUD)",
+        "hu": "Head-up display (HUD)",
+        "is": "Head-up display (HUD)",
+        "nl": "Head-up display (HUD)",
+        "pl": "Head-up display (HUD)",
+        "pt": "Head-up display (HUD)",
+        "ro": "Head-up display (HUD)",
+        "sk": "Head-up display (HUD)",
+        "sl": "Head-up display (HUD)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1432,7 +2655,20 @@
       "targets": {
         "it": "Infotainment",
         "fr": "Infodivertissement",
-        "de": "Infotainment"
+        "de": "Infotainment",
+        "cs": "Infotainment",
+        "el": "Σύστημα infotainment",
+        "en": "Infotainment",
+        "es": "Infoentretenimiento",
+        "hr": "Infotainment",
+        "hu": "Infotainment",
+        "is": "Upplýsinga- og afþreyingarkerfi",
+        "nl": "Infotainment",
+        "pl": "System multimedialny",
+        "pt": "Infotainment",
+        "ro": "Sistem infotainment",
+        "sk": "Infotainment",
+        "sl": "Infotainment"
       },
       "sourceRows": {
         "it": 95,
@@ -1446,7 +2682,20 @@
       "targets": {
         "it": "Quadro strumenti",
         "fr": "Combiné d'instruments",
-        "de": "Kombiinstrument"
+        "de": "Kombiinstrument",
+        "cs": "Přístrojový štít",
+        "el": "Πίνακας οργάνων",
+        "en": "Instrument cluster",
+        "es": "Cuadro de instrumentos",
+        "hr": "Instrumentna ploča",
+        "hu": "Műszeregység",
+        "is": "Mælaborð",
+        "nl": "Instrumentenpaneel",
+        "pl": "Zestaw wskaźników",
+        "pt": "Painel de instrumentos",
+        "ro": "Panou de instrumente",
+        "sk": "Prístrojový panel",
+        "sl": "Instrumentna plošča"
       },
       "sourceRows": {
         "it": 96,
@@ -1460,7 +2709,20 @@
       "targets": {
         "it": "NFC",
         "fr": "NFC",
-        "de": "NFC"
+        "de": "NFC",
+        "cs": "NFC",
+        "el": "NFC",
+        "en": "NFC",
+        "es": "NFC",
+        "hr": "NFC",
+        "hu": "NFC",
+        "is": "NFC",
+        "nl": "NFC",
+        "pl": "NFC",
+        "pt": "NFC",
+        "ro": "NFC",
+        "sk": "NFC",
+        "sl": "NFC"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1475,7 +2737,20 @@
       "targets": {
         "it": "Navigazione",
         "fr": "Navigation",
-        "de": "Navigation"
+        "de": "Navigation",
+        "cs": "Navigace",
+        "el": "Πλοήγηση",
+        "en": "Navigation",
+        "es": "Navegación",
+        "hr": "Navigacija",
+        "hu": "Navigáció",
+        "is": "Leiðsögn",
+        "nl": "Navigatie",
+        "pl": "Nawigacja",
+        "pt": "Navegação",
+        "ro": "Navigație",
+        "sk": "Navigácia",
+        "sl": "Navigacija"
       },
       "sourceRows": {
         "it": 98,
@@ -1489,7 +2764,20 @@
       "targets": {
         "it": "Integrazione smartphone",
         "fr": "Intégration smartphone",
-        "de": "Smartphone-Integration"
+        "de": "Smartphone-Integration",
+        "cs": "Integrace chytrého telefonu",
+        "el": "Ενσωμάτωση smartphone",
+        "en": "Smartphone integration",
+        "es": "Integración con smartphone",
+        "hr": "Integracija pametnog telefona",
+        "hu": "Okostelefon-integráció",
+        "is": "Snjallsímasamþætting",
+        "nl": "Smartphone-integratie",
+        "pl": "Integracja ze smartfonem",
+        "pt": "Integração com smartphone",
+        "ro": "Integrare smartphone",
+        "sk": "Prepojenie so smartfónom",
+        "sl": "Povezava s pametnim telefonom"
       },
       "sourceRows": {
         "it": 99,
@@ -1503,7 +2791,20 @@
       "targets": {
         "it": "Touchscreen",
         "fr": "Écran tactile",
-        "de": "Touchscreen"
+        "de": "Touchscreen",
+        "cs": "Dotykový displej",
+        "el": "Οθόνη αφής",
+        "en": "Touchscreen",
+        "es": "Pantalla táctil",
+        "hr": "Zaslon osjetljiv na dodir",
+        "hu": "Érintőképernyő",
+        "is": "Snertiskjár",
+        "nl": "Touchscreen",
+        "pl": "Ekran dotykowy",
+        "pt": "Ecrã tátil",
+        "ro": "Ecran tactil",
+        "sk": "Dotyková obrazovka",
+        "sl": "Zaslon na dotik"
       },
       "sourceRows": {
         "it": 100,
@@ -1517,7 +2818,20 @@
       "targets": {
         "it": "Wi-Fi",
         "fr": "Wi-Fi",
-        "de": "WLAN"
+        "de": "WLAN",
+        "cs": "Wi-Fi",
+        "el": "Wi-Fi",
+        "en": "Wi-Fi",
+        "es": "Wi-Fi",
+        "hr": "Wi-Fi",
+        "hu": "Wi-Fi",
+        "is": "Wi-Fi",
+        "nl": "Wi-Fi",
+        "pl": "Wi-Fi",
+        "pt": "Wi-Fi",
+        "ro": "Wi-Fi",
+        "sk": "Wi-Fi",
+        "sl": "Wi-Fi"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1532,7 +2846,20 @@
       "targets": {
         "it": "Ricarica wireless",
         "fr": "Recharge sans fil",
-        "de": "Kabelloses Laden"
+        "de": "Kabelloses Laden",
+        "cs": "Bezdrátové nabíjení",
+        "el": "Ασύρματη φόρτιση",
+        "en": "Wireless charging",
+        "es": "Carga inalámbrica",
+        "hr": "Bežično punjenje",
+        "hu": "Vezeték nélküli töltés",
+        "is": "Þráðlaus hleðsla",
+        "nl": "Draadloos laden",
+        "pl": "Ładowanie bezprzewodowe",
+        "pt": "Carregamento sem fios",
+        "ro": "Încărcare wireless",
+        "sk": "Bezdrôtové nabíjanie",
+        "sl": "Brezžično polnjenje"
       },
       "sourceRows": {
         "it": 102,
@@ -1546,7 +2873,20 @@
       "targets": {
         "it": "Post-vendita",
         "fr": "Après-vente",
-        "de": "Kundendienst"
+        "de": "Kundendienst",
+        "cs": "Poprodejní služby",
+        "el": "After-sales",
+        "en": "Aftersales",
+        "es": "Posventa",
+        "hr": "Postprodaja",
+        "hu": "Értékesítés utáni szolgáltatások",
+        "is": "Eftirþjónusta",
+        "nl": "Aftersales",
+        "pl": "Obsługa posprzedażowa",
+        "pt": "Pós-venda",
+        "ro": "Servicii post-vânzare",
+        "sk": "Popredajné služby",
+        "sl": "Poprodajne storitve"
       },
       "sourceRows": {
         "it": 103,
@@ -1560,7 +2900,20 @@
       "targets": {
         "it": "Configuratore",
         "fr": "Configurateur",
-        "de": "Konfigurator"
+        "de": "Konfigurator",
+        "cs": "Konfigurátor",
+        "el": "Διαμορφωτής",
+        "en": "Configurator",
+        "es": "Configurador",
+        "hr": "Konfigurator",
+        "hu": "Konfigurátor",
+        "is": "Bílaval",
+        "nl": "Configurator",
+        "pl": "Konfigurator",
+        "pt": "Configurador",
+        "ro": "Configurator",
+        "sk": "Konfigurátor",
+        "sl": "Konfigurator"
       },
       "sourceRows": {
         "it": 104,
@@ -1574,7 +2927,20 @@
       "targets": {
         "it": "Servizio clienti",
         "fr": "Service client",
-        "de": "Kundenservice"
+        "de": "Kundenservice",
+        "cs": "Zákaznický servis",
+        "el": "Εξυπηρέτηση πελατών",
+        "en": "Customer service",
+        "es": "Atención al cliente",
+        "hr": "Korisnička služba",
+        "hu": "Ügyfélszolgálat",
+        "is": "Þjónustuver",
+        "nl": "Klantenservice",
+        "pl": "Obsługa klienta",
+        "pt": "Atendimento ao cliente",
+        "ro": "Serviciu clienți",
+        "sk": "Zákaznícky servis",
+        "sl": "Storitve za stranke"
       },
       "sourceRows": {
         "it": 105,
@@ -1588,7 +2954,20 @@
       "targets": {
         "it": "Concessionaria",
         "fr": "Concessionnaire",
-        "de": "Händler"
+        "de": "Händler",
+        "cs": "Prodejna",
+        "el": "Αντιπροσωπεία",
+        "en": "Dealership",
+        "es": "Concesionario",
+        "hr": "Prodajno mjesto",
+        "hu": "Márkakereskedés",
+        "is": "Umboðsverslun",
+        "nl": "Dealer",
+        "pl": "Salon dealerski",
+        "pt": "Concessionário",
+        "ro": "Reprezentanță",
+        "sk": "Predajné miesto",
+        "sl": "Prodajni salon"
       },
       "sourceRows": {
         "it": 106,
@@ -1602,7 +2981,20 @@
       "targets": {
         "it": "Consegna",
         "fr": "Livraison",
-        "de": "Lieferung"
+        "de": "Lieferung",
+        "cs": "Dodání",
+        "el": "Παράδοση",
+        "en": "Delivery",
+        "es": "Entrega",
+        "hr": "Isporuka",
+        "hu": "Átadás",
+        "is": "Afhending",
+        "nl": "Levering",
+        "pl": "Dostawa",
+        "pt": "Entrega",
+        "ro": "Livrare",
+        "sk": "Dodanie",
+        "sl": "Dostava"
       },
       "sourceRows": {
         "it": 107,
@@ -1616,7 +3008,20 @@
       "targets": {
         "it": "Finanziamento",
         "fr": "Financement",
-        "de": "Finanzierung"
+        "de": "Finanzierung",
+        "cs": "Financování",
+        "el": "Χρηματοδότηση",
+        "en": "Financing",
+        "es": "Financiación",
+        "hr": "Financiranje",
+        "hu": "Finanszírozás",
+        "is": "Fjármögnun",
+        "nl": "Financiering",
+        "pl": "Finansowanie",
+        "pt": "Financiamento",
+        "ro": "Finanțare",
+        "sk": "Financovanie",
+        "sl": "Financiranje"
       },
       "sourceRows": {
         "it": 108,
@@ -1630,7 +3035,20 @@
       "targets": {
         "it": "Flotta",
         "fr": "Flotte",
-        "de": "Flotte"
+        "de": "Flotte",
+        "cs": "Firemní flotila",
+        "el": "Στόλος",
+        "en": "Fleet",
+        "es": "Flota",
+        "hr": "Flota",
+        "hu": "Flotta",
+        "is": "Fjöldi bíla",
+        "nl": "Wagenpark",
+        "pl": "Flota",
+        "pt": "Frota",
+        "ro": "Flotă",
+        "sk": "Firemný vozový park",
+        "sl": "Flota"
       },
       "sourceRows": {
         "it": 109,
@@ -1644,7 +3062,20 @@
       "targets": {
         "it": "Leasing",
         "fr": "Leasing",
-        "de": "Leasing"
+        "de": "Leasing",
+        "cs": "Operativní leasing",
+        "el": "Leasing",
+        "en": "Leasing",
+        "es": "Leasing",
+        "hr": "Leasing",
+        "hu": "Lízing",
+        "is": "Leasing",
+        "nl": "Leasing",
+        "pl": "Leasing",
+        "pt": "Leasing",
+        "ro": "Leasing",
+        "sk": "Leasing",
+        "sl": "Leasing"
       },
       "sourceRows": {
         "it": 110,
@@ -1658,7 +3089,20 @@
       "targets": {
         "it": "Offerta",
         "fr": "Offre",
-        "de": "Angebot"
+        "de": "Angebot",
+        "cs": "Nabídka",
+        "el": "Προσφορά",
+        "en": "Offer",
+        "es": "Oferta",
+        "hr": "Ponuda",
+        "hu": "Ajánlat",
+        "is": "Tilboð",
+        "nl": "Aanbod",
+        "pl": "Oferta",
+        "pt": "Oferta",
+        "ro": "Ofertă",
+        "sk": "Ponuka",
+        "sl": "Ponudba"
       },
       "sourceRows": {
         "it": 111,
@@ -1672,7 +3116,20 @@
       "targets": {
         "it": "Ordine",
         "fr": "Commande",
-        "de": "Bestellung"
+        "de": "Bestellung",
+        "cs": "Objednávka",
+        "el": "Παραγγελία",
+        "en": "Order",
+        "es": "Pedido",
+        "hr": "Narudžba",
+        "hu": "Rendelés",
+        "is": "Pöntun",
+        "nl": "Bestelling",
+        "pl": "Zamówienie",
+        "pt": "Encomenda",
+        "ro": "Comandă",
+        "sk": "Objednávka",
+        "sl": "Naročilo"
       },
       "sourceRows": {
         "it": 112,
@@ -1686,7 +3143,20 @@
       "targets": {
         "it": "Listino prezzi",
         "fr": "Tarif",
-        "de": "Preisliste"
+        "de": "Preisliste",
+        "cs": "Ceník",
+        "el": "Τιμοκατάλογος",
+        "en": "Price list",
+        "es": "Lista de precios",
+        "hr": "Cjenik",
+        "hu": "Árlista",
+        "is": "Verðskrá",
+        "nl": "Prijslijst",
+        "pl": "Cennik",
+        "pt": "Lista de preços",
+        "ro": "Listă de prețuri",
+        "sk": "Cenník",
+        "sl": "Cenik"
       },
       "sourceRows": {
         "it": 113,
@@ -1700,7 +3170,20 @@
       "targets": {
         "it": "Showroom",
         "fr": "Showroom",
-        "de": "Showroom"
+        "de": "Showroom",
+        "cs": "Showroom",
+        "el": "Έκθεση",
+        "en": "Showroom",
+        "es": "Showroom",
+        "hr": "Salon",
+        "hu": "Bemutatóterem",
+        "is": "Sýningarsalur",
+        "nl": "Showroom",
+        "pl": "Salon wystawowy",
+        "pt": "Showroom",
+        "ro": "Showroom",
+        "sk": "Showroom",
+        "sl": "Razstavni salon"
       },
       "sourceRows": {
         "it": 114,
@@ -1714,7 +3197,20 @@
       "targets": {
         "it": "Test drive",
         "fr": "Essai",
-        "de": "Probefahrt"
+        "de": "Probefahrt",
+        "cs": "Testovací jízda",
+        "el": "Test drive",
+        "en": "Test drive",
+        "es": "Prueba de conducción",
+        "hr": "Probna vožnja",
+        "hu": "Tesztvezetés",
+        "is": "Prufuakstur",
+        "nl": "Proefrit",
+        "pl": "Jazda próbna",
+        "pt": "Test drive",
+        "ro": "Test drive",
+        "sk": "Testovacia jazda",
+        "sl": "Testna vožnja"
       },
       "sourceRows": {
         "it": 115,
@@ -1728,7 +3224,20 @@
       "targets": {
         "it": "Permuta",
         "fr": "Reprise",
-        "de": "Inzahlungnahme"
+        "de": "Inzahlungnahme",
+        "cs": "Protiúčet",
+        "el": "Ανταλλαγή",
+        "en": "Trade-in",
+        "es": "Entrega a cambio",
+        "hr": "Zamjena vozila",
+        "hu": "Beszámítás",
+        "is": "Innskipti",
+        "nl": "Inruil",
+        "pl": "Odkup",
+        "pt": "Retoma",
+        "ro": "Trade-in",
+        "sk": "Výkup na protiúčet",
+        "sl": "Menjava vozila"
       },
       "sourceRows": {
         "it": 116,
@@ -1742,7 +3251,20 @@
       "targets": {
         "it": "Garanzia",
         "fr": "Garantie",
-        "de": "Garantie"
+        "de": "Garantie",
+        "cs": "Záruka",
+        "el": "Εγγύηση",
+        "en": "Warranty",
+        "es": "Garantía",
+        "hr": "Jamstvo",
+        "hu": "Garancia",
+        "is": "Ábyrgð",
+        "nl": "Garantie",
+        "pl": "Gwarancja",
+        "pt": "Garantia",
+        "ro": "Garanție",
+        "sk": "Záruka",
+        "sl": "Garancija"
       },
       "sourceRows": {
         "it": 117,
@@ -1756,7 +3278,20 @@
       "targets": {
         "it": "ELV",
         "fr": "ELV",
-        "de": "ELV"
+        "de": "ELV",
+        "cs": "ELV",
+        "el": "ELV",
+        "en": "ELV",
+        "es": "ELV",
+        "hr": "ELV",
+        "hu": "ELV",
+        "is": "ELV",
+        "nl": "ELV",
+        "pl": "ELV",
+        "pt": "ELV",
+        "ro": "ELV",
+        "sk": "ELV",
+        "sl": "ELV"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1771,7 +3306,20 @@
       "targets": {
         "it": "Veicolo fuori uso",
         "fr": "Véhicule hors d'usag",
-        "de": "Altfahrzeug"
+        "de": "Altfahrzeug",
+        "cs": "Vozidlo na konci životnosti",
+        "el": "Όχημα στο τέλος του κύκλου ζωής του",
+        "en": "End-of-life vehicle",
+        "es": "Vehículo al final de su vida útil",
+        "hr": "Vozilo na kraju životnog vijeka",
+        "hu": "Élettartama végére ért jármű",
+        "is": "End-of-life vehicle",
+        "nl": "End-of-life vehicle",
+        "pl": "Pojazd wycofany z eksploatacji",
+        "pt": "Veículo em fim de vida",
+        "ro": "Vehicul la sfârșitul duratei de viață",
+        "sk": "Vozidlo po skončení životnosti",
+        "sl": "Vozilo ob koncu življenjske dobe"
       },
       "sourceRows": {
         "it": 119,
@@ -1785,7 +3333,20 @@
       "targets": {
         "it": "Veicoli fuori uso",
         "fr": "Véhicules hors d'usag",
-        "de": "Altfahrzeuge"
+        "de": "Altfahrzeuge",
+        "cs": "Vozidla na konci životnosti",
+        "el": "Οχήματα στο τέλος του κύκλου ζωής τους",
+        "en": "End-of-life vehicles",
+        "es": "Vehículos al final de su vida útil",
+        "hr": "Vozila na kraju životnog vijeka",
+        "hu": "Élettartama végére ért járművek",
+        "is": "End-of-life vehicles",
+        "nl": "End-of-life vehicles",
+        "pl": "Pojazdy wycofane z eksploatacji",
+        "pt": "Veículos em fim de vida",
+        "ro": "Vehicule la sfârșitul duratei de viață",
+        "sk": "Vozidlá po skončení životnosti",
+        "sl": "Vozila ob koncu življenjske dobe"
       },
       "sourceRows": {
         "it": 120,
@@ -1799,7 +3360,20 @@
       "targets": {
         "it": "ABS",
         "fr": "ABS",
-        "de": "ABS"
+        "de": "ABS",
+        "cs": "ABS",
+        "el": "ABS",
+        "en": "ABS",
+        "es": "ABS",
+        "hr": "ABS",
+        "hu": "ABS",
+        "is": "ABS",
+        "nl": "ABS",
+        "pl": "ABS",
+        "pt": "ABS",
+        "ro": "ABS",
+        "sk": "ABS",
+        "sl": "ABS"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1814,7 +3388,20 @@
       "targets": {
         "it": "Sicurezza attiva",
         "fr": "Sécurité active",
-        "de": "Aktive Sicherheit"
+        "de": "Aktive Sicherheit",
+        "cs": "Aktivní bezpečnost",
+        "el": "Ενεργητική ασφάλεια",
+        "en": "Active safety",
+        "es": "Seguridad activa",
+        "hr": "Aktivna sigurnost",
+        "hu": "Aktív biztonság",
+        "is": "Virk öryggi",
+        "nl": "Actieve veiligheid",
+        "pl": "Aktywne bezpieczeństwo",
+        "pt": "Segurança ativa",
+        "ro": "Siguranță activă",
+        "sk": "Aktívna bezpečnosť",
+        "sl": "Aktivna varnost"
       },
       "sourceRows": {
         "it": 122,
@@ -1828,7 +3415,20 @@
       "targets": {
         "it": "Airbag",
         "fr": "Airbag",
-        "de": "Airbag"
+        "de": "Airbag",
+        "cs": "Airbag",
+        "el": "Αερόσακος",
+        "en": "Airbag",
+        "es": "Airbag",
+        "hr": "Zračni jastuk",
+        "hu": "Légzsák",
+        "is": "Loftpúði",
+        "nl": "Airbag",
+        "pl": "Poduszka powietrzna",
+        "pt": "Airbag",
+        "ro": "Airbag",
+        "sk": "Airbag",
+        "sl": "Zračna blazina"
       },
       "sourceRows": {
         "it": 123,
@@ -1842,7 +3442,20 @@
       "targets": {
         "it": "Crash test",
         "fr": "Crash test",
-        "de": "Crashtest"
+        "de": "Crashtest",
+        "cs": "Crash test",
+        "el": "Δοκιμή πρόσκρουσης",
+        "en": "Crash test",
+        "es": "Prueba de choque",
+        "hr": "Crash test",
+        "hu": "Törésteszt",
+        "is": "Árekstrarpróf",
+        "nl": "Crashtest",
+        "pl": "Test zderzeniowy",
+        "pt": "Teste de colisão",
+        "ro": "Test de impact",
+        "sk": "Crash test",
+        "sl": "Trk test"
       },
       "sourceRows": {
         "it": 124,
@@ -1856,7 +3469,20 @@
       "targets": {
         "it": "ESC/ESP",
         "fr": "ESC/ESP",
-        "de": "ESC/ESP"
+        "de": "ESC/ESP",
+        "cs": "ESC/ESP",
+        "el": "ESC/ESP",
+        "en": "ESC/ESP",
+        "es": "ESC/ESP",
+        "hr": "ESC/ESP",
+        "hu": "ESC/ESP",
+        "is": "ESC/ESP",
+        "nl": "ESC/ESP",
+        "pl": "ESC/ESP",
+        "pt": "ESC/ESP",
+        "ro": "ESC/ESP",
+        "sk": "ESC/ESP",
+        "sl": "ESC/ESP"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1871,7 +3497,20 @@
       "targets": {
         "it": "Chiamata di emergenza (eCall)",
         "fr": "Appel d'urgence (eCall)",
-        "de": "Notrufsystem (eCall)"
+        "de": "Notrufsystem (eCall)",
+        "cs": "Emergency call (eCall)",
+        "el": "Emergency call (eCall)",
+        "en": "Emergency call (eCall)",
+        "es": "Emergency call (eCall)",
+        "hr": "Emergency call (eCall)",
+        "hu": "Vészhelyzeti hívás (eCall)",
+        "is": "Emergency call (eCall)",
+        "nl": "Emergency call (eCall)",
+        "pl": "Emergency call (eCall)",
+        "pt": "Emergency call (eCall)",
+        "ro": "Apel de urgență (eCall)",
+        "sk": "Emergency call (eCall)",
+        "sl": "Klic v sili (eCall)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1886,7 +3525,20 @@
       "targets": {
         "it": "Euro NCAP",
         "fr": "Euro NCAP",
-        "de": "Euro NCAP"
+        "de": "Euro NCAP",
+        "cs": "Euro NCAP",
+        "el": "Euro NCAP",
+        "en": "Euro NCAP",
+        "es": "Euro NCAP",
+        "hr": "Euro NCAP",
+        "hu": "Euro NCAP",
+        "is": "Euro NCAP",
+        "nl": "Euro NCAP",
+        "pl": "Euro NCAP",
+        "pt": "Euro NCAP",
+        "ro": "Euro NCAP",
+        "sk": "Euro NCAP",
+        "sl": "Euro NCAP"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1901,7 +3553,20 @@
       "targets": {
         "it": "Assistente alla partenza in salita",
         "fr": "Aide au démarrage en côte",
-        "de": "Berganfahrassistent"
+        "de": "Berganfahrassistent",
+        "cs": "Asistent rozjezdu do kopce",
+        "el": "Υποβοήθηση εκκίνησης σε ανηφόρα",
+        "en": "Hill start assist",
+        "es": "Asistente de arranque en pendiente",
+        "hr": "Pomoć pri kretanju uzbrdo",
+        "hu": "Emelkedőn elindulás-segítő",
+        "is": "Aðstoð við af stað af brekku",
+        "nl": "Hill start assist",
+        "pl": "Asystent ruszania pod górę",
+        "pt": "Assistente de arranque em subida",
+        "ro": "Asistență la pornirea din rampă",
+        "sk": "Asistent rozjazdu do kopca",
+        "sl": "Pomoč pri speljevanju v klanec"
       },
       "sourceRows": {
         "it": 128,
@@ -1915,7 +3580,20 @@
       "targets": {
         "it": "ISOFIX",
         "fr": "ISOFIX",
-        "de": "ISOFIX"
+        "de": "ISOFIX",
+        "cs": "ISOFIX",
+        "el": "ISOFIX",
+        "en": "ISOFIX",
+        "es": "ISOFIX",
+        "hr": "ISOFIX",
+        "hu": "ISOFIX",
+        "is": "ISOFIX",
+        "nl": "ISOFIX",
+        "pl": "ISOFIX",
+        "pt": "ISOFIX",
+        "ro": "ISOFIX",
+        "sk": "ISOFIX",
+        "sl": "ISOFIX"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -1930,7 +3608,20 @@
       "targets": {
         "it": "Sicurezza passiva",
         "fr": "Sécurité passive",
-        "de": "Passive Sicherheit"
+        "de": "Passive Sicherheit",
+        "cs": "Pasivní bezpečnost",
+        "el": "Παθητική ασφάλεια",
+        "en": "Passive safety",
+        "es": "Seguridad pasiva",
+        "hr": "Pasivna sigurnost",
+        "hu": "Passzív biztonság",
+        "is": "Óvirkt öryggi",
+        "nl": "Passieve veiligheid",
+        "pl": "Bezpieczeństwo bierne",
+        "pt": "Segurança passiva",
+        "ro": "Siguranță pasivă",
+        "sk": "Pasívna bezpečnosť",
+        "sl": "Pasivna varnost"
       },
       "sourceRows": {
         "it": 130,
@@ -1944,7 +3635,20 @@
       "targets": {
         "it": "Protezione pedoni",
         "fr": "Protection des piétons",
-        "de": "Fußgängerschutz"
+        "de": "Fußgängerschutz",
+        "cs": "Ochrana chodců",
+        "el": "Προστασία πεζών",
+        "en": "Pedestrian protection",
+        "es": "Protección de peatones",
+        "hr": "Zaštita pješaka",
+        "hu": "Gyalogosvédelem",
+        "is": "Vernd gangandi vegfarenda",
+        "nl": "Voetgangersbescherming",
+        "pl": "Ochrona pieszych",
+        "pt": "Proteção de peões",
+        "ro": "Protecția pietonilor",
+        "sk": "Ochrana chodcov",
+        "sl": "Zaščita pešcev"
       },
       "sourceRows": {
         "it": 131,
@@ -1958,7 +3662,20 @@
       "targets": {
         "it": "Protezione anti-ribaltamento",
         "fr": "Protection anti-retournement",
-        "de": "Überschlagschutz"
+        "de": "Überschlagschutz",
+        "cs": "Ochrana proti převrácení",
+        "el": "Προστασία σε ανατροπή",
+        "en": "Rollover protection",
+        "es": "Protección antivuelco",
+        "hr": "Zaštita pri prevrtanju",
+        "hu": "Felborulás elleni védelem",
+        "is": "Veltivörn",
+        "nl": "Bescherming bij kantelen",
+        "pl": "Ochrona przy dachowaniu",
+        "pt": "Proteção contra capotamento",
+        "ro": "Protecție la răsturnare",
+        "sk": "Ochrana pri prevrátení",
+        "sl": "Zaščita pri prevračanju"
       },
       "sourceRows": {
         "it": 132,
@@ -1972,7 +3689,20 @@
       "targets": {
         "it": "Pretensionatore cintura",
         "fr": "Prétensionneur de ceinture",
-        "de": "Gurtstraffer"
+        "de": "Gurtstraffer",
+        "cs": "Předpínač bezpečnostního pásu",
+        "el": "Προεντατήρας ζώνης ασφαλείας",
+        "en": "Seatbelt pretensioner",
+        "es": "Pretensor del cinturón de seguridad",
+        "hr": "Zatezač sigurnosnog pojasa",
+        "hu": "Biztonságiöv-előfeszítő",
+        "is": "Öryggisbeltaforspenna",
+        "nl": "Gordelspanner",
+        "pl": "Napinacz pasów bezpieczeństwa",
+        "pt": "Pré-tensor do cinto de segurança",
+        "ro": "Pretensionator centură de siguranță",
+        "sk": "Predpínač bezpečnostného pásu",
+        "sl": "Prednapenjalnik varnostnega pasu"
       },
       "sourceRows": {
         "it": 133,
@@ -1986,7 +3716,20 @@
       "targets": {
         "it": "Sistema di monitoraggio pressione pneumatici (TPMS)",
         "fr": "Système de surveillance de pression des pneus (TPMS)",
-        "de": "Reifendruckkontrollsystem (TPMS)"
+        "de": "Reifendruckkontrollsystem (TPMS)",
+        "cs": "TPMS (Tyre Pressure Monitoring System)",
+        "el": "TPMS (Tyre Pressure Monitoring System)",
+        "en": "TPMS (Tyre Pressure Monitoring System)",
+        "es": "TPMS (Tyre Pressure Monitoring System)",
+        "hr": "TPMS (Tyre Pressure Monitoring System)",
+        "hu": "TPMS (Tyre Pressure Monitoring System)",
+        "is": "TPMS (Tyre Pressure Monitoring System)",
+        "nl": "TPMS (Tyre Pressure Monitoring System)",
+        "pl": "TPMS (Tyre Pressure Monitoring System)",
+        "pt": "TPMS (Tyre Pressure Monitoring System)",
+        "ro": "TPMS (Tyre Pressure Monitoring System)",
+        "sk": "TPMS (Tyre Pressure Monitoring System)",
+        "sl": "TPMS (Tyre Pressure Monitoring System)"
       },
       "note": "NEW - Acronym - keep in original form",
       "sourceRows": {
@@ -2001,7 +3744,20 @@
       "targets": {
         "it": "Controllo di trazione",
         "fr": "Antipatinage",
-        "de": "Traktionskontrolle"
+        "de": "Traktionskontrolle",
+        "cs": "Kontrola trakce",
+        "el": "Σύστημα ελέγχου πρόσφυσης",
+        "en": "Traction control",
+        "es": "Control de tracción",
+        "hr": "Kontrola proklizavanja",
+        "hu": "Vonóerő-szabályozás",
+        "is": "Gripstýring",
+        "nl": "Tractiecontrole",
+        "pl": "Kontrola trakcji",
+        "pt": "Controlo de tração",
+        "ro": "Controlul tracțiunii",
+        "sk": "Kontrola trakcie",
+        "sl": "Nadzor oprijema"
       },
       "sourceRows": {
         "it": 135,
@@ -2015,7 +3771,20 @@
       "targets": {
         "it": "Aerodinamico",
         "fr": "Aérodynamique",
-        "de": "Aerodynamisch"
+        "de": "Aerodynamisch",
+        "cs": "Aerodynamický",
+        "el": "Αεροδυναμικός",
+        "en": "Aerodynamic",
+        "es": "Aerodinámico",
+        "hr": "Aerodinamičan",
+        "hu": "Aerodinamikus",
+        "is": "Loftaflfræðilegur",
+        "nl": "Aerodynamisch",
+        "pl": "Aerodynamiczny",
+        "pt": "Aerodinâmico",
+        "ro": "Aerodinamic",
+        "sk": "Aerodynamický",
+        "sl": "Aerodinamičen"
       },
       "sourceRows": {
         "it": 136,
@@ -2029,7 +3798,20 @@
       "targets": {
         "it": "Cerchi in lega",
         "fr": "Jantes en alliage",
-        "de": "Leichtmetallfelgen"
+        "de": "Leichtmetallfelgen",
+        "cs": "Kola z lehké slitiny",
+        "el": "Ζάντες αλουμινίου",
+        "en": "Alloy wheels",
+        "es": "Llantas de aleación",
+        "hr": "Aluminijski naplatci",
+        "hu": "Könnyűfém keréktárcsák",
+        "is": "Álfelgur",
+        "nl": "Lichtmetalen velgen",
+        "pl": "Felgi aluminiowe",
+        "pt": "Jantes de liga leve",
+        "ro": "Jante din aliaj",
+        "sk": "Zliatinové disky",
+        "sl": "Lita platišča"
       },
       "sourceRows": {
         "it": 137,
@@ -2043,7 +3825,20 @@
       "targets": {
         "it": "Capacità del bagagliaio",
         "fr": "Capacité du coffre",
-        "de": "Kofferraumvolumen"
+        "de": "Kofferraumvolumen",
+        "cs": "Objem zavazadlového prostoru",
+        "el": "Χωρητικότητα πορτμπαγκάζ/χώρου αποσκευών",
+        "en": "Boot/Trunk capacity",
+        "es": "Capacidad del maletero/baúl",
+        "hr": "Kapacitet prtljažnika",
+        "hu": "Csomagtér/ csomagtartó kapacitás",
+        "is": "Farangursrými",
+        "nl": "Bagageruimte/kofferbakinhoud",
+        "pl": "Pojemność bagażnika",
+        "pt": "Capacidade da bagageira/mala",
+        "ro": "Capacitate portbagaj/portbagaj spate",
+        "sk": "Kapacita batožinového priestoru/kufra",
+        "sl": "Prostornina prtljažnika"
       },
       "sourceRows": {
         "it": 138,
@@ -2057,7 +3852,20 @@
       "targets": {
         "it": "Capacità del bagagliaio",
         "fr": "Capacité du coffre",
-        "de": "Kofferraumvolumen"
+        "de": "Kofferraumvolumen",
+        "cs": "Objem zavazadlového prostoru",
+        "el": "Χωρητικότητα πορτμπαγκάζ",
+        "en": "Boot capacity",
+        "es": "Capacidad del maletero",
+        "hr": "Kapacitet prtljažnika",
+        "hu": "Csomagtérkapacitás",
+        "is": "Farangursrými",
+        "nl": "Bagageruimte-inhoud",
+        "pl": "Pojemność bagażnika",
+        "pt": "Capacidade da bagageira",
+        "ro": "Capacitate portbagaj",
+        "sk": "Kapacita batožinového priestoru",
+        "sl": "Prostornina prtljažnika"
       },
       "sourceRows": {
         "it": 139,
@@ -2071,7 +3879,20 @@
       "targets": {
         "it": "Capacità del bagagliaio",
         "fr": "Capacité du coffre",
-        "de": "Kofferraumvolumen"
+        "de": "Kofferraumvolumen",
+        "cs": "Objem zavazadlového prostoru",
+        "el": "Χωρητικότητα χώρου αποσκευών",
+        "en": "Trunk capacity",
+        "es": "Capacidad del baúl",
+        "hr": "Kapacitet prtljažnika",
+        "hu": "Csomagtartó kapacitás",
+        "is": "Farangursrými",
+        "nl": "Kofferbakinhoud",
+        "pl": "Pojemność bagażnika",
+        "pt": "Capacidade da mala",
+        "ro": "Capacitate portbagaj spate",
+        "sk": "Kapacita kufra",
+        "sl": "Prostornina prtljažnika"
       },
       "sourceRows": {
         "it": 140,
@@ -2085,7 +3906,20 @@
       "targets": {
         "it": "Crossover",
         "fr": "Crossover",
-        "de": "Crossover"
+        "de": "Crossover",
+        "cs": "Crossover",
+        "el": "Crossover",
+        "en": "Crossover",
+        "es": "Crossover",
+        "hr": "Crossover",
+        "hu": "Crossover",
+        "is": "Crossover",
+        "nl": "Crossover",
+        "pl": "Crossover",
+        "pt": "Crossover",
+        "ro": "Crossover",
+        "sk": "Crossover",
+        "sl": "Crossover"
       },
       "sourceRows": {
         "it": 141,
@@ -2099,7 +3933,20 @@
       "targets": {
         "it": "Luci diurne (DRL)",
         "fr": "Feux de jour (DRL)",
-        "de": "Tagfahrlicht (TFL)"
+        "de": "Tagfahrlicht (TFL)",
+        "cs": "Denní svícení (DRL)",
+        "el": "Daytime running lights (DRL)",
+        "en": "Daytime running lights (DRL)",
+        "es": "Daytime running lights (DRL)",
+        "hr": "Daytime running lights (DRL)",
+        "hu": "Nappali menetfények (DRL)",
+        "is": "Daytime running lights (DRL)",
+        "nl": "Daytime running lights (DRL)",
+        "pl": "Daytime running lights (DRL)",
+        "pt": "Daytime running lights (DRL)",
+        "ro": "Lumini de zi (DRL)",
+        "sk": "Daytime running lights (DRL)",
+        "sl": "Dnevne luči (DRL)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -2114,7 +3961,20 @@
       "targets": {
         "it": "Coefficiente di resistenza aerodinamica (Cd)",
         "fr": "Coefficient de traînée (Cx)",
-        "de": "Luftwiderstandsbeiwert (cw)"
+        "de": "Luftwiderstandsbeiwert (cw)",
+        "cs": "Součinitel odporu vzduchu (Cd)",
+        "el": "Drag coefficient (Cd)",
+        "en": "Drag coefficient (Cd)",
+        "es": "Coeficiente de resistencia aerodinámica (Cd)",
+        "hr": "Koeficijent otpora zraka (Cd)",
+        "hu": "Légellenállási együttható (Cd)",
+        "is": "Drag coefficient (Cd)",
+        "nl": "Luchtweerstandscoëfficiënt (Cd)",
+        "pl": "Współczynnik oporu powietrza (Cd)",
+        "pt": "Coeficiente de arrasto (Cd)",
+        "ro": "Coeficient de rezistență aerodinamică (Cd)",
+        "sk": "Koeficient odporu vzduchu (Cd)",
+        "sl": "Koeficient zračnega upora (Cd)"
       },
       "note": "Acronym - keep in original form",
       "sourceRows": {
@@ -2129,7 +3989,20 @@
       "targets": {
         "it": "Altezza da terra",
         "fr": "Garde au sol",
-        "de": "Bodenfreiheit"
+        "de": "Bodenfreiheit",
+        "cs": "Světlá výška",
+        "el": "Απόσταση από το έδαφος",
+        "en": "Ground clearance",
+        "es": "Distancia al suelo",
+        "hr": "Udaljenost od tla",
+        "hu": "Hasmagasság",
+        "is": "Veghæð",
+        "nl": "Bodemvrijheid",
+        "pl": "Prześwit",
+        "pt": "Distância ao solo",
+        "ro": "Gardă la sol",
+        "sk": "Svetlá výška",
+        "sl": "Oddaljenost od tal"
       },
       "sourceRows": {
         "it": 144,
@@ -2143,7 +4016,20 @@
       "targets": {
         "it": "Berlina compatta",
         "fr": "Berline compacte",
-        "de": "Schrägheck"
+        "de": "Schrägheck",
+        "cs": "Hatchback",
+        "el": "Hatchback",
+        "en": "Hatchback",
+        "es": "Hatchback",
+        "hr": "Hatchback",
+        "hu": "Hatchback",
+        "is": "Hlaðbakur",
+        "nl": "Hatchback",
+        "pl": "Hatchback",
+        "pt": "Hatchback",
+        "ro": "Hatchback",
+        "sk": "Hatchback",
+        "sl": "Hatchback"
       },
       "sourceRows": {
         "it": 145,
@@ -2157,7 +4043,20 @@
       "targets": {
         "it": "Fari a LED",
         "fr": "Phares LED",
-        "de": "LED-Scheinwerfer"
+        "de": "LED-Scheinwerfer",
+        "cs": "LED světlomety",
+        "el": "LED προβολείς",
+        "en": "LED headlights",
+        "es": "Faros LED",
+        "hr": "LED prednja svjetla",
+        "hu": "LED fényszórók",
+        "is": "LED framljós",
+        "nl": "LED-koplampen",
+        "pl": "Reflektory LED",
+        "pt": "Faróis LED",
+        "ro": "Faruri LED",
+        "sk": "LED svetlomety",
+        "sl": "LED žarometi"
       },
       "sourceRows": {
         "it": 146,
@@ -2171,7 +4070,20 @@
       "targets": {
         "it": "Tetto panoramico",
         "fr": "Toit panoramique",
-        "de": "Panoramadach"
+        "de": "Panoramadach",
+        "cs": "Panoramatická střecha",
+        "el": "Πανοραμική οροφή",
+        "en": "Panoramic roof",
+        "es": "Techo panorámico",
+        "hr": "Panoramski krov",
+        "hu": "Panorámatető",
+        "is": "Panoramic roof",
+        "nl": "Panoramisch dak",
+        "pl": "Panoramiczny dach",
+        "pt": "Teto panorâmico",
+        "ro": "Trapă panoramică",
+        "sk": "Panoramatická strecha",
+        "sl": "Panoramska streha"
       },
       "sourceRows": {
         "it": 147,
@@ -2185,7 +4097,20 @@
       "targets": {
         "it": "Barre portatutto",
         "fr": "Barres de toit",
-        "de": "Dachreling"
+        "de": "Dachreling",
+        "cs": "Střešní ližiny",
+        "el": "Ράγες οροφής",
+        "en": "Roof rails",
+        "es": "Barras de techo",
+        "hr": "Krovne šine",
+        "hu": "Tetősínek",
+        "is": "Þakbogar",
+        "nl": "Dakrails",
+        "pl": "Relingi dachowe",
+        "pt": "Barras de tejadilho",
+        "ro": "Bare longitudinale pe plafon",
+        "sk": "Strešné lyžiny",
+        "sl": "Strešne letve"
       },
       "sourceRows": {
         "it": 148,
@@ -2199,7 +4124,20 @@
       "targets": {
         "it": "SUV",
         "fr": "SUV",
-        "de": "SUV"
+        "de": "SUV",
+        "cs": "SUV",
+        "el": "SUV",
+        "en": "SUV",
+        "es": "SUV",
+        "hr": "SUV",
+        "hu": "SUV",
+        "is": "SUV",
+        "nl": "SUV",
+        "pl": "SUV",
+        "pt": "SUV",
+        "ro": "SUV",
+        "sk": "SUV",
+        "sl": "SUV"
       },
       "sourceRows": {
         "it": 149,
@@ -2213,7 +4151,20 @@
       "targets": {
         "it": "Berlina",
         "fr": "Berline",
-        "de": "Limousine"
+        "de": "Limousine",
+        "cs": "Sedan",
+        "el": "Sedan",
+        "en": "Sedan",
+        "es": "Sedán",
+        "hr": "Limuzina",
+        "hu": "Szedán",
+        "is": "Sedan",
+        "nl": "Sedan",
+        "pl": "Sedan",
+        "pt": "Sedan",
+        "ro": "Sedan",
+        "sk": "Sedan",
+        "sl": "Limuzina"
       },
       "sourceRows": {
         "it": 150,
@@ -2227,7 +4178,20 @@
       "targets": {
         "it": "Portellone",
         "fr": "Hayon",
-        "de": "Heckklappe"
+        "de": "Heckklappe",
+        "cs": "Páté dveře",
+        "el": "Πίσω πόρτα",
+        "en": "Tailgate",
+        "es": "Portón trasero",
+        "hr": "Peta vrata",
+        "hu": "Hátsó ajtó",
+        "is": "Afturlok",
+        "nl": "Achterklep",
+        "pl": "Klapa tylna",
+        "pt": "Porta da bagageira",
+        "ro": "Hayon",
+        "sk": "Piata dvere",
+        "sl": "Dvižna vrata"
       },
       "sourceRows": {
         "it": 151,
@@ -2241,7 +4205,20 @@
       "targets": {
         "it": "Raggio di sterzata",
         "fr": "Rayon de braquage",
-        "de": "Wendekreis"
+        "de": "Wendekreis",
+        "cs": "Poloměr otáčení",
+        "el": "Ακτίνα στροφής",
+        "en": "Turning radius",
+        "es": "Radio de giro",
+        "hr": "Polumjer okretanja",
+        "hu": "Fordulókör",
+        "is": "Beygjuradíus",
+        "nl": "Draaicirkel",
+        "pl": "Promień skrętu",
+        "pt": "Raio de viragem",
+        "ro": "Rază de bracaj",
+        "sk": "Polomer otáčania",
+        "sl": "Polmer obračanja"
       },
       "sourceRows": {
         "it": 152,
@@ -2255,7 +4232,20 @@
       "targets": {
         "it": "Allestimento",
         "fr": "Finition",
-        "de": "Ausstattung"
+        "de": "Ausstattung",
+        "cs": "Výbava",
+        "el": "Έκδοση",
+        "en": "Trim",
+        "es": "Versión",
+        "hr": "Razina opreme",
+        "hu": "Kivitel",
+        "is": "Útfærsla",
+        "nl": "Uitvoering",
+        "pl": "Wersja",
+        "pt": "Versão",
+        "ro": "Echipare",
+        "sk": "Výbava",
+        "sl": "Raven opreme"
       },
       "sourceRows": {
         "it": 153,
@@ -2269,7 +4259,20 @@
       "targets": {
         "it": "Allestimenti",
         "fr": "Finitions",
-        "de": "Ausstattungen"
+        "de": "Ausstattungen",
+        "cs": "Výbavy",
+        "el": "Εκδόσεις",
+        "en": "Trims",
+        "es": "Versiones",
+        "hr": "Razine opreme",
+        "hu": "Kivitelek",
+        "is": "Útfærslur",
+        "nl": "Uitvoeringen",
+        "pl": "Wersje",
+        "pt": "Versões",
+        "ro": "Echipări",
+        "sk": "Výbavy",
+        "sl": "Ravni opreme"
       },
       "sourceRows": {
         "it": 154,
@@ -2279,17 +4282,38 @@
     }
   ],
   "marketNotes": {
-    "en-gb": "Use British English.",
-    "en-ie": "Use Irish/British English conventions.",
-    "en-au": "Use Australian English.",
-    "en-nz": "Use New Zealand English.",
-    "en-za": "Use South African English.",
-    "fr-be": "Use French suitable for Belgium, applying the French glossary targets unless a Belgian variant is explicitly added.",
-    "fr-ch": "Use French suitable for Switzerland, applying the French glossary targets unless a Swiss variant is explicitly added.",
-    "de-at": "Use German suitable for Austria, applying the German glossary targets unless an Austrian variant is explicitly added.",
-    "de-ch": "Use German suitable for Switzerland, applying the German glossary targets unless a Swiss variant is explicitly added.",
-    "it-it": "Use Italian suitable for Italy. Vehicle gender in Italian: treat T03 as feminine when the model name stands alone or is referenced without an explicit head noun (for example, \"la T03\" and \"T03 è compatta\"). Use masculine for SUV as the head noun (for example, \"il SUV\" and \"un SUV spazioso\"). When an explicit head noun is present, agreement follows that noun: feminine with auto, automobile, macchina, vettura, city car, or versione; masculine with modello, veicolo, SUV, crossover, or fuoristrada (for example, \"il modello T03 è compatto\"). For other model names, follow the explicit or clearly implied vehicle category and approved Italian usage; keep articles, adjectives, participles, and pronouns consistent throughout the item.",
-    "it-ch": "Use Italian suitable for Switzerland, applying the Italian glossary targets unless a Swiss variant is explicitly added. Vehicle gender in Italian: treat T03 as feminine when the model name stands alone or is referenced without an explicit head noun (for example, \"la T03\" and \"T03 è compatta\"). Use masculine for SUV as the head noun (for example, \"il SUV\" and \"un SUV spazioso\"). When an explicit head noun is present, agreement follows that noun: feminine with auto, automobile, macchina, vettura, city car, or versione; masculine with modello, veicolo, SUV, crossover, or fuoristrada (for example, \"il modello T03 è compatto\"). For other model names, follow the explicit or clearly implied vehicle category and approved Italian usage; keep articles, adjectives, participles, and pronouns consistent throughout the item.",
-    "nl-be": "Use Dutch suitable for Belgium."
+    "en-gb": "LOCALIZATION REVIEW — English source terms are retained because this market uses English. Review spelling, punctuation, typography, automotive terminology, and local legal conventions for United Kingdom; keep this style guide in English.",
+    "en-ie": "LOCALIZATION REVIEW — English source terms are retained because this market uses English. Review spelling, punctuation, typography, automotive terminology, and local legal conventions for Ireland; keep this style guide in English.",
+    "en-au": "LOCALIZATION REVIEW — English source terms are retained because this market uses English. Review spelling, punctuation, typography, automotive terminology, and local legal conventions for Australia; keep this style guide in English.",
+    "en-nz": "LOCALIZATION REVIEW — English source terms are retained because this market uses English. Review spelling, punctuation, typography, automotive terminology, and local legal conventions for New Zealand; keep this style guide in English.",
+    "en-za": "LOCALIZATION REVIEW — English source terms are retained because this market uses English. Review spelling, punctuation, typography, automotive terminology, and local legal conventions for South Africa; keep this style guide in English.",
+    "fr-be": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Belgium (French); keep this style guide in English.",
+    "fr-ch": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Switzerland (French); keep this style guide in English.",
+    "de-at": "BASE-LANGUAGE SEED — targets are copied from the approved German glossary. Review regional spelling, punctuation, terminology, and local legal wording for Austria; keep this style guide in English.",
+    "de-ch": "BASE-LANGUAGE SEED — targets are copied from the approved German glossary. Review regional spelling, punctuation, terminology, and local legal wording for Switzerland (German); keep this style guide in English.",
+    "it-it": "Approved Italian targets from the authoritative glossary. Review only market-specific preferences for Italy; keep this style guide in English.",
+    "it-ch": "BASE-LANGUAGE SEED — targets are copied from the approved Italian glossary. Review regional spelling, punctuation, terminology, and local legal wording for Switzerland (Italian); keep this style guide in English.",
+    "nl-be": "AI DRAFT — REVIEW REQUIRED — these Dutch targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Belgium (Dutch); keep this style guide in English.",
+    "cs-cz": "AI DRAFT — REVIEW REQUIRED — these Czech targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Czechia; keep this style guide in English.",
+    "de-de": "Approved German targets from the authoritative glossary. Review only market-specific preferences for Germany; keep this style guide in English.",
+    "el-gr": "AI DRAFT — REVIEW REQUIRED — these Greek targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Greece; keep this style guide in English.",
+    "en-mt": "LOCALIZATION REVIEW — English source terms are retained because this market uses English. Review spelling, punctuation, typography, automotive terminology, and local legal conventions for Malta; keep this style guide in English.",
+    "es-es": "AI DRAFT — REVIEW REQUIRED — these Spanish targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Spain; keep this style guide in English.",
+    "fr-fr": "Approved French targets from the authoritative glossary. Review only market-specific preferences for France; keep this style guide in English.",
+    "fr-gp": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Guadeloupe; keep this style guide in English.",
+    "fr-lu": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Luxembourg; keep this style guide in English.",
+    "fr-ma": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Morocco; keep this style guide in English.",
+    "fr-mq": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Martinique; keep this style guide in English.",
+    "fr-mu": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Mauritius; keep this style guide in English.",
+    "fr-re": "BASE-LANGUAGE SEED — targets are copied from the approved French glossary. Review regional spelling, punctuation, terminology, and local legal wording for Réunion; keep this style guide in English.",
+    "hr-hr": "AI DRAFT — REVIEW REQUIRED — these Croatian targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Croatia; keep this style guide in English.",
+    "hu-hu": "AI DRAFT — REVIEW REQUIRED — these Hungarian targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Hungary; keep this style guide in English.",
+    "is-is": "AI DRAFT — REVIEW REQUIRED — these Icelandic targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Iceland; keep this style guide in English.",
+    "nl-nl": "AI DRAFT — REVIEW REQUIRED — these Dutch targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Netherlands; keep this style guide in English.",
+    "pl-pl": "AI DRAFT — REVIEW REQUIRED — these Polish targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Poland; keep this style guide in English.",
+    "pt-pt": "AI DRAFT — REVIEW REQUIRED — these Portuguese targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Portugal; keep this style guide in English.",
+    "ro-ro": "AI DRAFT — REVIEW REQUIRED — these Romanian targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Romania; keep this style guide in English.",
+    "sk-sk": "AI DRAFT — REVIEW REQUIRED — these Slovak targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Slovakia; keep this style guide in English.",
+    "sl-si": "AI DRAFT — REVIEW REQUIRED — these Slovenian targets were generated as a first draft. Review terminology, wordplay, gender or noun class, punctuation, layout, and legal wording for Slovenia; keep this style guide in English."
   }
 }
